@@ -283,7 +283,19 @@ span.eventMask_goRight .eventContents {
   border-top: 0.1px solid rgba(128, 128, 128, 0.5);
   padding: 0 12vw 0 7vw;
   width: 76vw;
+}
+
+.myWorks ul li:not(:nth-child(1)) {
   cursor: pointer;
+}
+
+.myWorks ul li > a {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: inline-block;
+  width: 100%;
+  height: 100%;
 }
 
 .myWorks ul li h3,
@@ -347,6 +359,26 @@ span.eventMask_goRight .eventContents {
           transform: translate(0, 100%);
 }
 
+.myWorks ul li .myWorks_txt .myWorks_txtLink .myWork_eventMask_Goup:nth-child(1) .myWork_eventContents a {
+  position: relative;
+}
+
+.myWorks ul li .myWorks_txt .myWorks_txtLink .myWork_eventMask_Goup:nth-child(1) .myWork_eventContents a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: #dddddd;
+  -webkit-transform-origin: left;
+          transform-origin: left;
+  -webkit-transform: scaleX(0%);
+          transform: scaleX(0%);
+  -webkit-transition: all 0.6s ease;
+  transition: all 0.6s ease;
+}
+
 .myWorks ul li .myWorks_txt .myWorks_txtLink .myWork_eventMask_Goright {
   margin-left: 1.6rem;
   vertical-align: top;
@@ -378,7 +410,7 @@ span.eventMask_goRight .eventContents {
 }
 
 .myWorks ul > li:nth-of-type(1) .myWorks_eventBg {
-  background: url(../imgs/bg_AUSTEM.png) no-repeat 50% 50%/100%;
+  background: url(../imgs/bg_index.png) no-repeat 50% 50%/100%;
 }
 
 .myWorks ul > li:nth-of-type(2) .myWorks_eventBg {
@@ -438,6 +470,7 @@ span.eventMask_goRight .eventContents {
   transition: -webkit-transform 1s ease;
   transition: transform 1s ease;
   transition: transform 1s ease, -webkit-transform 1s ease;
+  margin-right: 4rem;
 }
 
 .myWorks ul li:hover .myWorks_txtLink span.myWork_eventMask_Goup:nth-child(2) .myWork_eventContents,
@@ -458,9 +491,22 @@ span.eventMask_goRight .eventContents {
 
 .myWorks ul li:hover .myWorks_txtLink span.myWork_eventMask_Goup:nth-child(4) .myWork_eventContents,
 .myWorks ul li:hover .myWorks_txtLink span.myWork_eventMask_Goright:nth-child(4) .myWork_eventContents {
+  -webkit-transition: -webkit-transform 1s ease 0.45s;
+  transition: -webkit-transform 1s ease 0.45s;
+  transition: transform 1s ease 0.45s;
+  transition: transform 1s ease 0.45s, -webkit-transform 1s ease 0.45s;
+}
+
+.myWorks ul li:hover .myWorks_txtLink span.myWork_eventMask_Goup:nth-child(5) .myWork_eventContents,
+.myWorks ul li:hover .myWorks_txtLink span.myWork_eventMask_Goright:nth-child(5) .myWork_eventContents {
   opacity: 1;
-  -webkit-transition: all 1s ease 0.45s;
-  transition: all 1s ease 0.45s;
+  -webkit-transition: all 1s ease 0.6s;
+  transition: all 1s ease 0.6s;
+}
+
+.myWorks ul li:hover .myWorks_txtLink span.myWork_eventMask_Goup:nth-child(1) .myWork_eventContents a:hover::after {
+  -webkit-transform: scaleX(100%);
+          transform: scaleX(100%);
 }
 
 /*-------------------- .myWorks 끝 -------------------- */

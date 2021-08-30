@@ -10,6 +10,7 @@ const aboutMeContainer = aboutMe.querySelectorAll('li');
 const myWorks = document.querySelector('.myWorks');
 const myWorksContents = myWorks.querySelectorAll('.myWorks_contents');
 const myWorksEventBg = myWorks.querySelectorAll('.myWorks_eventBg');
+const myWorkLinkGitHub = myWorks.querySelectorAll('.myWork_linkGitHub');
 
 // .viewBox
 const viewBox = document.querySelectorAll('.viewBox');
@@ -197,9 +198,15 @@ function goDownHideBgAnimation(target) {
 };
 
 // link
-myWorksContents[0].addEventListener('click', function(){ window.open('../austem/'); });
-myWorksContents[1].addEventListener('click', function(){ window.open('../nespresso/'); });
-myWorksContents[2].addEventListener('click', function(){ window.open('../3000/'); });
-myWorksContents[3].addEventListener('click', function(){ window.open('../iosTravel/'); });
+myWorksContents[1].addEventListener('click', function(){ window.open('../austem/'); });
+myWorksContents[2].addEventListener('click', function(){ window.open('../nespresso/'); });
+myWorksContents[3].addEventListener('click', function(){ window.open('../3000/'); });
+myWorksContents[4].addEventListener('click', function(){ window.open('../iosTravel/'); });
+
+for(var i = 0; i < myWorkLinkGitHub.length; i++){
+    myWorkLinkGitHub[i].addEventListener('click', function(e){
+        e.stopPropagation();
+    })
+};
 
 /* -------------------- section.myWorks 끝 -------------------- */
