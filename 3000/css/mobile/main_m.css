@@ -255,6 +255,7 @@ main>section.row>.centerBox>ul>li{
     width:32rem;
     font-size: 2.8rem;
     cursor: pointer;
+    text-align: center;
 }
 @media only screen and (max-width:770px){
     main>section.row>.centerBox>ul>li{font-size: 1.6rem;}

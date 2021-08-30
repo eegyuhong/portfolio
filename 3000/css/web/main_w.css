@@ -265,6 +265,7 @@ main>section.row>.centerBox>ul>li{
     width:32rem;
     font-size: 3.2rem;
     cursor: pointer;
+    text-align: center;
 }
 main>section.row>.centerBox>ul>li::before{
     content: "";
