@@ -1,0 +1,501 @@
+/* 배너 */
+#banner{
+    position:relative; 
+    height:60rem;
+}
+#banner>ul#bannerList{
+    height:60rem;
+}
+#banner>ul#bannerList>li{
+    display:none;
+    position:absolute;
+    padding-top: 30rem;
+    width:100%; height:30rem;
+}
+#banner>ul#bannerList>li.on{
+    display: list-item; 
+}
+#banner>ul#bannerList>li:nth-child(1){
+    background:url(../imgs/bannerList_bn1.jpg) no-repeat 0 50%/cover;
+}
+#banner>ul#bannerList>li:nth-child(2){
+    background:url(../imgs/bannerList_bn2.jpg) no-repeat 0 50%/cover;
+}
+#banner>ul#bannerList>li:nth-child(3){
+    background:url(../imgs/bannerList_bn3.jpg) no-repeat 0 80%/cover;
+}
+#banner>ul#bannerList>li>div.center{
+    transform: translateY(-50%);
+}
+#banner>ul#bannerList>li>div.center>strong{
+    display: block; 
+    font:4.1rem/8.7rem "NanumSquare","Malgun Gothic",sans-serif;
+    text-shadow:0.2rem 0.2rem 0.2rem rgba(0,0,0,0.5); 
+    color:#fff;
+}
+#banner>ul#bannerList>li>div.center>p{
+    font:2rem/2.4rem "Malgun Gothic",sans-serif; color:#fff;
+}
+#banner>ul#bannerList>li>div.center>a{
+    display:block; 
+    margin-top:2.5rem;
+    width:12rem; height:4.4rem;
+    border:0.1rem solid #fff;
+    text-align:center; 
+    font:1.5rem/4.4rem "Malgun Gothic",sans-serif; 
+    color:#fff;
+}
+#banner>div#controllBox>p.prevBtn{
+    position:absolute; 
+    left:calc(50% - 57rem); top:calc(50% - 2.5rem);
+    width:3rem; height:5rem;
+    background: url(../imgs/sub_mainVisual_controls_2019.png) no-repeat 0 -45rem;
+    font-size:0; line-height:0;
+    cursor:pointer;
+}
+#banner>div#controllBox>p.nextBtn{
+    position:absolute; 
+    right:calc(50% - 57rem); top:calc(50% - 2.5rem);
+    width:3rem; height:5rem;
+    background: url(../imgs/sub_mainVisual_controls_2019.png) no-repeat 100% -45rem;
+    font-size:0; line-height:0;
+    cursor:pointer;
+}
+#banner>div#controllBox>div#bannerController{
+    position:absolute; z-index:200;
+    bottom:6.5rem;
+    width:100%; height:1rem;
+    text-align: center;
+    font-size:0; line-height:0;
+}
+#banner>div#controllBox>div#bannerController>p.bannerPlay{
+    display: inline-block; 
+    width:1rem; height:1rem; 
+    background:url(../imgs/btn_slide2.png) no-repeat -1rem -1.1rem; 
+    cursor:pointer;
+}
+#banner>div#controllBox>div#bannerController>p.bannerPlay.off{
+    background-position:-1rem 0;
+}
+#banner>div#controllBox>div#bannerController>ul#bannerBullet{
+    display: inline-block; 
+
+}
+#banner>div#controllBox>div#bannerController>ul#bannerBullet>li{
+    cursor:pointer;
+    display: inline-block; 
+    margin:0 0.4rem;
+    width:1rem; height:1rem; 
+    background:#fff;
+    border-radius:0.5rem; 
+    transition:all .3s ease;
+}
+#banner>div#controllBox>div#bannerController>ul#bannerBullet>li.on{
+    width:2rem; 
+    background:rgba(255,184,51,1);
+}
+
+
+/* 멤버 서비스 */
+#member{
+    position:relative; 
+    width:100%; height:0;
+}
+#member>ul{
+    display: flex;
+    justify-content: space-between;
+    position:absolute; z-index: 300;
+    left:calc(50% - 50rem); top:-3rem;
+    width:100rem; height:5.5rem;
+    background:#fff;
+    box-shadow:0 0.5rem 1rem rgba(160,160,160,.3);
+}
+#member>ul>li{
+    flex: 0 0 12.5rem;
+    position:relative;
+    text-align: center;
+}
+#member>ul>li:not(:last-child):after{
+    position:absolute; right:0; top:1.5rem;
+    content: "";
+    border-right:0.1rem solid #d6d6d6;
+    width:0; height:2.5rem; 
+}
+#member>ul>li>a{
+    display:block;
+    box-sizing: border-box;
+    height:5.5rem;
+    letter-spacing:-.1rem;
+    font:1.5rem/5.5rem "Malgun Gothic",sans-serif;
+    color:#333;
+}
+#member>ul>li>a:hover{
+    border-bottom: 0.4rem solid #FFB833;
+}
+
+
+
+
+/* 이벤트 */
+#event{
+    padding-top:8.8rem;
+    height:49.9rem;
+    background:#f3f2f7;
+}
+#event>div.center{/* 컨텐츠를 중앙으로 모아주는 역할 block요소*/
+    position:relative;
+    height:40.5rem; 
+}
+#event>div.center>h3{/*전체 제목*/
+    float:left;
+    margin-right:63.5rem;
+    font:3rem/3.8rem arial,sans-serif;
+    letter-spacing: -0.1rem;
+}
+#event>div.center>h4{/* 컨텐츠들의 실질적인 제목 - 이벤트관련 제목 일행정렬 */
+    cursor:pointer;
+    float:left; 
+    margin-top:.3rem;
+    margin-right:3.5rem;
+    font:1.5rem/2.9rem "Malgun Gothic",sans-serif;
+    color:#949790;
+    cursor:pointer;
+}
+#event>div.center>h4.on,
+#event>div.center>h4:hover
+{
+    font-weight:bold;
+    color:#FFB833;
+    border-bottom:0.1rem solid #FFB833;
+}
+#event>div.center>div.conts{/* 이벤트에 관련된 내용을 묶어줌 겹쳐있음 */
+    position:absolute; left:0; top:6.3rem;
+    width:100%; height:30.1rem;
+    background:#f3f2f7;
+}
+
+#event>div.center>div.conts.on{
+    z-index:100;
+}
+#event>div.center>div.conts>p.eventBtnL{
+    cursor:pointer;
+    position:absolute;
+    left:-5rem; top:13rem; 
+    width:3rem; height:5rem;
+    opacity: 0.25;
+    background:#000 url(../imgs/sub_mainVisual_controls_2019.png) no-repeat 0 -45rem;
+    font-size:0; line-height: 0;
+}
+#event>div.center>div.conts>p.eventBtnR{
+    cursor:pointer;
+    position:absolute;
+    right:-5rem; top:13rem; 
+    width:3rem; height:5rem;
+    opacity: 0.25;
+    background:#000 url(../imgs/sub_mainVisual_controls_2019.png) no-repeat 100% -45rem;
+    font-size:0; line-height: 0;
+}
+
+#event>div.center>div.conts>.eventBox{/* 화면에서 보이는 ul이외의 ul들을 숨기는 block요소 */
+    overflow:hidden;
+    width:100%; height:30.1rem;
+}
+#event>div.center>div.conts>.eventBox>.eventList{/*ul 목록을 묶어주는 div */
+    width:300rem;
+    height:30.1rem;
+}
+#event>div.center>div.conts>.eventBox>.eventList>ul{/*일행 정렬되는 목록 ul들*/
+    float:left;
+}
+#event>div.center>div.conts>.eventBox>.eventList>ul>li{
+    cursor:pointer;
+    float:left;
+    margin-right:1.3rem;
+    border:0.5rem solid #f3f2f7;
+    width:23rem; height:29.1rem; 
+    background:#fff;
+}
+#event>div.center>div.conts>.eventBox>.eventList>ul>li:hover{
+    border-color:#FFB833;
+}
+#event>div.center>div.conts>.eventBox>.eventList>ul>li:last-child{
+    margin-right:0;
+}
+#event>div.center>div.conts>.eventBox>.eventList>ul>li>p>img{
+    width:100%;
+}
+#event>div.center>div.conts>.eventBox>.eventList>ul>li>strong{
+    display: block; 
+    margin:1.5rem 1.5rem 0 1.5rem;
+    height:4.4rem;
+    font:1.6rem/2.2rem "Malgun Gothic",sans-serif;
+    color:#38373d;
+    letter-spacing: -0.2rem;
+}
+#event>div.center>div.conts>.eventBox>.eventList>ul>li>.eventListTxt{
+    margin-left:1.5rem;
+    font:1.2rem/2.2rem "'Nanum Gothic'",sans-serif;
+    color:#6c6c6c;
+    letter-spacing: -0.1rem;
+}
+#event>div.center>div.conts>div.controller{
+    position:absolute; bottom:-4rem;
+    width:100%; height:1rem;
+    text-align: center;
+    font-size:0; line-height:0;
+    background:#f3f2f7;
+}
+#event>div.center>div.conts>div.controller>p{ /*재생 일시멈춤*/
+    cursor:pointer;
+    display: inline-block; 
+    width:1rem;  height:1rem;
+    background:url(../imgs/btn_slide2.png) no-repeat 0 -1.1rem;
+}
+#event>div.center>div.conts>div.controller>ul{ /* 페이징 처리 */
+    display: inline-block; 
+}
+#event>div.center>div.conts>div.controller>ul>li{
+    cursor:pointer;
+    display: inline-block; 
+    margin:0 0.4rem;
+    border-radius:0.5rem;
+    width:1rem; height:1rem;
+    background:#a1a9be;
+}
+#event>div.center>div.conts>div.controller>ul>li.on{
+    width:2rem;
+    background:#FFB833;
+}
+#event>div.center>div.conts>p.more{
+    cursor:pointer;
+    position:absolute; 
+    right:0; top:-6.2rem; 
+    border:0.1rem solid #98989a;
+    width:2.8rem; height:2.8rem;
+    text-align: center; line-height: 2.5rem;
+}
+#event>div.center>div.conts>p.more>a{
+    display:block; 
+    width:2.8rem; height:2.8rem;
+    color:#98989a;
+    font-size:2rem;
+}
+#event>div.center>div.conts>p.more:hover{
+    border-color:#FFB833;
+    background:#FFB833;
+}
+#event>div.center>div.conts>p.more:hover>a{
+    color:#fff;
+}
+
+
+/* semiPackage */
+#semiPackage{
+    position: relative;
+    height: 57rem;
+    background: url(../imgs/semipackage_bg.jpg) no-repeat 0 35%/cover;
+}
+#semiPackage>.center{
+    width: 100%; height: 100%;
+    background: rgba(0,0,0,0.5);
+}
+#semiPackage>.center>div{
+    position: absolute;
+    top: 50%; left: 50%; transform: translate(-50%, -50%);
+    
+}
+#semiPackage>.center>div>h3{
+    width: 60rem; height: 22rem;
+    background: url(../imgs/semipackage_con.jpg) no-repeat 50% 50%;
+}
+#semiPackage>.center>div>a{
+    display: block;
+    margin: 2.5rem auto 0 auto;
+    width: 12rem; height: 4.4rem;
+    border: 0.1rem solid #fff;
+    text-align: center;
+    font: 1.5rem/4.4rem "Malgun Gothic",sans-serif;
+    color: #fff;
+}
+
+/* explorer */
+#explorer{
+    clear:both;
+}
+#explorer>.center{
+    padding: 100px 0;
+}
+#explorer>.center>h3{
+    font-weight:bold;
+    font-family: "Nanum Gothic", sans-serif;
+    font-size: 33px;
+    margin-bottom: 30px;
+}
+#explorer>.center>.cardWrapper{
+    display:flex; 
+    justify-content: space-between;
+    align-items: flex-end;
+}
+#explorer>.center>.cardWrapper>div{
+    width:21.7rem; height:19rem;
+    
+}
+#explorer>.center>.cardWrapper>div img{
+    width:21.7rem;
+}
+#explorer>.center>.cardWrapper h4{
+    height:4.4rem;
+    font-size: 1.6rem; line-height:2.2rem; font-weight:bold;
+    color: #333;
+}
+#explorer>.center>.cardWrapper article> p{
+    height:3.2rem;
+    font-size: 1.2rem; line-height:1.6rem;
+}
+#explorer>.center>.cardWrapper>div>article>a{
+    display: block;
+    margin-top: 1.2rem;
+    font: 1.2rem/1.8rem "Malgun Gothic",sans-serif;
+    font-weight: 600;
+    color: #999;
+}
+#explorer>.center>.cardWrapper>div>article>a:hover{
+    color: #000;
+}
+
+
+
+
+#notice{
+    overflow:hidden;
+    padding: 100px 0;
+    background-color: #dcecf4;
+}
+#notice>.center{
+    overflow:hidden;
+}
+
+#notice>.center>#notice01 {
+    box-sizing:border-box;
+    float: left;
+    width: 49rem;
+    height: 40.5rem;
+    position: relative;
+    background-color: #fff;
+    padding: 3rem;
+}
+#notice>.center>#notice01>h3{
+    position:absolute; left:3rem; top:3rem; z-index:9999;
+    font-weight:bold;
+    font-family: "Nanum Gothic", sans-serif;
+    font-size: 3.3rem;
+    margin-bottom: 3rem;
+}
+
+#notice>.center>#notice01>dl{
+    box-sizing:border-box;
+    position:relative;
+    width: 100%;
+    height:100%;
+}
+#notice>.center>#notice01>dl>dt{
+    float:left;
+    padding: 0 15px;
+}
+#notice>.center>#notice01>dl>dt>a{
+    color: #999;
+    font-weight: bold;
+    line-height: 3rem;
+    font-size: 15px;
+}
+#notice>.center>#notice01>dl>dt:nth-child(1){
+    padding-left:16rem;
+}
+#notice>.center>#notice01>dl>dt.on>a{
+    border-bottom: 1px solid #FFB833;
+    color: #FFB833;
+}
+#notice>.center>#notice01>dl>dd.txt{
+    position:absolute;
+    left:0; bottom:0; 
+    width:100%; height:29.5rem; 
+    background:#fff;
+}
+#notice>.center>#notice01>dl>dd.txt.on{
+    z-index:1000;
+}
+#notice>.center>#notice01>dl>dd.txt>ul>li{
+    margin-bottom: 1rem;
+    position: relative;
+    background: url(https://www.standardchartered.co.kr/np/assets/images/kr/page/self_ico03.gif) no-repeat 0 10px;
+    padding-left: 1.8rem;
+}
+#notice>.center>#notice01>dl>dd.txt>ul>li>a{
+    font-size: 1.4rem; line-height:2.2rem;
+    overflow:hidden;
+    color: #555;
+    display: block;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    word-wrap: normal;
+}
+#notice>.center>#notice01>dl>dd.more{
+    position:absolute;
+    right:0; top:0;    
+}
+#notice>.center>#notice01>dl>dd.more>a{
+    display: block;
+    padding: 0.7rem;
+    width:1.4rem; height:1.4rem;
+    text-align: center;
+    font-weight: normal;
+    color: #999;
+    font-size: 20px;
+    line-height:1.4rem;
+    border: 0.1rem solid #999;
+    background-color: transparent;
+    
+}
+#notice>.center>#notice01>dl>dd.more.on{
+    z-index:1000;
+}
+
+
+#notice>.center>#notice02{
+    float: right;
+    width: 49rem;
+}
+#notice>.center>#notice02>.bnr{
+    width:49rem;
+}
+#notice>.center>#notice02>.bnr img{
+    width:49rem;
+}
+
+#notice>.center>#notice02>ul{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+#notice>.center>#notice02>ul>li{
+    flex: 0 0 18rem;
+    margin-top: 1rem;
+    padding: 1.4rem 3rem;
+    background: #fff;
+    font-family: "Nanum Gothic", sans-serif;
+    font-size: 1.5rem;
+    line-height:3.2rem;
+}
+#notice>.center>#notice02>ul>li>a{
+    display: block;
+    width: 100%; height: 100%;
+    color: rgb(51, 51, 51);
+    background: url(../imgs/ico_arrow_left.png) no-repeat 100% 50%;
+}
+
+#notice>.center>#notice01>dl>dd.more>a:hover{
+    border-color:#FFB833;
+    background:#FFB833;
+    color:#fff;
+}

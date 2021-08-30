@@ -1,0 +1,351 @@
+@mixin font-(
+    $f:11,
+    $s:1.8rem,
+    $h:1.8rem,
+    $c:white,
+    $ts:0,
+    $op:0.5,
+    ){
+        @if($f == 11){// font-family 10 = NotoSansKR, 20 = NanumSquareOTF
+            font-family: 'NotoSansKR-Thin', sans-serif;
+        }@else if($f == 13){
+            font-family: 'NotoSansKR-Light', sans-serif;
+        }@else if($f == 14){
+            font-family: 'NotoSansKR-Regular', sans-serif;
+        }@else if($f == 15){
+            font-family: 'NotoSansKR-Medium', sans-serif;
+        }@else if($f == 17){
+            font-family: 'NotoSansKR-Bold', sans-serif;
+        }@else if($f == 19){
+            font-family: 'NotoSansKR-Black', sans-serif;
+        }@else if($f == 20){
+            font-family: 'ChosunBg', sans-serif;
+        }@else if($f == 30){
+            font-family: 'NanumBarunGothicBold', sans-serif;
+        }
+        font-size: $s;// font-size
+        line-height: $h;// line-height
+        @if($c == white){// color
+            color: rgba(255,255,255,$op);
+        }
+        @else if($c == black){
+            color: rgba(0,0,0,$op);
+        }
+        @else if($c == broun){
+            color: rgba(143,114,71,$op);
+        }
+}
+//thin 100, light 300, regular 400, medium 500, bold 700, black 900
+//@include font-($f:, $s:, $h:, $c:, $op:);
+
+main{
+    width: 100%;
+    .centerBox{
+        margin: 0 auto;
+        width: 160rem;
+    }
+}
+
+//section01
+$sec01_con_h:20rem;
+.sec01{
+    width: 100%;
+    height: 64rem;
+    background: url(../imgs/shop/sec01_bg.jpg) no-repeat 0 60%/cover;
+    .centerBox{
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        height: 64rem;
+        p{
+            padding-top: 6rem;
+            height: $sec01_con_h - 6rem;
+            @include font-($s:3.2rem, $h:4rem);
+        }
+        nav>ul{
+            display: flex;
+            width: 100rem;
+            height: $sec01_con_h;
+            >li{
+                display: flex;
+                overflow: hidden;
+                text-align: center;
+                background: #bbb;
+                ul{
+                    display: flex;
+                }
+            }
+            a{
+                display: block;
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+}
+
+//section01 클릭 이벤트
+.sec01 .centerBox nav>ul{
+    >li{
+        transition: all .3s ease;
+        flex: 1 1 10rem;
+        >a>svg{
+            width: 100%;
+        }
+        ul{
+            transition: all .3s ease;
+            flex: 0 1 0;
+            li{
+                flex: 1 1 10rem;
+                a{
+                    svg{
+                        fill: #C7B8A3;
+                        width: 100%;
+                    }
+                }
+            }
+        }
+        &:hover, &.on{
+            &:nth-of-type(1), &:nth-of-type(2){
+                flex: 8 1 10rem;
+                >a>svg>rect{
+                    fill: #241918;
+                }
+                ul{
+                    flex: 1 1 200%;
+                    li{
+                        flex: 1 1 50%;
+                        a{
+                            svg{
+                                width: 100%;
+                                rect{
+                                    fill: #C7B8A3;
+                                }
+                            }
+                        }
+                        &:hover ,&.on{
+                            a svg rect{
+                                fill: #8F7247;
+                            }
+                        }
+                    }
+                }
+            }
+            &:nth-of-type(3), &:nth-of-type(4), &:nth-of-type(5){
+                flex: 2 1 10rem;
+                >a>svg{
+                    rect{
+                        fill: #241918;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+//section02
+$sec02_products_height:20rem;
+$sec02_dep3_original_position: 3.2rem;
+$sec02_dep3_after_distance: 3.2rem;
+
+.sec02{
+    margin-bottom: 14rem;
+    .sec02_category{
+        margin-top: 10rem;
+        @include font-($f:15, $s:2.2rem, $h:2.2rem, $c:black, $op:1);
+        .sec02_dep1{
+            margin-top: 3.2rem;
+            .sec02_dep1_products{
+                height: $sec02_products_height;
+                border-bottom: 1px solid #eee;
+                a{
+                    color: inherit;
+                }
+            }
+            .sec02_dep2{
+                display: flex;
+                justify-content: space-between;
+                height: 100%;
+                .sec02_dep2_img{
+                    font-size: 1rem;
+                    flex: 1 0 20rem;
+                    height: 100%;
+                    text-align: center;
+                    line-height: 20rem;
+                    img{
+                        vertical-align:middle;
+                    }
+                }
+                .sec02_dep2_tit{
+                    flex: 1 0 42rem;
+                    margin: 0 2rem;
+                    height: 100%;
+                    .sec02_dep3_name{
+                        margin-top: 6.4rem;
+                        height: 4rem;
+                        font-size: 1.8rem;
+                        line-height: 2rem;
+                    }
+                    .sec02_dep3_info{
+                        height: 3.2rem;
+                        font-size: 1.4rem;
+                        font-family: 'NotoSansKR-Thin', sans-serif;
+                        line-height: 1.6rem;
+                    }
+                }
+                .sec02_dep2_op{
+                    flex: 1 0 94rem;
+                    .sec02_dep3{
+                        display: flex;
+                        height: 100%;
+                        justify-content: flex-end;
+                        align-items: center;
+                        li{//공통
+                            position: relative;
+                            text-align: center;
+                            top: $sec02_dep3_original_position;
+                            margin:0 2rem;
+                            &:last-of-type{
+                                margin-right: 0;
+                            }
+                        }
+                        .sec02_dep3_volume{
+                            width: 13rem;
+                            font-size: 1.4rem;
+                            line-height: 1.4rem;
+                            font-family: 'NotoSansKR-Light', sans-serif;
+                            span{
+                                position: absolute;
+                                bottom: $sec02_dep3_after_distance;
+                                left: calc(50% - 2.4rem);
+                                width: 4.8rem;
+                                height: 5.8rem;
+                                background: url(../imgs/shop/sec02_dep3_volume.png) no-repeat 0 0;
+                            }
+                            // &::after{
+                            //     content: "";
+                            //     position: absolute;
+                            //     bottom: $sec02_dep3_after_distance;
+                            //     left: calc(50% - 2.4rem);
+                            //     width: 4.8rem;
+                            //     height: 5.8rem;
+                            //     background: url(../imgs/shop/sec02_dep3_volume.png) no-repeat 0 0;
+                            // }
+                        }
+                        .sec02_dep3_level{
+                            width: 14rem;
+                            font-size: 1.4rem;
+                            line-height: 1.4rem;
+                            font-family: 'NotoSansKR-Light', sans-serif;
+                            span{
+                                position: absolute;
+                                bottom: $sec02_dep3_after_distance;
+                                left: calc(50% - 7rem);
+                                width: 14rem;
+                                height: 1rem;
+                                background: url(../imgs/shop/sec02_dep3_level.png) no-repeat 0 0;
+                            }
+                            // &::after{
+                            //     content: "";
+                            //     position: absolute;
+                            //     bottom: $sec02_dep3_after_distance;
+                            //     left: calc(50% - 7rem);
+                            //     width: 14rem;
+                            //     height: 1rem;
+                            //     background: url(../imgs/shop/sec02_dep3_level.png) no-repeat 0 0;
+                            // }
+                        }
+                        .sec02_dep3_pieces{
+                            width: 9rem;
+                            font-size: 1.4rem;
+                            line-height: 1.4rem;
+                            font-family: 'NotoSansKR-Light', sans-serif;
+                            
+                            &::after{
+                                content: "";
+                                position: absolute;
+                                bottom: $sec02_dep3_after_distance;
+                                left: calc(50% - 2.6rem);
+                                width: 5.2rem;
+                                height: 2rem;
+                                background: url(../imgs/shop/sec02_dep3_pieces.png) no-repeat 0 0;
+                            }
+                        }
+                        .sec02_dep3_price{
+                            position: static;
+                            width: 13rem;
+                        }
+                        .sec02_dep3_btnAddCart{
+                            overflow: hidden;
+                            position: relative;
+                            top: 0;
+                            border: 1px solid black;
+                            width: 20rem;
+                            height: 4.8rem;
+                            font-size: 1.4rem;
+                            line-height: 4.8rem;
+                            font-family: 'NotoSansKR-Medium', sans-serif;
+                            span{
+                                position: absolute;
+                                top: 100%;
+                                display: block;
+                                height: 4.8rem;
+                                &:nth-of-type(1){//수량
+                                    width: 20rem;
+                                    color: #fff;
+                                    background-color: rgba(143,114,71,1);
+                                    @include font-($f:15, $s:1.8rem, $h:4.8rem, $op:1);
+                                }
+                                &:nth-of-type(2){//1개 담기
+                                    left: 2.4rem;
+                                    width: 2.4rem;
+                                    font-size: 0;
+                                    background: url(../imgs/shop/sec02_btnAddCart_up.png) no-repeat 50% 50%;
+                                }
+                                &:nth-of-type(3){//1개 빼기
+                                    right: 2.4rem;
+                                    width: 2.4rem;
+                                    font-size: 0;
+                                    background: url(../imgs/shop/sec02_btnAddCart_down.png) no-repeat 50% 50%;
+
+                                }
+                                &:nth-of-type(4){//10개 담기
+                                    left: 0;
+                                    width: 2.4rem;
+                                    font-size: 0;
+                                    background: url(../imgs/shop/sec02_btnAddCart_top.png) no-repeat 50% 50%;
+                                }
+                                &:nth-of-type(5){//10개 빼기
+                                    right: 0;
+                                    width: 2.4rem;
+                                    font-size: 0;
+                                    background: url(../imgs/shop/sec02_btnAddCart_bottom.png) no-repeat 50% 50%;
+                                }
+                            }
+                        }
+                    }
+                }
+            }   
+        }
+        
+    }
+}
+
+//section02 이벤트
+.sec02 .centerBox .sec02_category .sec02_dep1 .sec02_dep1_products{
+    &:hover{
+        background-color: #eee;
+    }
+    .sec02_dep2 .sec02_dep2_op .sec02_dep3 .sec02_dep3_btnAddCart{
+        span{
+            transition: all 0.5s ease;
+        }
+        &:hover, &.on{
+            span{
+                top: 0;
+            }
+        }
+    }
+}
+

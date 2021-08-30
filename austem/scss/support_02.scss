@@ -1,0 +1,210 @@
+@mixin titlUnderLine-(){
+    &::after{
+        display: block;
+        content: "";
+        margin: 2.4rem auto;
+        width: 14rem; height: 0.8rem;
+        background: $c4;
+    }
+};
+
+@mixin underLine-(){
+    &::after{
+        display: block;
+        content: "";
+        margin: 0 auto;
+        margin-top: 2.4rem;
+        margin-bottom: 4rem;
+        width: 12rem; height: 0.6rem;
+        background: $c5;
+    }
+};
+
+@mixin font-(
+    $f:13,
+    $s:1.8rem,
+    $h:1.8rem,
+    $c:1,
+    $ts:0
+    ){
+        @if($f == 11){// font-family 10 = NotoSansKR, 20 = NanumSquareOTF
+            font-family: 'NotoSansKR-Thin', sans-serif;
+        }@else if($f == 12){
+            font-family: 'NotoSansKR-Light', sans-serif;
+        }@else if($f == 13){
+            font-family: 'NotoSansKR-Regular', sans-serif;
+        }@else if($f == 14){
+            font-family: 'NotoSansKR-Medium', sans-serif;
+        }@else if($f == 15){
+            font-family: 'NotoSansKR-Bold', sans-serif;
+        }@else if($f == 16){
+            font-family: 'NotoSansKR-Black', sans-serif;
+        }@else if($f == 21){
+            font-family: 'NanumSquareL', sans-serif;
+        }@else if($f == 22){
+            font-family: 'NanumSquareR', sans-serif;
+        }@else if($f == 23){
+            font-family: 'NanumSquareB', sans-serif;
+        }@else if($f == 24){
+            font-family: 'NanumSquareEB', sans-serif;
+        }
+        font-size: $s;// font-size
+        line-height: $h;// line-height
+        @if($c == 1){// color
+            color: #0E3254;
+        }
+        @else if($c == 2){
+            color: #4F6A82;
+        }
+        @else if($c == 3){
+            color: #8899AA;
+        }
+        @else if($c == 4){
+            color: #F5F5F5
+        }
+        @if($ts == 1){// text-shadow
+            text-shadow: 0.1rem 0.1rem 0.1rem rgba(0,0,0,0.5);
+        }
+}
+//thin 100, light 300, regular 400, medium 500, bold 700, black 900
+//@include font-($f:, $s:, $h:, $c:, $ts:);
+
+$c1:#0E3254;
+$c2:#4F6A82;
+$c3:#8899AA;
+$c4:#F5F5F5;
+$c5:#E36D00;
+$c6:#EEBE91;
+
+//section01 --------------------------------------------------
+.sec01{
+    margin-bottom: 17.2rem;
+    width: 100%; height: 48rem;
+    background: url(../imgs/support/support_title_bg.png) no-repeat 0 0/cover fixed;
+    .ctBox{
+        padding-top: 20rem;
+        >h2{
+            text-align: center;
+            @include font-($f:24, $s:5rem, $c:4, $h:5.5rem, $ts:1);
+            @include titlUnderLine-();
+        }
+        >p:nth-of-type(1){
+            text-align: center;
+            @include font-($s:1.8rem, $c:4, $h:2.6rem, $ts:1);
+        }
+        nav{
+            ul{
+                display: flex;
+                margin-top: 10.3rem;
+                box-sizing: border-box;
+                border-top: 0.1rem solid $c2;
+                border-bottom: 0.1rem solid $c3;
+                width: 100%; height: 8rem;
+                text-align: center;
+                li{
+                    flex: 1 0 40rem;
+                    background: $c4;
+                    a{
+                        display: block;
+                        @include font-($f:23, $s:1.8rem, $c:1, $h:8rem);
+                    }
+                    &.on{
+                        background: $c5;
+                        a{
+                            color: $c4;
+                        }
+                    }
+                }
+            }
+        }
+        >p:last-of-type{
+            padding-left: 3.4rem;
+            height: 5.2rem;
+            @include font-($f:22, $s:1.4rem, $c:3, $h:5.2rem);
+            background: url(../imgs/company/sec1_ico_home.png) no-repeat 0 40%;
+            span{
+                display: inline-block;
+                margin-right: 0.8rem;
+                height: 5.2rem;
+            }
+        }
+    }
+}
+//section01 end --------------------------------------------------
+
+//section02 --------------------------------------------------
+.sec02{
+    .ctBox{
+        h2{
+            text-align: center;
+            @include font-($f:24, $s:5rem, $c:1, $h:5.5rem, $ts:1);
+            @include underLine-();
+            &::after{
+                margin-bottom: 8rem;
+            }
+        }
+        .sec02_tab{
+            display: flex;
+            margin-bottom: 8rem;
+            text-align: center;
+            li{
+                width: 60rem; height: 8.3rem;
+                a{
+                    @include font-($f:22, $s:2.4rem, $c:1, $h:8.3rem);
+                }
+                span{
+                    display: block;
+                    margin: 0 auto;
+                    width: 0; height: 0.2rem;
+                    background: $c1;
+                    transform: translateY(-100%);
+                }
+                &.on{
+                    a{
+                        @include font-($f:24, $s:3.2rem, $c:1, $h:8.3rem, $ts:1);
+                    }
+                    span{
+                        width: 20rem;
+                    }
+                }
+            }
+        }
+        .sec02_mapArea{
+            margin-bottom: 4rem;
+            padding: 0.8rem;
+            width: 120rem; height: 60rem;
+            background: $c3;
+            .sec02_map{
+                width: 100%; height: 100%;
+                .sec02_MapMarker{
+                    position: relative; left: 7.5rem;
+                    transform: translateX(-50%);
+                    font-size: 1.8rem;
+                    line-height: 2.3rem;
+                }
+            }
+        }
+        .sec02_addressBox{
+            margin-bottom: 10rem;
+            div{
+                display: none;
+            }
+            div.on{
+                height: 13.2rem;
+                background: $c4;
+                display: flex;
+                .sec02_location{
+                    text-align: center;
+                    width: 28rem;
+                    @include font-($f:15, $s:1.8rem, $c:1, $h:13.2rem);
+                }
+                .sec02_address{
+                    padding: 4rem 0 0 4rem;
+                    width: 92rem;
+                    @include font-($s:1.8rem, $c:3, $h:2.6rem);
+                }
+            }
+        }
+    }
+}
+//section02 end --------------------------------------------------

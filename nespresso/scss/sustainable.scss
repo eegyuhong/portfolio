@@ -1,0 +1,329 @@
+@mixin font-(
+    $f:11,
+    $s:1.8rem,
+    $h:1.8rem,
+    $c:white,
+    $ts:0,
+    $op:0.5,
+    ){
+        @if($f == 11){// font-family 10 = NotoSansKR, 20 = NanumSquareOTF
+            font-family: 'NotoSansKR-Thin', sans-serif;
+        }@else if($f == 13){
+            font-family: 'NotoSansKR-Light', sans-serif;
+        }@else if($f == 14){
+            font-family: 'NotoSansKR-Regular', sans-serif;
+        }@else if($f == 15){
+            font-family: 'NotoSansKR-Medium', sans-serif;
+        }@else if($f == 17){
+            font-family: 'NotoSansKR-Bold', sans-serif;
+        }@else if($f == 19){
+            font-family: 'NotoSansKR-Black', sans-serif;
+        }@else if($f == 20){
+            font-family: 'ChosunBg', sans-serif;
+        }@else if($f == 30){
+            font-family: 'NanumBarunGothicBold', sans-serif;
+        }
+        font-size: $s;// font-size
+        line-height: $h;// line-height
+        @if($c == white){// color
+            color: rgba(255,255,255,$op);
+        }
+        @else if($c == black){
+            color: rgba(0,0,0,$op);
+        }
+        @else if($c == broun){
+            color: rgba(143,114,71,$op);
+        }
+}
+//thin 100, light 300, regular 400, medium 500, bold 700, black 900
+//@include font-($f:, $s:, $h:, $c:, $op:);
+
+main{
+    width: 100%;
+    .centerBox{
+        margin: 0 auto;
+        width: 160rem;
+    }
+}
+
+//section01
+.sec01{
+    width: 100%;
+    height: 98rem;
+    background: url(../imgs/sustainable/sec01_bg.jpg) no-repeat 0 50%/cover;
+    .sec01_txt{
+        height: 100%;
+        padding-top: 30rem;
+        h2{
+            @include font-($s:4.8rem, $h:4.8rem, $op:0.7);
+        }
+        ul{
+            margin-top: 3.2rem;
+            li{
+                a{
+                    @include font-($s:2.4rem, $h:6.4rem, $op:0.7);
+                }
+            }
+        }
+    }
+}
+
+//section02
+.sec02{
+    .sec02_con{
+        width: 100%;
+        height: 80rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        &:nth-child(even){
+                flex-direction: row-reverse;
+        }        
+        .sec02_con_txt{
+            margin: 0 auto;
+            text-align: center;
+            h3{
+                @include font-($f:15, $s:3rem, $h:3.4rem, $c:black, $op:1);
+            }
+            >p{
+                margin-top: 0.8rem;
+                strong{
+                    @include font-($f:15, $s:3rem, $h:3.4rem, $c:broun, $op:1);
+                }
+            }
+            >p:nth-of-type(2){
+                margin-top: 3.2rem;
+                @include font-($f:13, $s:1.6rem, $c:black, $op:1);
+            }
+        }
+        >p{
+            width: 88rem;
+            height: 80rem;
+        }
+        @for $i from 1 through 4 {
+            &:nth-of-type(#{$i})>p{
+                background: url("../imgs/sustainable/sec02_con#{$i}.jpg") no-repeat 0 0;
+            }
+        }
+    }
+}
+
+//section03
+.sec03{
+    .centerBox{
+        padding-top: 27.3rem;
+    }
+    width: 100%;
+    height: 108rem;
+    .sec03_con_top{
+        text-align: center;
+        margin-bottom: 8rem;
+        h3{
+            @include font-($f:15, $s:3rem, $h:3.4rem, $c:black, $op:1);
+        }
+        p{
+            margin-top: 0.8rem;
+            strong{
+                @include font-($f:15, $s:3rem, $h:3.4rem, $c:broun, $op:1);
+            }
+        }
+        p:nth-of-type(2){
+            margin-top: 3.2rem;
+            @include font-($f:13, $s:1.6rem, $c:black, $op:1);
+        }
+    }
+    .sec03_con_bottom{
+        display: flex;
+        justify-content: center;
+        .sec03_con_bottom_left{
+            text-align: right;
+            h4{
+                margin-top: 4rem;
+                margin-bottom: 6rem;
+                @include font-($f:17, $c:black, $op:1);
+            }
+            p{
+                margin-right: 4rem;
+                @include font-($f:13, $s:1.6rem, $c:black, $op:1);
+            }
+        }
+        .sec03_con_bottom_center{
+            width: 40rem;
+            height: 31rem;
+            background: url(../imgs/sustainable/sec03_con_bottom_center.png) no-repeat 0 0;
+        }
+        .sec03_con_bottom_right{
+            text-align: left;
+            h4{
+                margin-top: 4rem;
+                margin-bottom: 6rem;
+                @include font-($f:17, $c:black, $op:1);
+            }
+            p{
+                margin-left: 4rem;
+                @include font-($f:13, $s:1.6rem, $c:black, $op:1);
+            }
+        }
+    }
+}
+
+
+//section04
+.sec04{
+    background: rgb(143,114,71);
+    background: linear-gradient(180deg, rgba(143,114,71,0.2) 0%, rgba(143,114,71,0) 50%);
+    .sec04_topMenu{
+        display: flex;
+        padding-top: 20rem;
+        width: 160rem;
+        height: 24rem;
+        h3{
+            box-sizing: border-box;
+            padding: 8rem;
+            width: 80rem;
+            height: 24rem;
+            @include font-($s:3.6rem, $h:4r, $op:1);
+            background: url(../imgs/sustainable/sec04_topMenu_bg.jpg) no-repeat 0 0;
+        }
+        nav{
+            width: 80rem;
+            ul{
+                display: flex;
+                align-items: center;
+                text-align: center;
+                li{
+                    flex: 1 1 100%;
+                    width: 16rem;
+                    height: 24rem;
+                    background: #bbb;
+                    @include font-($f:13, $s:1.8rem, $h:24rem);
+                    a{
+                        display: block;
+                        color: #fff;
+                    }                    
+                }
+            }
+        }
+    }
+    .sec04_showBox{
+        position: relative;
+        width: 160rem;
+        height: 60rem;
+        .sec04_showBox_con{
+            position: absolute;
+            margin-top: 20rem;
+            padding-left:44rem;
+            width: 116rem;
+            height: 40rem;
+            
+            @for $i from 1 through 5 {
+                &:nth-of-type(#{$i}){
+                    background: url("../imgs/sustainable/sec04_showBox_con#{$i}.jpg") no-repeat 0 0;
+                }
+            }
+            h4{
+                padding-top: 2.4rem;
+                @include font-($s:3.6rem, $h:4rem, $c:black, $op:1);
+            }
+            >p:first-of-type{
+                margin: 0.8rem 0 2.4rem 0;
+                >strong{
+                    @include font-($f:15, $s:3rem, $h:4rem, $c:broun, $op:1);
+                }
+            }
+            >p:last-of-type{
+                @include font-($f:13, $h:2.4rem, $c:black);
+            }
+        }
+    }
+}
+
+//section04 이벤트
+.sec04>.centerBox{
+    .sec04_topMenu>nav>ul>li{
+        transition: all .3s ease;
+        &.on{
+            flex: 1 1 125%;
+            font-weight: 500;
+            background: rgba(143,114,71,1);
+        }
+    }
+    .sec04_showBox>.sec04_showBox_con{
+        transition: all .3s ease;
+        opacity: 0;
+        &.on{
+            opacity: 1;
+        }
+    }
+}
+
+
+
+
+//section05
+.sec05{
+    padding: 32rem 0;
+    text-align: right;
+    .centerBox{
+        position: relative;
+    }
+    h3{
+        @include font-($s:2.4rem, $h:4.8rem, $c:black, $op:1);
+    }
+    p{
+        strong{
+            @include font-($f:15, $s:2.4rem, $h:4.8rem, $c:broun, $op:1);
+        }
+    }
+    .sec05_conBox{
+        overflow: hidden;
+        width: 100%;
+        ul{
+            position: relative;
+            top: 0;
+            left: 0;
+            display: flex;    
+            justify-content: space-between;
+            width: 160rem;
+            height: 32rem;
+            li{
+                flex: 0 1 0;
+                height: 32rem;
+                a{
+                    width: 100%;
+                    height: 100%;
+                    img{
+                        width: 32rem;
+                        height: 32rem;
+                    }
+                }
+            }
+        }
+    }
+    dl{
+        >dd:first-of-type{
+            position: absolute;
+            bottom: calc( (32rem / 2) - 1rem );
+            left: 1rem;
+            width: 2rem;
+            height: 2rem;
+            border: 0.2rem solid transparent;
+            border-left: 0.2rem solid rgba(255,255,255,0.5);
+            border-bottom: 0.2rem solid rgba(255,255,255,0.5);
+            transform: rotate(45deg);
+        }
+        >dd:last-of-type{
+            position: absolute;
+            bottom: calc( (32rem / 2) - 1rem );
+            right: 1rem;
+            width: 2rem;
+            height: 2rem;
+            border: 0.2rem solid transparent;
+            border-right: 0.2rem solid rgba(255,255,255,0.5);
+            border-bottom: 0.2rem solid rgba(255,255,255,0.5);
+            transform: rotate(-45deg);
+        }
+    }
+}
+
+//section05 이벤트

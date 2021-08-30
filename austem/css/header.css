@@ -1,0 +1,126 @@
+header {
+  position: fixed;
+  top: 0;
+  z-index: 100;
+  overflow: hidden;
+  width: 100vw;
+  height: 8rem;
+  background: rgba(14, 50, 84, 0.5);
+}
+
+header > .ctBox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-align: center;
+}
+
+header > .ctBox h1 {
+  margin-right: 10rem;
+  width: 14rem;
+  height: 8rem;
+  background: url(../imgs/header/logo.png) no-repeat 50% 50%;
+}
+
+header > .ctBox h1 a {
+  display: block;
+  width: 14rem;
+  height: 8rem;
+}
+
+header > .ctBox > nav {
+  width: calc(100% - 24rem);
+}
+
+header > .ctBox > nav > ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+header > .ctBox > nav > ul .headerNavDep1 {
+  width: calc(100% / 5);
+  height: 8rem;
+}
+
+header > .ctBox > nav > ul .headerNavDep1 a {
+  display: block;
+  font-family: 'NanumSquareEB', sans-serif;
+  font-size: 1.8rem;
+  line-height: 8rem;
+  color: #F5F5F5;
+  text-shadow: 0.1rem 0.1rem 0.1rem rgba(0, 0, 0, 0.5);
+}
+
+header > .ctBox > nav > ul .headerNavDep1 ul .headerNavDep2 a {
+  font-family: 'NanumSquareL', sans-serif;
+  font-size: 1.8rem;
+  line-height: 6rem;
+  color: #F5F5F5;
+  text-shadow: 0.1rem 0.1rem 0.1rem rgba(0, 0, 0, 0.5);
+}
+
+header {
+  -webkit-transition: height 0.3s linear;
+  transition: height 0.3s linear;
+}
+
+header div.headerCurtain {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+  height: 0rem;
+  background: #0E3254;
+  -webkit-transition: height 0.4s linear;
+  transition: height 0.4s linear;
+}
+
+header div.headerBg {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: -2;
+  width: 100%;
+  height: 0rem;
+  background: #8899AA;
+}
+
+header nav ul .headerNavDep1 a:hover {
+  color: #E36D00;
+}
+
+header nav ul .headerNavDep1 ul .headerNavDep2 {
+  position: relative;
+}
+
+header nav ul .headerNavDep1 ul .headerNavDep2 a:hover {
+  color: #EEBE91;
+}
+
+header nav ul .headerNavDep1 ul .headerNavDep2::after {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  content: "";
+  width: 0;
+  height: 0.4rem;
+  background: #E36D00;
+  -webkit-transition: width 0.3s ease;
+  transition: width 0.3s ease;
+}
+
+header nav ul .headerNavDep1 ul .headerNavDep2:hover {
+  color: #EEBE91;
+}
+
+header nav ul .headerNavDep1 ul .headerNavDep2:hover::after {
+  width: 75%;
+}
+/*# sourceMappingURL=header.css.map */

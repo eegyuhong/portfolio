@@ -1,0 +1,225 @@
+.t, .m{display: none;}
+.centerBox{max-width:120rem; margin:0 auto;}
+
+header{
+    position: fixed; top:0; left:0; z-index: 900;
+    box-shadow: 0 0.1rem 0.5rem rgba(0,0,0,0.5);
+    width:100%;
+    background:#fff;
+}
+header>.centerBox{
+    position:relative;
+    display: flex;
+    align-items: center;
+    height:10rem;
+}
+/* @media only screen and (min-width:960px) and (max-width:1200px){
+    header>.centerBox{width:96rem;}
+} */
+/* ---------- ---------- logo ---------- ---------- */
+header>.centerBox>h1{
+    width: 10rem; height: 10rem;
+    background: url(../../imgs/header/logo.png) no-repeat 0 0;
+}
+/* ---------- ---------- nav ---------- ---------- */
+header>.centerBox>nav{
+    display: block;
+    margin-left: 6.2rem;
+    flex: 0 0 auto;
+}
+/* ---------- dep1 ---------- */
+header>.centerBox>nav>.dep1{
+    position:static;
+    display: flex;
+    height: 10rem;
+}
+header>.centerBox>nav>.dep1>li{
+    position:relative;
+    height: 10rem;
+    cursor: pointer;
+}
+header>.centerBox>nav>.dep1>li:not(:last-of-type){
+    margin-right:7.6rem;
+}
+header>.centerBox>nav>.dep1>li>a{
+    position: relative;
+    text-align: center;
+    font-size:1.6rem; line-height:10rem; font-weight:bold;
+    letter-spacing: -0.1rem;
+    color:#222;
+}
+header>.centerBox>nav>.dep1>li:after{
+    position:absolute; bottom:3.2rem;
+    content:"";
+    display:none;
+    width:100%; height:0.3rem;
+    background: #da2427;
+}
+/* ---------- dep2 ---------- */
+header>.centerBox>nav>.dep1>li>.dep2{
+    display: none;
+    position: absolute; top:10rem; left:-2.5rem; 
+    width:18.5rem;
+    box-shadow: 0.2rem 0.2rem 0.5rem rgba(0,0,0,0.3);
+    background: #da2427;
+}
+header>.centerBox>nav>.dep1>li>.dep2>.is>a{
+    background: url(../../imgs/header/bu_2depth.png) no-repeat 16.5rem 1.8rem;
+}
+header>.centerBox>nav>.dep1>li>.dep2>li{
+    position:relative;
+    border:0.1rem solid #da2427;
+    border-bottom:0 none;
+    height:4.3rem;
+}
+header>.centerBox>nav>.dep1>li>.dep2>li:last-of-type{
+    border-bottom:0.1rem solid #da2427;
+}
+header>.centerBox>nav>.dep1>li>.dep2>li:not(:first-of-type){
+    border-top-color:#da2427;
+}
+header>.centerBox>nav>.dep1>li>.dep2>li>a{
+    position: relative; z-index: 100;
+    display: block;
+    padding-left:2.1rem;
+    font-size:1.4rem; line-height:4.3rem;
+    color:#fff;
+}
+/* ---------- dep3 ---------- */
+header>.centerBox>nav>.dep1>li>.dep2>li>.dep3{
+    display: none; z-index: 10;
+    position:absolute; top:-0.1rem; left:18.2rem;
+    border:0.1rem solid #da2427;
+    width:18.8rem;
+    box-shadow: 0.1rem 0.1rem 0.5rem rgba(0,0,0,0.5);
+    background: #fff;
+}
+header>.centerBox>nav>.dep1>li>.dep2>li>.dep3>li{}
+header>.centerBox>nav>.dep1>li>.dep2>li>.dep3>li>a{
+    position: relative;
+    display: block;
+    padding-left:2rem;
+    font-size:1.4rem; line-height:3.4rem;
+    color:#263238;
+}
+header>.centerBox>nav>.dep1>li>.dep2>li>.dep3>li>a:before{
+    position: absolute; top:50%; left:0.9rem;
+    content:"";
+    border-top: 0.1rem solid #2c3d45;
+    width:0.4rem; height:0;
+}
+/* ---------- nav 이벤트 ---------- */
+header>.centerBox>nav>.dep1>li:hover:after{
+    display: block;
+}
+header>.centerBox>nav>.dep1>li>.dep2>li:hover>a{
+    border-right-color:#fff;
+    background-color: #fff;
+    color:#263238;
+}
+header>.centerBox>nav>.dep1>li>.dep2>li>.dep3>li>a:hover{
+    color:#da2427;
+    text-decoration: underline;
+}
+/* ---------- ---------- search & util ---------- ---------- */
+header>.centerBox>.utils{
+    margin-left: auto;
+    display: flex;
+    align-items: flex-start;
+}
+/* ---------- search ---------- */
+header>.centerBox>.utils>p{margin-right:0.2rem;}
+header>.centerBox>.utils>p>button{
+    display: flex;
+    justify-content: space-between;
+    padding:0 0.7rem 0 1rem;
+    border-radius: 0.4rem;
+    width:9.2rem; height:3.6rem;
+    font-size:1.2rem; line-height:3.6rem; font-weight:bold;
+    letter-spacing: -0.1rem;
+    color:#eceff1;
+    background: #da2427 url(../../imgs/header/ic_search.png) no-repeat 6.5rem 0.8rem;
+    cursor: pointer;
+}
+header>.centerBox>.utils>div{
+    display: none;
+    position:absolute; top:10rem; right:0;
+}
+header>.centerBox>.utils>div>form{
+    display: flex;
+    justify-content: space-between;
+    width:32rem; height:5rem;
+    background: #da2427;
+}
+header>.centerBox>.utils>div>form>input[type="search"]{
+    flex: 1 0 0;
+    padding-left:1.4rem;
+    border:0 none;
+    padding:0 none;
+    margin:0 none;
+    outline:0 none;
+    font-size: 1.4rem;
+    color:#ebebeb;
+    background: #da2427;
+}
+header>.centerBox>.utils>div>form>input[type="search"]::placeholder{
+    color:#ebebeb;
+}
+header>.centerBox>.utils>div>form>input[type="image"]{
+    margin:1.4rem 2.4rem 0 auto; 
+    width:2rem; height:2rem;
+}
+header>.centerBox>.utils>div>form>p{
+    position: relative;
+    margin:1.4rem 1rem 0 0;
+    padding:0.4rem 0.3rem 0.2rem 0.3rem;
+}
+header>.centerBox>.utils>div>form>p:before{
+    position:absolute; top:-0.4rem; left:-1.1rem;
+    content:"";
+    width:0; height:3rem;
+    border-left:0.1rem solid #ebebeb;
+}
+header>.centerBox>.utils>div>form>p>img{
+    cursor: pointer;
+}
+/* ---------- util ---------- */
+header>.centerBox>.utils>dl{
+    width:4.6rem; height:3.4rem; text-align:center;
+}
+header>.centerBox>.utils>dl>dd{
+    border:0.1rem solid #a9b0b8;
+}
+header>.centerBox>.utils>dl>dd.on{
+    border-radius: 0.4rem;
+    padding-top:1rem;
+    height:2.4rem;
+}
+header>.centerBox>.utils>dl>dd.on>a{
+    display: block;
+    font-size:1.2rem; line-height:1rem; font-weight:bold;
+    color:#222;
+}
+header>.centerBox>.utils>dl>dd.on>a>span{
+    display:block;
+    margin:0.4rem auto;
+    width:0.7rem; height:0.4rem;
+    background: url(../../imgs/header/country_off.png) no-repeat 0 0;;
+}
+header>.centerBox>.utils>dl>dd.off{
+    display: none;
+    margin-top:-0.1rem;
+    text-align: center;
+    font-size:1.2rem; line-height:3rem;
+    background: #fff;
+}
+header>.centerBox>.utils>dl>dd.off>a{
+    color:#444;
+}
+header>.centerBox>.utils>dl>dd.off:not(:last-of-type){
+    border-bottom:0 none;
+}
+/* search 이벤트 */
+header>.centerBox>.utils>dl.on>dd.on>a>span{
+    background-image: url(../../imgs/header/country_on.png);
+}

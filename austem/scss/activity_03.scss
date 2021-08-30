@@ -1,0 +1,238 @@
+@mixin titlUnderLine-(){
+    &::after{
+        display: block;
+        content: "";
+        margin: 2.4rem auto;
+        width: 14rem; height: 0.8rem;
+        background: $c4;
+    }
+};
+
+@mixin underLine-(){
+    &::after{
+        display: block;
+        content: "";
+        margin: 0 auto;
+        margin-top: 2.4rem;
+        margin-bottom: 4rem;
+        width: 12rem; height: 0.6rem;
+        background: $c5;
+    }
+};
+
+@mixin font-(
+    $f:13,
+    $s:1.8rem,
+    $h:1.8rem,
+    $c:1,
+    $ts:0
+    ){
+        @if($f == 11){// font-family 10 = NotoSansKR, 20 = NanumSquareOTF
+            font-family: 'NotoSansKR-Thin', sans-serif;
+        }@else if($f == 12){
+            font-family: 'NotoSansKR-Light', sans-serif;
+        }@else if($f == 13){
+            font-family: 'NotoSansKR-Regular', sans-serif;
+        }@else if($f == 14){
+            font-family: 'NotoSansKR-Medium', sans-serif;
+        }@else if($f == 15){
+            font-family: 'NotoSansKR-Bold', sans-serif;
+        }@else if($f == 16){
+            font-family: 'NotoSansKR-Black', sans-serif;
+        }@else if($f == 21){
+            font-family: 'NanumSquareL', sans-serif;
+        }@else if($f == 22){
+            font-family: 'NanumSquareR', sans-serif;
+        }@else if($f == 23){
+            font-family: 'NanumSquareB', sans-serif;
+        }@else if($f == 24){
+            font-family: 'NanumSquareEB', sans-serif;
+        }
+        font-size: $s;// font-size
+        line-height: $h;// line-height
+        @if($c == 1){// color
+            color: #0E3254;
+        }
+        @else if($c == 2){
+            color: #4F6A82;
+        }
+        @else if($c == 3){
+            color: #8899AA;
+        }
+        @else if($c == 4){
+            color: #F5F5F5
+        }
+        @if($ts == 1){// text-shadow
+            text-shadow: 0.1rem 0.1rem 0.1rem rgba(0,0,0,0.5);
+        }
+}
+//thin 100, light 300, regular 400, medium 500, bold 700, black 900
+//@include font-($f:, $s:, $h:, $c:, $ts:);
+
+$c1:#0E3254;
+$c2:#4F6A82;
+$c3:#8899AA;
+$c4:#F5F5F5;
+$c5:#E36D00;
+$c6:#EEBE91;
+
+//section01 --------------------------------------------------
+.sec01{
+    margin-bottom: 17.2rem;
+    width: 100%; height: 48rem;
+    background: url(../imgs/activity/activity_title_bg.png) no-repeat 0 90%/cover fixed;
+    .ctBox{
+        padding-top: 20rem;
+        >h2{
+            text-align: center;
+            @include font-($f:24, $s:5rem, $c:4, $h:5.5rem, $ts:1);
+            @include titlUnderLine-();
+        }
+        >p:nth-of-type(1){
+            text-align: center;
+            @include font-($s:1.8rem, $c:4, $h:2.6rem, $ts:1);
+        }
+        nav{
+            ul{
+                display: flex;
+                margin-top: 10.3rem;
+                box-sizing: border-box;
+                border-top: 0.1rem solid $c2;
+                border-bottom: 0.1rem solid $c3;
+                width: 100%; height: 8rem;
+                text-align: center;
+                li{
+                    flex: 1 0 40rem;
+                    background: $c4;
+                    a{
+                        display: block;
+                        @include font-($f:23, $s:1.8rem, $c:1, $h:8rem);
+                    }
+                    &.on{
+                        background: $c5;
+                        a{
+                            color: $c4;
+                        }
+                    }
+                }
+            }
+        }
+        >p:last-of-type{
+            padding-left: 3.4rem;
+            height: 5.2rem;
+            @include font-($f:22, $s:1.4rem, $c:3, $h:5.2rem);
+            background: url(../imgs/company/sec1_ico_home.png) no-repeat 0 40%;
+            span{
+                display: inline-block;
+                margin-right: 0.8rem;
+                height: 5.2rem;
+            }
+        }
+    }
+}
+//section01 end --------------------------------------------------
+
+//section02 --------------------------------------------------
+.sec02{
+    .ctBox{
+        h2{
+            text-align: center;
+            @include font-($f:24, $s:5rem, $c:1, $h:5.5rem, $ts:1);
+            @include underLine-();
+        }
+        p{
+            margin-bottom: 8rem;
+            text-align: center;
+            @include font-($f:15, $s:2.6rem, $c:3, $h:3.8rem);
+            strong{
+                color: $c1;
+            }
+        }
+        .sec02_imgs{
+            ul{
+                display: flex;
+                justify-content: space-between;
+                flex-wrap: wrap;
+                margin-bottom: 10rem;
+                li{
+                    margin-bottom: 0.4rem;
+                    flex: 0 0 29.7rem;
+                    height: 18rem;
+                    @for $i from 1 through 62 {
+                        &:nth-of-type(#{$i}){
+                            background: url("../imgs/activity/activity_03/#{$i}.png") no-repeat 50% 50%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+//imgs 이벤트 --------------------------------------------------
+.sec02 .ctBox .sec02_imgs .sec02_imgs_ul li:not(:last-child):not(:nth-child(63)){
+    position: relative;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    &::after{
+        position: absolute; top: 0; left: 50%; z-index: 0;
+        transform: translateX(-50%);
+        content: "";
+        width: 0; height: 100%;
+        background: $c5; opacity: 0.5;
+        transition: all 0.5s ease;
+    }
+    &:hover{
+        &::after{
+            width: 100%;
+        }
+    }
+}
+//section02 end --------------------------------------------------
+
+//script element --------------------------------------------------
+.mainBg{
+    &.on{
+        display: block;    
+    }
+    display: none;
+    position: fixed; top: 0; left: 0; z-index: 100;
+    width: 100vw; height: 100vh;
+    background: rgba(14,50,84,0.5);
+    .imgBg{
+        position: absolute; top: 50%; left:50%; transform: translate(-50%, -50%);
+        width: 100rem; height: 55.4rem;
+        background: $c1;
+        .imgArea{
+            position: absolute; top: 6rem; left:50%; transform: translateX(-50%);
+            width: 50rem;
+        }
+        .titlArea{
+            position: absolute; bottom: 4rem; left:50%; transform: translateX(-50%);
+            @include font-($f:15, $s:1.8rem, $c:4, $h:2.2rem);
+        }
+        dl .PrevtBtn, dl .NextBtn{
+            position: absolute; top: 45%; transform: translateY(-50%);
+            width: 4rem; height: 4rem;
+            border: 0.4rem solid $c3;
+            border-top: transparent;
+            border-left: transparent;
+            cursor: pointer;
+        }
+        dl .PrevtBtn{
+            left: 10rem;
+            transform: rotate(135deg);
+            &.off{
+                cursor: default;
+                border-color: $c1;
+            }
+        }
+        dl .NextBtn{
+            right: 10rem;
+            transform: rotate(-45deg);
+            &.off{
+                cursor: default;
+                border-color: $c1;
+            }
+        }
+    }
+}

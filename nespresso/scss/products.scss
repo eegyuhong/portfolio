@@ -1,0 +1,470 @@
+@mixin font-(
+    $f:11,
+    $s:1.8rem,
+    $h:1.8rem,
+    $c:white,
+    $ts:0,
+    $op:0.5,
+    ){
+        @if($f == 11){// font-family 10 = NotoSansKR, 20 = NanumSquareOTF
+            font-family: 'NotoSansKR-Thin', sans-serif;
+        }@else if($f == 13){
+            font-family: 'NotoSansKR-Light', sans-serif;
+        }@else if($f == 14){
+            font-family: 'NotoSansKR-Regular', sans-serif;
+        }@else if($f == 15){
+            font-family: 'NotoSansKR-Medium', sans-serif;
+        }@else if($f == 17){
+            font-family: 'NotoSansKR-Bold', sans-serif;
+        }@else if($f == 19){
+            font-family: 'NotoSansKR-Black', sans-serif;
+        }@else if($f == 20){
+            font-family: 'ChosunBg', sans-serif;
+        }@else if($f == 30){
+            font-family: 'NanumBarunGothicBold', sans-serif;
+        }
+        font-size: $s;// font-size
+        line-height: $h;// line-height
+        @if($c == white){// color
+            color: rgba(255,255,255,$op);
+        }
+        @else if($c == black){
+            color: rgba(0,0,0,$op);
+        }
+        @else if($c == broun){
+            color: rgba(143,114,71,$op);
+        }
+}
+//thin 100, light 300, regular 400, medium 500, bold 700, black 900
+//@include font-($f:, $s:, $h:, $c:, $op:);
+
+main{
+    width: 100%;
+    .centerBox{
+        margin: 0 auto;
+        width: 160rem;
+    }
+}
+
+//section01
+$sec01_con_h:20rem;
+.sec01{
+    width: 100%;
+    height: 64rem;
+    background: url(../imgs/shop/sec01_bg.jpg) no-repeat 0 60%/cover;
+    .centerBox{
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        height: 64rem;
+        p{
+            padding-top: 6rem;
+            height: $sec01_con_h - 6rem;
+            @include font-($s:3.2rem, $h:4rem);
+        }
+        nav>ul{
+            display: flex;
+            width: 100rem;
+            height: $sec01_con_h;
+            >li{
+                display: flex;
+                overflow: hidden;
+                text-align: center;
+                background: #bbb;
+                ul{
+                    display: flex;
+                }
+            }
+            a{
+                display: block;
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+}
+
+//section01 클릭 이벤트
+.sec01 .centerBox nav>ul{
+    >li{
+        transition: all .3s ease;
+        flex: 1 1 10rem;
+        >a>svg{
+            width: 100%;
+        }
+        ul{
+            transition: all .3s ease;
+            flex: 0 1 0;
+            li{
+                flex: 1 1 10rem;
+                a{
+                    svg{
+                        fill: #C7B8A3;
+                        width: 100%;
+                    }
+                }
+            }
+        }
+        &:hover, &.on{
+            &:nth-of-type(1), &:nth-of-type(2){
+                flex: 8 1 10rem;
+                >a>svg>rect{
+                    fill: #241918;
+                }
+                ul{
+                    flex: 1 1 200%;
+                    li{
+                        flex: 1 1 50%;
+                        a{
+                            svg{
+                                width: 100%;
+                                rect{
+                                    fill: #C7B8A3;
+                                }
+                            }
+                        }
+                        &:hover ,&.on{
+                            a svg rect{
+                                fill: #8F7247;
+                            }
+                        }
+                    }
+                }
+            }
+            &:nth-of-type(3), &:nth-of-type(4), &:nth-of-type(5){
+                flex: 2 1 10rem;
+                >a>svg{
+                    rect{
+                        fill: #241918;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+//section02
+.sec02 .centerBox{
+    height: 80rem;
+    background: url(../imgs/products/sec02_bg.png) no-repeat 0 0;
+    .sec02_txt{
+        margin-left: auto;
+        padding: 8rem 0 0 0;
+        width: 64rem;
+        p>em{
+            @include font-($s:1.4rem, $h:2rem, $c:black, $op:1);
+        }
+        h2{
+            @include font-($f:13, $s:3.6rem, $h:3.6rem, $c:black, $op:1);
+        }
+        dl{
+            display: flex;
+            flex-wrap: wrap;
+            align-items: flex-start;
+            margin: 3.2rem 0;
+            border-top: 1px solid #eee;
+            border-bottom: 1px solid #eee;
+            dt{
+                margin: 3.6rem 0;
+                width: 12rem;
+                @include font-($f:15, $h:2.2rem, $c:black, $op:1);
+            }
+            dd{
+                flex: 1 0 52rem;
+                margin-top: 3.6rem;
+                @include font-($s:1.6rem, $h:2.2rem, $c:black, $op:1);
+                &.sec02_txt_level{
+                    .sec02_txt_level_vlu{
+                        margin: 0 0.6rem;
+                    }
+                    .sec02_txt_level_icn{
+                        display: inline-block;
+                        width: 1rem;
+                        height: 1rem;
+                        &.sec02_txt_level_icn_black{
+                            background: #000;
+                        }
+                        &.sec02_txt_level_icn_gray{
+                            background: #bbb;
+                        }
+                    }
+                }
+                &.sec02_txt_volume{
+                    margin: 0 0 3.6rem 0;
+                    .sec02_txt_volume_icn{
+                        display: inline-block;
+                        margin-right: 1rem;
+                        width: 4.8rem;
+                        height: 5.8rem;
+                        background: url(../imgs/products/sec02_txt_volume_icn.png) no-repeat 0 0;
+                    }
+                }
+                &.sec02_txt_pieces{
+                    span{
+                        display: inline-block;
+                        margin-right: 1rem;
+                        width: 5.2rem;
+                        height: 2rem;
+                        background: url(../imgs/products/sec02_txt_pieces.png) no-repeat 0 0;
+                    }
+                }
+            }
+        }
+        .sec02_txt_btn{
+            overflow: hidden;
+            position: relative;
+            float: left;
+            border: 1px solid #000;
+            width: 20rem;
+            height: 4.8rem;
+            text-align: center;
+            @include font-($f:15, $s:1.4rem, $h:4.8rem, $c:black, $op:1);
+            span{
+                position: absolute;
+                top: 100%;
+                display: block;
+                height: 4.8rem;
+                &:nth-of-type(1){//수량
+                    width: 20rem;
+                    color: #fff;
+                    background-color: rgba(143,114,71,1);
+                    @include font-($f:15, $h:4.8rem, $op:1);
+                }
+                &:nth-of-type(2){//1개 담기
+                    left: 2.4rem;
+                    width: 2.4rem;
+                    font-size: 0;
+                    background: url(../imgs/shop/sec02_btnAddCart_up.png) no-repeat 50% 50%;
+                }
+                &:nth-of-type(3){//1개 빼기
+                    right: 2.4rem;
+                    width: 2.4rem;
+                    font-size: 0;
+                    background: url(../imgs/shop/sec02_btnAddCart_down.png) no-repeat 50% 50%;
+
+                }
+                &:nth-of-type(4){//10개 담기
+                    left: 0;
+                    width: 2.4rem;
+                    font-size: 0;
+                    background: url(../imgs/shop/sec02_btnAddCart_top.png) no-repeat 50% 50%;
+                }
+                &:nth-of-type(5){//10개 빼기
+                    right: 0;
+                    width: 2.4rem;
+                    font-size: 0;
+                    background: url(../imgs/shop/sec02_btnAddCart_bottom.png) no-repeat 50% 50%;
+                }
+            }
+        }
+        p:last-child{
+            float: right;
+            strong{
+                @include font-($f:15, $s:3rem, $h:5rem, $c:black, $op:1);
+            }
+        }
+    }
+}
+
+//section02 버튼 이벤트
+.sec02 .centerBox{
+    .sec02_txt{
+        .sec02_txt_btn{
+            span{
+                transition: all 0.5s ease;
+            }
+            &:hover, &.on{
+                span{
+                    top: 0;
+                }
+            }
+        }
+    }
+}
+
+//중간 로고
+main>.centerBox{
+    height: 60rem;
+    background: url(../imgs/products/logo_costarica.png) no-repeat 50% 50%;
+}
+
+
+//section03
+.sec03{
+    height: 80rem;
+    background: url(../imgs/products/sec03_bg.jpg) no-repeat 0 0/cover;
+    .centerBox{
+        padding-top: 30rem;
+        height: 30rem;
+        p{
+            text-align: center;
+            @include font-($s:1.6rem, $h:2.4rem, $op:1);
+            &:nth-child(1){
+                font-size: 3.8rem;
+                line-height: 3.8rem;
+            }
+            &:nth-child(2){
+                font-size: 3.2rem;
+                line-height: 3.2rem;
+                margin: 4rem 0 8rem 0;
+            }
+            &:nth-child(3){
+                opacity: 0.7;
+            }
+        }
+    }
+}
+
+//section04
+.sec04{
+    .sec04_txt_top, .sec04_txt_middle, .sec04_txt_bottome{
+        margin-top: 12rem;
+        width: 88rem;
+        p{
+            @include font-($s:1.6rem, $h:2.2rem, $c:black, $op:1);
+            strong{
+                @include font-($f:15, $s:3rem, $h:3.2rem, $c:black, $op:1);
+            }
+            b{
+                @include font-($f:15, $s:3rem, $h:3.2rem, $c:broun, $op:1);
+            }
+            &:nth-child(2){
+                margin: 2.4rem 0 5.6rem 0;
+            }
+        }
+    }
+    .sec04_txt_middle, .sec04_txt_etc{
+        margin-left: auto;
+        text-align: right;
+    }
+    .sec04_txt_etc{
+        margin-top: 12rem;
+        >p{
+            @include font-($f:15, $h:2rem, $c:black, $op:1);
+            strong{
+                position: relative;
+                &::before{
+                    content: "";
+                    position: absolute;
+                    top: 0.3rem;
+                    left: -2.8rem;
+                    width: 2.2rem;
+                    height: 2.2rem;
+                    background: url(../imgs/products/sec04_txt_etc.png) no-repeat 0 0;
+                }
+            }
+        }
+        .sec04_txt_etc_hide{
+            overflow: hidden;
+            margin-top: 8rem;
+            height: 0;
+            dl{
+                margin: 4rem 0 ;
+                display: flex;
+                text-align: left;
+                flex-wrap: wrap;
+                div{
+                    margin: 1.6rem 0;
+                    dt{
+                        @include font-($s:1.6rem, $h:2rem, $c:black, $op:1);
+                    }
+                    dd{
+                        @include font-($f:15, $s:2rem, $h:2.4rem, $c:black, $op:1);
+                    }
+                    &.sec04_txt_etc_hide_col01{
+                        flex: 0 0 60rem;
+                        width: 42rem;
+                    }
+                    &.sec04_txt_etc_hide_col02{
+                        flex: 0 0 41rem;
+                        width: 23rem;
+                    }
+                    &.sec04_txt_etc_hide_col03{
+                        flex: 0 0 27rem;
+                        width: 9rem;
+                    }
+                    &.sec04_txt_etc_hide_col04{
+                        flex: 0 0 32rem;
+                        width: 14rem;
+                    }
+                    &.sec04_txt_etc_hide_last{
+                        flex: 1 0 59rem;
+                    }
+                }
+            }
+            >p{
+                text-align: left;
+                @include font-($s:1.6rem, $h:2rem, $c:black, $op:1);
+            }
+        }
+    }
+}
+
+//section04 이벤트
+.sec04 .centerBox .sec04_txt_etc .sec04_txt_etc_hide{
+    &.on{
+        height: 36.8rem;
+    }
+}
+
+//section05
+.sec05{
+    margin: 16rem 0;
+    .centerBox{
+        p{
+            @include font-($f:15, $h:2rem, $c:black, $op:1);
+        }
+        ul{
+            margin: 4rem 0;
+            display: flex;
+            width: 160rem;
+            &.sec05_conts{
+                @for $i from 1 through 4{
+                    li:nth-of-type(#{$i}){
+                        background: url(../imgs/products/sec05_conts_0#{$i}.png) no-repeat 50% 50%/100%;
+                    }
+                }
+            }
+            &.sec05_etc{
+                @for $i from 1 through 4{
+                    li:nth-of-type(#{$i}){
+                        background: url(../imgs/products/sec05_etc_0#{$i}.png) no-repeat 50% 50%/100%;
+                    }
+                }
+            }
+            li{
+                padding-top: 25.6rem;
+                width: 40rem;
+                text-align: center;
+                a>span:first-child{
+                    @include font-($f:14, $h:2.4rem, $c:black, $op:1);
+                }
+                a>span:last-child{
+                    @include font-($s:1.6rem, $h:2rem, $c:black, $op:1);
+                }
+                &:not(:last-child){
+                    border-right: 1px solid #eee;
+                }
+            }
+            
+        }
+        
+    }
+}
+
+//section05 이벤트
+main{
+    .sec05{
+        .centerBox{
+            .sec05_conts, .sec05_etc{
+                li{
+                    transition: all .3s ease;
+                    &:hover{
+                        background-size: 110%;
+                    }
+                }
+            }
+        }
+    }
+}

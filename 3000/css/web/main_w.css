@@ -1,0 +1,310 @@
+.t, .m{display: none;}
+/* ---------- ---------- main>.banner ---------- ---------- */
+main{
+    position:relative;
+    padding-top:10rem;
+    background: #fff;
+}
+main>aside.m_banner{
+    margin-bottom:5rem;
+    padding-bottom:0.1rem;
+    background: #dbdbdb;
+}
+@media only screen and (min-width:960px) and (max-width:1199px){
+    main>aside.m_banner{margin-bottom:0;}
+}
+main>aside.m_banner>.centerBox{
+    margin:0 auto;
+    max-width:120rem;
+}
+main>aside.m_banner>.centerBox>.videoBox{
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+}
+main>aside.m_banner>.centerBox>.videoBox>iframe{
+    position: absolute;
+    top: 0; left: 0;
+    width:100%; height:100%;
+}
+
+/* ---------- ---------- main>.products ---------- ---------- */
+main>section.products{
+    margin-bottom:5rem;
+    background: #fff;
+}
+main>section.products>ul.centerBox{
+    display: flex;
+    flex-wrap: wrap;
+}
+main>section.products>ul.centerBox>li{
+    position:relative;
+    flex:0 0 50%;
+    overflow: hidden;
+}
+/* ---------- img.bg ---------- */
+main>section.products>ul.centerBox>li>a>img.bg{
+    box-sizing: border-box;
+    border-right: 0.4rem solid #dbdbdb;
+    border-bottom: 0.4rem solid #dbdbdb;
+    width:100%;
+    height:100%;
+}
+
+/* ---------- img.bg_over ---------- */
+main>section.products>ul.centerBox>li>a>img.bg_over{
+    position:absolute; top:0; left:0;
+    box-sizing: border-box;
+    border-right: 0.4rem solid #DA2427;
+    border-bottom: 0.4rem solid #DA2427;
+    width:100%;
+    opacity:0;
+    transition:0.5s ease;
+}
+
+/* ---------- img.object ---------- */
+main>section.products>ul.centerBox>li>a>img.object{
+    position:absolute; right:-40%; bottom:0;
+    transition:0.5s ease;
+}
+main>section.products>ul.centerBox>li:nth-of-type(1)>a>img.object{width:90%;}
+main>section.products>ul.centerBox>li:nth-of-type(2)>a>img.object{width:80%;}
+main>section.products>ul.centerBox>li:nth-of-type(3)>a>img.object{width:80%;}
+main>section.products>ul.centerBox>li:nth-of-type(4)>a>img.object{width:90%;}
+
+/* ---------- main>.products 이벤트 ---------- */
+main>section.products>ul.centerBox>li:hover>a>img.bg_over{
+    opacity: 1;
+}
+main>section.products>ul.centerBox>li:hover>a>img.object{
+    right:0;
+}
+
+
+/* ---------- ---------- main>.middle ---------- ---------- */
+/* ---------- .introduce ---------- */
+section.middle section.introduce>dl{
+    display:flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+section.middle section.introduce>dl>div{
+    flex: 0 1 58.4rem;
+    margin-bottom:5rem;
+    border-top:0.2rem solid #DA2427;
+    
+    background: url(../../imgs/main/img_menu_more02.png) no-repeat 98% 2rem;
+}
+section.middle section.introduce>dl>div dt{
+    font-size:2.5rem; line-height:6.4rem;
+    font-weight: bold;
+}
+section.middle section.introduce>dl>div dt a{
+    color:#222;
+}
+section.middle section.introduce>dl>div dd{
+    margin-bottom:3.5rem;
+    font-size:1.4rem; line-height:2.2rem;
+}
+section.middle section.introduce>dl>div dd a{
+    color:#666;
+}
+section.middle section.introduce>dl>div dd img{
+    width:100%;
+}
+/* ---------- .news ---------- */
+article.news{
+    border-top: 0.2rem solid #DA2427;
+    margin-bottom: 4rem;
+}
+
+article.news>.newsBox{
+    display: flex;
+    justify-content: space-between;
+}
+article.news>h2{
+    margin-bottom: 2.5rem;
+    border-bottom: 0.1rem solid #e1e1e1;
+    font-size: 2.5rem; line-height: 6.4rem; font-weight: bold;
+}
+article.news>.newsBox>div{
+    flex: 0 0 58.4rem;
+}
+/* .news_showBox */
+article.news>.newsBox>.news_showBox{
+    padding-top: 2rem;
+}
+article.news>.newsBox>.news_showBox>h3{
+    font-size: 1.8rem; line-height: 3.8rem; font-weight: bold; color: #222;
+}
+article.news>.newsBox>.news_showBox>.news_showBox_time{
+    font-family: 'Nanum Gothic', sans-serif; font-size: 1.4rem; line-height: 2.3rem; color: #666;
+}
+article.news>.newsBox>.news_showBox>.news_showBox_txt{
+    margin-top: 2.4rem;
+    height: 11rem;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 5;
+    -webkit-box-orient: vertical;
+    font-size: 1.4rem; line-height: 2.2rem; color: #333;
+}
+
+/* .news_listBox */
+article.news>.newsBox>.news_listBox{  
+    position: relative;
+    overflow: hidden;
+    width: 58.4rem;
+    height: 31.8rem;
+}
+article.news>.newsBox>.news_listBox>.news_list{
+    display: flex;
+    overflow: hidden;
+    position: absolute; top: 0; left: 0;
+}
+article.news>.newsBox>.news_listBox>.news_list>ul{
+    flex: 0 0 58.4rem;
+    border-top: 0.1rem solid #e1e1e1;
+    border-bottom: 0.1rem solid #e1e1e1;
+}
+article.news>.newsBox>.news_listBox>.news_list>ul>li{
+    display: flex;
+    padding: 1.9rem 0;
+}
+article.news>.newsBox>.news_listBox>.news_list>ul>li:not(:last-of-type){
+    border-bottom: 0.1rem solid #e1e1e1;
+}
+article.news>.newsBox>.news_listBox>.news_list>ul>li>span{
+    flex: 0 0 auto;
+}
+article.news>.newsBox>.news_listBox>.news_list>ul>li>h2{
+    flex: 0 0 calc(100% - (6.1rem + 0.8rem + 6.3rem + 1.6rem) );
+    overflow: hidden;
+    margin-left: 0.8rem;
+    white-space: nowrap; text-overflow: ellipsis;
+    font-size: 1.4rem; line-height: 2rem; font-weight: bold; color: #222;
+}
+article.news>.newsBox>.news_listBox>.news_list>ul>li>time{
+    flex: 0 0 6.3rem;
+    margin-left: auto;    
+    font-size: 1.3rem; line-height: 2rem; color: #666;
+}
+
+/* .news span.ic_1 */
+section.middle article.news .ic_1{
+    display: block;
+    border:0.1rem solid #e17350;
+    border-radius:0.2rem;
+    width:5.9rem; height:2.1rem;
+    font-size:1.2rem; line-height:2.1rem;
+    letter-spacing: -0.1rem;
+    text-align: center;
+    color:#e17350;
+}
+/* .news span.ic_2 */
+section.middle article.news .ic_2{
+    display: block;
+    border:0.1rem solid #58b549;
+    border-radius:0.2rem;
+    width:5.9rem; height:2.1rem;
+    font-size:1.2rem; line-height:2.1rem;
+    letter-spacing: -0.1rem;
+    text-align: center;
+    color:#58b549;
+}
+
+/* .news_Box_control */
+article.news>.newsBox>.news_listBox>.news_list_control{
+    position: absolute; bottom: 0;
+    width: 100%; height: 2.1rem;
+}
+article.news>.newsBox>.news_listBox>.news_list_control>dl{
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+article.news>.newsBox>.news_listBox>.news_list_control>dl>.list_control_btn{
+    width: 1.2rem; height: 2.1rem;
+}
+article.news>.newsBox>.news_listBox>.news_list_control>dl>.list_control_btnPrev{
+    background: url(../../imgs/main/btn_main_news_left.png) no-repeat 0 0;
+}
+article.news>.newsBox>.news_listBox>.news_list_control>dl>.list_control_btnNext{
+    margin-left: auto;
+    background: url(../../imgs/main/btn_main_news_right.png) no-repeat 0 0;
+}
+
+article.news>.newsBox>.news_listBox>.news_list_control>dl>.list_control_dot{
+    width: 1.8rem; height: 1.8rem;
+    background: url(../../imgs/main/mainnews_indicator.png) no-repeat 50% 50%;
+}
+article.news>.newsBox>.news_listBox>.news_list_control>dl>.list_control_dot:nth-of-type(2){
+    margin-left: calc(50% - (1.2rem + 3.5rem) );
+}
+article.news>.newsBox>.news_listBox>.news_list_control>dl>.list_control_dot:not(:nth-of-type(4)){
+    margin-right: 0.8rem;
+}
+article.news>.newsBox>.news_listBox>.news_list_control>dl>.list_control_dot.on{
+    background: url(../../imgs/main/mainnews_indicator_on.png) no-repeat 50% 50%;
+}
+
+/* ---------- ---------- main>.row ---------- ---------- */
+main>section.row{
+    margin:10rem 0 10rem 0;
+}
+main>section.row>.centerBox>ul{
+    display: flex;
+    justify-content: space-between;
+}
+main>section.row>.centerBox>ul>li{
+    flex:0 0 auto;
+    overflow: hidden;
+    position: relative;
+    border:0.1rem solid #e1e1e1;
+    border-radius: 100%;
+    width:32rem;
+    font-size: 3.2rem;
+    cursor: pointer;
+}
+main>section.row>.centerBox>ul>li::before{
+    content: "";
+    display: block;
+    padding-bottom: 100%;
+}
+main>section.row>.centerBox>ul>li>a{
+    position: absolute; z-index: 1; top: 50%; left: 50%; transform: translate(-50%, -50%);
+    display: block;
+    transition: all 0.3s ease;
+}
+/* ---------- ---------- main>.row 애니메이션 ---------- ---------- */
+main>section.row>.centerBox>ul>li::after{
+    content: "";
+    position: absolute; top: 100%; left: 0;
+    width: 100%; height: 100%;
+    background: #DA2427;
+    transition: all 0.3s ease;
+}
+main>section.row>.centerBox>ul>li:hover::after{
+    top: 0;
+}
+main>section.row>.centerBox>ul>li:hover>a{
+    color: #fff;
+}
+
+/* ---------- ---------- main>.scroll_top ---------- ---------- */
+main>#quickTop{
+    position: relative;
+}
+main>#quickTop>p.scroll_top{
+    position: fixed; right:calc(50% - 60rem); bottom:2.4rem; z-index: 101;
+    width:5rem; height:5rem;
+    background: url(../../imgs/main/btn_top.png) no-repeat 0 0;
+    cursor: pointer;
+}
+main>#quickTop>p.scroll_top>a{
+    display: block; height:5rem;
+}
+main>#quickTop>p.scroll_top.on{
+    position: absolute;
+    bottom: 2.4rem;
+}

@@ -1,0 +1,38 @@
+/* font-face start -------------------------------------------------- */
+/* Malgun Gothic ------------------------- */
+@font-face {
+    font-family: 'Malgun Gothic';
+    src: url(../font/malgun.eot);  /* IE 호환성 보기 */
+    src: url(../font/malgun.eot#iefix) format('embedded-opentype'), /* IE 6 ~ 8 */
+         url(../font/malgun.woff2) format('woff2'), /* WOFF2 지원 브라우저 */
+         url(../font/malgun.woff) format('woff'), /* 모던 브라우저 */
+         url(../font/malgun.ttf) format('truetype');
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: 'Malgun Gothic';
+    src: url(../font/malgunbd.eot);  /* IE 호환성 보기 */
+    src: url(../font/malgunbd.eot#iefix) format('embedded-opentype'), /* IE 6 ~ 8 */
+         url(../font/malgunbd.woff2) format('woff2'), /* WOFF2 지원 브라우저 */
+         url(../font/malgunbd.woff) format('woff'), /* 모던 브라우저 */
+         url(../font/malgunbd.ttf) format('truetype');
+    font-weight: bold;
+}
+
+/* Nanum Gothic ------------------------- */
+@font-face {
+    font-family: 'Nanum Gothic';
+    src: url(../font/NanumGothic.eot);  /* IE 호환성 보기 */
+    src: url(../font/NanumGothic.eot#iefix) format('embedded-opentype'), /* IE 6 ~ 8 */
+         url(../font/NanumGothic.woff2) format('woff2'), /* WOFF2 지원 브라우저 */
+         url(../font/NanumGothic.woff) format('woff'), /* 모던 브라우저 */
+         url(../font/NanumGothic.ttf) format('truetype');
+}
+
+/* font-face end -------------------------------------------------- */
+
+html{
+    font-family: 'Malgun Gothic', sans-serif;
+    font-size:62.5%
+}

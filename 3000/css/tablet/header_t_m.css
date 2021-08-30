@@ -1,0 +1,257 @@
+.w, .t{display: none;}
+
+html, body{
+    margin:0; padding:0;
+}
+header{
+    position: fixed; top:0; left:0; z-index: 100;
+    box-shadow: 0 0.1rem 0.5rem rgba(0,0,0,0.5);    
+    width:100%;
+    background:#fff;
+}
+header>.centerBox{
+    /* position:relative; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height:10rem;
+}
+
+header>.centerBox>h1{
+    /* position:absolute;
+    top:0; left:calc(50% - 5rem); */
+    width: 10rem; height: 10rem;
+    background: url(../../imgs/header/logo.png) no-repeat 0 0;
+}
+header>.centerBox>h1>img{
+    width:13rem; 
+}
+
+/* ---------------------------------------------------------- nav -------------------------------------------------------------------------- */
+/* --------------- nav 바로가기 ---------- */
+header>.centerBox>.bg{
+    display:none;
+    position:fixed; left:0; top:0;
+    width:100vw; height:100vh; 
+    background:rgba(0,0,0,0.5);
+}
+header>.centerBox>.bg.on{
+    display: block;
+}
+
+header>.centerBox>p.direct_nav{
+    flex: 0 0 3.2rem;
+    margin-left: 2.4rem;
+    margin-right:auto;
+    width:2.3rem; height:1.5rem;
+    background:url(../../imgs/header/btn_gnb_mobile.png) no-repeat 50% 0/2.3rem 1.5rem;
+}
+
+/* ------------- 실제 네비게이터 ---------- */
+header>.centerBox>nav{
+    display: none;
+    position:fixed; top:0; left:-30rem; z-index:1000;
+    width:25.6rem; height:100vh;
+
+}
+header>.centerBox>nav>div.m{
+    position: relative;
+    padding:6.5rem 0 0 21.6rem;
+    width:4rem; height:3.4rem;
+    border-bottom:0.1rem solid #c00000;
+    background:#da2427 url(../../imgs/header/m_logo.png) no-repeat 0 0;
+    box-shadow: 0 0.1rem 0.5rem rgba(0,0,0,0.5);
+}
+header>.centerBox>nav>div.m>p{
+    width:1.8rem; height:1.5rem;
+    background:#da2427 url(../../imgs/header/ic_home_m.png) no-repeat 0 0/1.8rem 1.5rem;
+    cursor: pointer;
+}
+/* ---------- nav 닫기 ---------- */
+header>.centerBox>nav>p.close_nav{
+    position:absolute; top:6.1rem; left:26.9rem;
+    width:2.5rem; height:2.5rem;
+    background: url(../../imgs/header/btn_close_fade.png) no-repeat 0.5rem 0.5rem/1.5rem 1.5rem;
+    cursor: pointer;
+}
+/* ---------- dep1 ---------- */
+header>.centerBox>nav>.dep1{
+    width:25.6rem; height:100vh;
+    background: #da2427;
+}
+header>.centerBox>nav>.dep1>li{
+    border-bottom:0.1rem solid #c00000;
+}
+header>.centerBox>nav>.dep1>li>a{
+    display:block;
+    padding-left:2.8rem;
+    font-size:1.5rem; line-height:5.1rem; font-weight:bold;
+    color:#fff;
+}
+/* ---------- dep2 ---------- */
+header>.centerBox>nav>.dep1>li>.dep2{
+    display: none;
+    /* margin-top:1.4rem; */
+    padding:1.5rem 0;
+    background: #eceff1;
+}
+header>.centerBox>nav>.dep1>li>.dep2>.is>a{
+    background: url(../../imgs/header/t_m_bu_2depth_on.png) no-repeat 21.8rem 1.8rem;
+}
+header>.centerBox>nav>.dep1>li>.dep2>li>a{
+    display: block;
+    position:relative;
+    padding-left:2.8rem;
+    font-size:1.4rem; line-height:3.6rem; font-weight:bold; 
+    color:#c00000;
+}
+/* ---------- dep3 ---------- */
+header>.centerBox>nav>.dep1>li>.dep2>li>.dep3{
+    display: none;
+    margin:1.4rem 2.8rem;
+    padding:1.1rem 0 1.1rem 2rem;
+    border-top:0.1rem solid #222;
+    border-bottom:0.1rem solid #222;
+}
+header>.centerBox>nav>.dep1>li>.dep2>li>.dep3>li>a{
+    display: block;
+    font-size:1.4rem; line-height:4.8rem; font-weight:bold;
+    color:#666;
+}
+/* ---------- nav 이벤트 ---------- */
+/* header>.centerBox>p.direct_nav:active+nav{
+    display: block;
+} 
+
+header>.centerBox>nav>.dep1>li:hover>.dep2{
+    display: block;
+}
+*/
+
+/*
+header>.centerBox>nav>.dep1>li:hover>.dep2>li:hover>.dep3{
+    display: block;
+}
+*/
+header>.centerBox>nav>.dep1>li>.dep2>li>a:hover{
+    background: #da2427;
+    color:#fff;
+}
+header>.centerBox>nav>.dep1>li>.dep2>li>.dep3>li>a:hover{
+    background: #da2427;
+    color:#fff;
+}
+/* header>.centerBox>nav>.dep1>li>.dep2>li.is.on>a:after{
+    transform:rotate(45deg);
+} */
+/* header>.centerBox>nav>.dep1>li:last-of-type>.dep2>li>a:hover:after{
+    transform:rotate(45deg);
+} */
+
+/* ---------- ---------- search & util ---------- ---------- */
+header>.centerBox>.utils{
+    display: flex;
+    align-items: center;
+}
+/* ---------- search ---------- */
+header>.centerBox>.utils>p{}
+header>.centerBox>.utils>p>button{
+    margin-right:1.2rem;
+    width:2.3rem; height:2.3rem;    
+    font-size:0; line-height:0;
+    cursor: pointer;
+    background:url(../../imgs/header/ic_search_m.png) no-repeat 0 0/2.3rem 2.3rem;
+}
+header>.centerBox>.utils>div{
+    display: none;
+    position:absolute; top:10rem; right:0;
+}
+header>.centerBox>.utils>div>form{
+    display: flex;
+    justify-content: space-between;
+    width:100vw; height:5rem;
+    background: #da2427;
+}
+header>.centerBox>.utils>div>form>input[type="search"]{
+    flex: 1 0 0;
+    padding-left:1.4rem;
+    border:0 none;
+    padding:0 none;
+    margin:0 none;
+    outline:0 none;
+    font-size: 1.4rem;
+    color:#ebebeb;
+    background: #da2427;
+}
+header>.centerBox>.utils>div>form>input[type="search"]::placeholder{
+    padding-left: 1.4rem;
+    color:#ebebeb;
+}
+header>.centerBox>.utils>div>form>input[type="image"]{
+    margin:1.4rem 2.4rem 0 auto; 
+    width:2rem; height:2rem;
+}
+header>.centerBox>.utils>div>form>p{
+    position: relative;
+    margin:1.4rem 3rem 0 0;
+    padding:0.4rem 0.3rem 0.2rem 0.3rem;
+}
+header>.centerBox>.utils>div>form>p:before{
+    position:absolute; top:-0.4rem; left:-1.1rem;
+    content:"";
+    width:0; height:3rem;
+    border-left:0.1rem solid #ebebeb;
+}
+header>.centerBox>.utils>div>form>p>img{
+    cursor: pointer;
+}
+/* search 이벤트 
+header>.centerBox>div>p:active+div{
+    display: block;
+}
+
+*/
+
+/* ---------- util ---------- */
+header>.centerBox>div>dl{
+    width:4.6rem; height:3.4rem; text-align:center;
+}
+header>.centerBox>div>dl>dd{
+    border:0.1rem solid #a9b0b8;
+}
+header>.centerBox>div>dl>dd.on{
+    border-radius: 0.4rem;
+    padding-top:1rem;
+    height:2.4rem;
+}
+header>.centerBox>div>dl>dd.on>a{
+    display: block;
+    font-size:1.2rem; line-height:1rem; font-weight:bold;
+    color:#222;
+}
+header>.centerBox>div>dl>dd.on>a>span{
+    display:block;
+    margin:0.4rem auto;
+    width:0.7rem; height:0.4rem;
+    background: url(../../imgs/header/country_off.png) no-repeat 0 0;;
+}
+header>.centerBox>div>dl>dd.off{
+    display: none;
+    margin-top:-0.1rem;
+    text-align: center;
+    font-size:1.2rem; line-height:3rem;
+    background: #fff;
+}
+header>.centerBox>div>dl>dd.off>a{
+    color:#444;
+}
+header>.centerBox>div>dl>dd.off:not(:last-of-type){
+    border-bottom:0 none;
+}
+/* search 이벤트 */
+header>.centerBox>div>dl.on>dd>a>span{
+    background-image: url(../../imgs/header/country_on.png);
+}
+/*header>.centerBox>div>dl.on>dd.on:active~dd{
+    display: block;
+}*/

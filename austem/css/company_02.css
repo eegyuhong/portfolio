@@ -1,0 +1,164 @@
+.sec01 {
+  width: 100%;
+  height: 48rem;
+  background: url(../imgs/company/company_title_bg.png) no-repeat 0 50%/cover fixed;
+}
+
+.sec01 .ctBox {
+  padding-top: 20rem;
+}
+
+.sec01 .ctBox > h2 {
+  text-align: center;
+  font-family: 'NanumSquareEB', sans-serif;
+  font-size: 5rem;
+  line-height: 5.5rem;
+  color: #F5F5F5;
+  text-shadow: 0.1rem 0.1rem 0.1rem rgba(0, 0, 0, 0.5);
+}
+
+.sec01 .ctBox > h2::after {
+  display: block;
+  content: "";
+  margin: 2.4rem auto;
+  width: 14rem;
+  height: 0.8rem;
+  background: #F5F5F5;
+}
+
+.sec01 .ctBox > p:nth-of-type(1) {
+  text-align: center;
+  font-family: 'NotoSansKR-Regular', sans-serif;
+  font-size: 1.8rem;
+  line-height: 2.6rem;
+  color: #F5F5F5;
+  text-shadow: 0.1rem 0.1rem 0.1rem rgba(0, 0, 0, 0.5);
+}
+
+.sec01 .ctBox nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 10.3rem;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-top: 0.1rem solid #4F6A82;
+  border-bottom: 0.1rem solid #8899AA;
+  width: 100%;
+  height: 8rem;
+  text-align: center;
+}
+
+.sec01 .ctBox nav ul li {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 40rem;
+          flex: 1 0 40rem;
+  background: #F5F5F5;
+}
+
+.sec01 .ctBox nav ul li a {
+  display: block;
+  font-family: 'NanumSquareB', sans-serif;
+  font-size: 1.8rem;
+  line-height: 8rem;
+  color: #0E3254;
+}
+
+.sec01 .ctBox nav ul li.on {
+  background: #E36D00;
+}
+
+.sec01 .ctBox nav ul li.on a {
+  color: #F5F5F5;
+}
+
+.sec01 .ctBox > p:last-of-type {
+  padding-left: 3.4rem;
+  height: 5.2rem;
+  font-family: 'NanumSquareR', sans-serif;
+  font-size: 1.4rem;
+  line-height: 5.2rem;
+  color: #8899AA;
+  background: url(../imgs/company/sec1_ico_home.png) no-repeat 0 40%;
+}
+
+.sec01 .ctBox > p:last-of-type span {
+  display: inline-block;
+  margin-right: 0.8rem;
+  height: 5.2rem;
+}
+
+.sec02 {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding-top: 17.2rem;
+}
+
+.sec02 .ctBox h2 {
+  text-align: center;
+  font-family: 'NanumSquareEB', sans-serif;
+  font-size: 5rem;
+  line-height: 5.5rem;
+  color: #0E3254;
+  text-shadow: 0.1rem 0.1rem 0.1rem rgba(0, 0, 0, 0.5);
+}
+
+.sec02 .ctBox h2::after {
+  display: block;
+  content: "";
+  margin: 0 auto;
+  margin-top: 2.4rem;
+  margin-bottom: 4rem;
+  width: 12rem;
+  height: 0.6rem;
+  background: #E36D00;
+}
+
+.sec02 .ctBox > p {
+  text-align: center;
+  margin-bottom: 8rem;
+  font-family: 'NotoSansKR-Bold', sans-serif;
+  font-size: 2.6rem;
+  line-height: 3.8rem;
+  color: #8899AA;
+}
+
+.sec02 .ctBox > p strong {
+  color: #E36D00;
+}
+
+.sec02 .ctBox div {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin-bottom: 10rem;
+  border-top: 0.1rem solid #8899AA;
+  border-bottom: 0.1rem solid #8899AA;
+  padding: 4rem;
+  height: 56.2rem;
+  background: #F5F5F5;
+  font-family: 'NotoSansKR-Regular', sans-serif;
+  font-size: 2rem;
+  line-height: 2.9rem;
+  color: #8899AA;
+}
+
+.sec02 .ctBox div .sec02_ceo {
+  float: left;
+  margin-right: 2.4rem;
+  width: 12.4rem;
+  height: 14.1rem;
+  background: url(../imgs/company/company_02/sec02_ceo.png) no-repeat 0 0;
+}
+
+.sec02 .ctBox div .sec02_txt {
+  margin-top: 5rem;
+  margin-bottom: 0.9rem;
+}
+
+.sec02 .ctBox div .sec02_sign {
+  float: right;
+  width: 12.6rem;
+  height: 7.3rem;
+  background: url(../imgs/company/company_02/sec02_sign.png) no-repeat 0 0;
+}
+/*# sourceMappingURL=company_02.css.map */

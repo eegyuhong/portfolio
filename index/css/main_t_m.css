@@ -1,0 +1,559 @@
+@charset "UTF-8";
+/*-------------------- common 시작 -------------------- */
+.view_f {
+  height: 100vh;
+}
+
+.view_h {
+  height: calc(25vw - 1px);
+}
+
+hr {
+  margin: 0;
+  border: none;
+  height: 1px;
+  background: rgba(128, 128, 128, 0.5);
+}
+
+.hrLv_1 {
+  width: 100vw;
+}
+
+._fontLv_0_1 {
+  font-family: 'Roboto-Black', sans-serif;
+  font-size: 3.2rem;
+  line-height: 1.2;
+  color: #dddddd;
+}
+
+._fontLv_0_2 {
+  font-family: 'Roboto-Black', sans-serif;
+  font-size: 8rem;
+  line-height: 1.2;
+  color: #dddddd;
+}
+
+._fontLv_0_3 {
+  font-family: 'NotoSansKR-Thin', sans-serif;
+  font-size: 5.6rem;
+  line-height: 1.2;
+  color: #dddddd;
+}
+
+._fontLv_0_4 {
+  font-family: 'Roboto-Black', sans-serif;
+  font-size: 2.4rem;
+  line-height: 1.2;
+  color: #dddddd;
+}
+
+._fontLv_1_1 {
+  font-family: 'NotoSansKR-Thin', sans-serif;
+  font-size: 2.4rem;
+  line-height: 1.2;
+  color: #3f3f3f;
+}
+
+._fontLv_1_2 {
+  margin-top: 0.8rem;
+  font-family: 'Roboto-Black', sans-serif;
+  font-size: 6.4rem;
+  line-height: 1.2;
+  color: #3f3f3f;
+}
+
+._fontLv_1_3 {
+  margin-top: 6.4rem;
+  font-family: 'NotoSansKR-Thin', sans-serif;
+  font-size: 2.4rem;
+  line-height: 1.2;
+  color: #3f3f3f;
+}
+
+._fontLv_1_4 {
+  font-family: 'Roboto-Black', sans-serif;
+  font-size: 4.8rem;
+  line-height: 1.2;
+  color: #3f3f3f;
+}
+
+._fontLv_2_1 {
+  font-family: 'Roboto-Black', sans-serif;
+  font-size: 4.8rem;
+  line-height: 1.2;
+  color: #3f3f3f;
+}
+
+._fontLv_2_2 {
+  font-family: 'NotoSansKR-Black', sans-serif;
+  font-size: 3.2rem;
+  line-height: 1.2;
+  color: #3f3f3f;
+}
+
+._fontLv_2_3 {
+  font-family: 'NotoSansKR-Thin', sans-serif;
+  font-size: 3.2rem;
+  line-height: 1.2;
+  color: #3f3f3f;
+}
+
+._fontLv_2_4 {
+  font-family: 'Roboto-Black', sans-serif;
+  font-size: 3.2rem;
+  line-height: 1.2;
+  color: #dddddd;
+}
+
+span span.eventContents {
+  display: inline-block;
+}
+
+span.eventMask_goUp {
+  display: inline-block;
+  overflow: hidden;
+}
+
+span.eventMask_goUp .eventContents {
+  -webkit-transform: translateY(100%);
+          transform: translateY(100%);
+}
+
+span.eventMask_goRight {
+  display: inline-block;
+  vertical-align: top;
+}
+
+span.eventMask_goRight .eventContents {
+  opacity: 0;
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
+}
+
+/*-------------------- common 끝 -------------------- */
+/*-------------------- .front 시작 -------------------- */
+.front {
+  background: url(../imgs/frontBg.svg) repeat 0 0;
+  -webkit-animation: rollingBg 10s linear infinite;
+          animation: rollingBg 10s linear infinite;
+}
+
+@-webkit-keyframes rollingBg {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 0 -560px;
+  }
+}
+
+@keyframes rollingBg {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 0 -560px;
+  }
+}
+
+.front .frontBg {
+  position: relative;
+  padding: 0 12vw;
+  background: rgba(9, 9, 9, 0.5);
+}
+
+.front .frontBg .front_title {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.front .frontBg .front_title h2 {
+  margin-top: 3.2rem;
+}
+
+.front .frontBg .front_BtnNext {
+  position: absolute;
+  bottom: 0;
+  border-left: 1px solid rgba(128, 128, 128, 0.5);
+  padding-left: 24px;
+  height: 10rem;
+}
+
+/*-------------------- .front 끝 -------------------- */
+/*-------------------- .aboutMe 시작 -------------------- */
+.aboutMe {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 32rem 12vw;
+  height: auto;
+}
+
+.aboutMe div,
+.aboutMe ul {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 36vw;
+          flex: 0 0 36vw;
+}
+
+.aboutMe ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-line-pack: justify;
+      align-content: space-between;
+  height: 36rem;
+}
+
+.aboutMe ul li {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 33%;
+          flex: 1 1 33%;
+  width: 12rem;
+  height: 16rem;
+  text-align: left;
+}
+
+.aboutMe ul li svg {
+  width: 12rem;
+  height: 12rem;
+  margin-bottom: 1.6rem;
+}
+
+.aboutMe ul li .title_skill {
+  display: block;
+  width: 12rem;
+  font-family: 'Roboto-Regular', sans-serif;
+  font-size: 2.4rem;
+  line-height: 1.2;
+  color: #3f3f3f;
+  text-align: center;
+}
+
+/*-------------------- .aboutMe 끝 -------------------- */
+/*-------------------- .myWorks 시작 -------------------- */
+.myWorks .myWorks_title {
+  padding: 0 12vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 32rem 12vw;
+  height: auto;
+}
+
+.myWorks .myWorks_title div,
+.myWorks .myWorks_title p {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 36vw;
+          flex: 0 0 36vw;
+}
+
+.myWorks ul li {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-top: 0.1px solid rgba(128, 128, 128, 0.5);
+  padding: 0 12vw 0 12vw;
+  width: 76vw;
+  cursor: pointer;
+}
+
+.myWorks ul li h3,
+.myWorks ul li .myWorks_txt {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 36vw;
+          flex: 0 0 36vw;
+}
+
+.myWorks ul li h3 {
+  height: 5.6rem;
+}
+
+.myWorks ul li h3 svg {
+  margin-right: auto;
+  height: 100%;
+}
+
+.myWorks ul li h3 svg path {
+  -webkit-transition: all 0.1s ease;
+  transition: all 0.1s ease;
+}
+
+.myWorks ul li .myWorks_txt {
+  -webkit-transform: translateY(20%);
+          transform: translateY(20%);
+}
+
+.myWorks ul li .myWorks_txt .myWorks_txtConcept {
+  margin: 2.4rem 0 4.8rem 0;
+}
+
+.myWorks ul li .myWorks_txt .myWorks_txtLink {
+  vertical-align: top;
+}
+
+.myWorks ul li .myWorks_txt .myWorks_txtLink > span {
+  display: inline-block;
+}
+
+.myWorks ul li .myWorks_txt .myWorks_txtLink > span > span {
+  display: inline-block;
+}
+
+.myWorks ul li .myWorks_txt .myWorks_txtLink .myWork_eventMask_Goup {
+  overflow: hidden;
+}
+
+.myWorks ul li .myWorks_txt .myWorks_txtLink .myWork_eventMask_Goup .myWork_eventContents {
+  -webkit-transform: translate(0, 100%);
+          transform: translate(0, 100%);
+}
+
+.myWorks ul li .myWorks_txt .myWorks_txtLink .myWork_eventMask_Goright {
+  margin-left: 1.6rem;
+  vertical-align: top;
+}
+
+.myWorks ul li .myWorks_txt .myWorks_txtLink .myWork_eventMask_Goright .myWork_eventContents {
+  opacity: 0;
+  -webkit-transform: translate(-100%, 0);
+          transform: translate(-100%, 0);
+}
+
+.myWorks ul li .myWorks_txt .myWorks_txtLink .myWork_eventMask_Goright .myWork_eventContents svg {
+  width: 4rem;
+  height: 1.8rem;
+}
+
+.myWorks ul li .myWorks_eventBg {
+  -webkit-transition: -webkit-clip-path 0.5s ease;
+  transition: -webkit-clip-path 0.5s ease;
+  transition: clip-path 0.5s ease;
+  transition: clip-path 0.5s ease, -webkit-clip-path 0.5s ease;
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  -webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%);
+          clip-path: polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%);
+}
+
+.myWorks ul > li:nth-of-type(1) .myWorks_eventBg {
+  background: url(../imgs/bg_iosTravel.png) no-repeat 50% 50%/100%;
+}
+
+.myWorks ul > li:nth-of-type(2) .myWorks_eventBg {
+  background: url(../imgs/bg_3000.png) no-repeat 50% 50%/100%;
+}
+
+.myWorks ul > li:nth-of-type(3) .myWorks_eventBg {
+  background: url(../imgs/bg_NESPRESSO.png) no-repeat 50% 50%/100%;
+}
+
+.myWorks ul > li:nth-of-type(4) .myWorks_eventBg {
+  background: url(../imgs/bg_AUSTEM.png) no-repeat 50% 50%/100%;
+}
+
+.myWorks ul li:hover h3 path {
+  -webkit-transition: all 0.6s ease;
+  transition: all 0.6s ease;
+  fill: #dddddd;
+}
+
+.myWorks ul li:hover .myWorks_txt p {
+  color: #dddddd;
+  -webkit-transition: all 0.6s ease;
+  transition: all 0.6s ease;
+}
+
+.myWorks ul li:hover .myWorks_eventBg {
+  display: block;
+}
+
+.myWorks ul li:hover .myWorks_txtLink span.myWork_eventMask_Goup .myWork_eventContents,
+.myWorks ul li:hover .myWorks_txtLink span.myWork_eventMask_Goright .myWork_eventContents {
+  -webkit-transform: translate(0, 0);
+          transform: translate(0, 0);
+}
+
+.myWorks ul li:hover .myWorks_txtLink span.myWork_eventMask_Goup:nth-child(1) .myWork_eventContents,
+.myWorks ul li:hover .myWorks_txtLink span.myWork_eventMask_Goright:nth-child(1) .myWork_eventContents {
+  -webkit-transition: -webkit-transform 1s ease;
+  transition: -webkit-transform 1s ease;
+  transition: transform 1s ease;
+  transition: transform 1s ease, -webkit-transform 1s ease;
+}
+
+.myWorks ul li:hover .myWorks_txtLink span.myWork_eventMask_Goup:nth-child(2) .myWork_eventContents,
+.myWorks ul li:hover .myWorks_txtLink span.myWork_eventMask_Goright:nth-child(2) .myWork_eventContents {
+  -webkit-transition: -webkit-transform 1s ease 0.15s;
+  transition: -webkit-transform 1s ease 0.15s;
+  transition: transform 1s ease 0.15s;
+  transition: transform 1s ease 0.15s, -webkit-transform 1s ease 0.15s;
+}
+
+.myWorks ul li:hover .myWorks_txtLink span.myWork_eventMask_Goup:nth-child(3) .myWork_eventContents,
+.myWorks ul li:hover .myWorks_txtLink span.myWork_eventMask_Goright:nth-child(3) .myWork_eventContents {
+  -webkit-transition: -webkit-transform 1s ease 0.3s;
+  transition: -webkit-transform 1s ease 0.3s;
+  transition: transform 1s ease 0.3s;
+  transition: transform 1s ease 0.3s, -webkit-transform 1s ease 0.3s;
+}
+
+.myWorks ul li:hover .myWorks_txtLink span.myWork_eventMask_Goup:nth-child(4) .myWork_eventContents,
+.myWorks ul li:hover .myWorks_txtLink span.myWork_eventMask_Goright:nth-child(4) .myWork_eventContents {
+  opacity: 1;
+  -webkit-transition: all 1s ease 0.45s;
+  transition: all 1s ease 0.45s;
+}
+
+/*-------------------- .myWorks 끝 -------------------- */
+/*-------------------- .contactMe 시작 -------------------- */
+.contactMe {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 32rem 12vw;
+  height: auto;
+}
+
+.contactMe div {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 36vw;
+          flex: 0 0 36vw;
+}
+
+.contactMe .contactMe_info span {
+  display: inline-block;
+  height: 6rem;
+  line-height: 6rem;
+  vertical-align: top;
+}
+
+.contactMe .contactMe_info .info_mail {
+  margin-right: 4rem;
+}
+
+.contactMe .contactMe_info .sendMessage {
+  position: relative;
+}
+
+.contactMe .contactMe_info .sendMessage .eventContents {
+  width: 24rem;
+}
+
+.contactMe .contactMe_info .sendMessage .eventContents .sendMessage_txt {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  white-space: nowrap;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  vertical-align: center;
+}
+
+.contactMe .contactMe_info .sendMessage .eventContents .sendMessage_bg {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: -1;
+  border-radius: 3rem;
+  width: 24rem;
+  background: gray;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+.contactMe .contactMe_info .sendMessage .eventContents .sendMessage_bg svg {
+  width: 6rem;
+  height: 6rem;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  opacity: 0;
+}
+
+.contactMe .contactMe_info .sendMessage:hover .eventContents .sendMessage_txt {
+  left: 0;
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+}
+
+.contactMe .contactMe_info .sendMessage:hover .eventContents .sendMessage_bg {
+  width: 6rem;
+  min-width: 0;
+}
+
+.contactMe .contactMe_info .sendMessage:hover .eventContents .sendMessage_bg svg {
+  opacity: 1;
+}
+
+@media only screen and (max-width: 784px) {
+  main .contactMe .contactMe_info .info_mail {
+    height: 25px;
+  }
+  main .contactMe .contactMe_info .info_mail .eventContents {
+    line-height: 25px;
+  }
+  main .contactMe .contactMe_info .sendMessage {
+    width: 100px;
+    height: 25px;
+  }
+  main .contactMe .contactMe_info .sendMessage .eventContents {
+    width: 100px;
+    height: 25px;
+  }
+  main .contactMe .contactMe_info .sendMessage .eventContents .sendMessage_txt {
+    line-height: 25px;
+  }
+  main .contactMe .contactMe_info .sendMessage .eventContents .sendMessage_bg {
+    width: 100px;
+    height: 25px;
+    border-radius: 12.5px;
+  }
+  main .contactMe .contactMe_info .sendMessage .eventContents .sendMessage_bg svg {
+    width: 25px;
+    height: 25px;
+  }
+  main .contactMe .contactMe_info .sendMessage:hover .eventContents .sendMessage_bg {
+    width: 25px;
+    border-radius: 12.5px;
+  }
+}
+
+/*-------------------- .contactMe 끝 -------------------- */
+/*# sourceMappingURL=main_t_m.css.map */

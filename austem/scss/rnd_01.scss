@@ -1,0 +1,163 @@
+@mixin titlUnderLine-(){
+    &::after{
+        display: block;
+        content: "";
+        margin: 2.4rem auto;
+        width: 14rem; height: 0.8rem;
+        background: $c4;
+    }
+};
+
+@mixin underLine-(){
+    &::after{
+        display: block;
+        content: "";
+        margin: 0 auto;
+        margin-top: 2.4rem;
+        margin-bottom: 4rem;
+        width: 12rem; height: 0.6rem;
+        background: $c5;
+    }
+};
+
+@mixin font-(
+    $f:13,
+    $s:1.8rem,
+    $h:1.8rem,
+    $c:1,
+    $ts:0
+    ){
+        @if($f == 11){// font-family 10 = NotoSansKR, 20 = NanumSquareOTF
+            font-family: 'NotoSansKR-Thin', sans-serif;
+        }@else if($f == 12){
+            font-family: 'NotoSansKR-Light', sans-serif;
+        }@else if($f == 13){
+            font-family: 'NotoSansKR-Regular', sans-serif;
+        }@else if($f == 14){
+            font-family: 'NotoSansKR-Medium', sans-serif;
+        }@else if($f == 15){
+            font-family: 'NotoSansKR-Bold', sans-serif;
+        }@else if($f == 16){
+            font-family: 'NotoSansKR-Black', sans-serif;
+        }@else if($f == 21){
+            font-family: 'NanumSquareL', sans-serif;
+        }@else if($f == 22){
+            font-family: 'NanumSquareR', sans-serif;
+        }@else if($f == 23){
+            font-family: 'NanumSquareB', sans-serif;
+        }@else if($f == 24){
+            font-family: 'NanumSquareEB', sans-serif;
+        }
+        font-size: $s;// font-size
+        line-height: $h;// line-height
+        @if($c == 1){// color
+            color: #0E3254;
+        }
+        @else if($c == 2){
+            color: #4F6A82;
+        }
+        @else if($c == 3){
+            color: #8899AA;
+        }
+        @else if($c == 4){
+            color: #F5F5F5
+        }
+        @if($ts == 1){// text-shadow
+            text-shadow: 0.1rem 0.1rem 0.1rem rgba(0,0,0,0.5);
+        }
+}
+//thin 100, light 300, regular 400, medium 500, bold 700, black 900
+//@include font-($f:, $s:, $h:, $c:, $ts:);
+
+$c1:#0E3254;
+$c2:#4F6A82;
+$c3:#8899AA;
+$c4:#F5F5F5;
+$c5:#E36D00;
+$c6:#EEBE91;
+
+//section01 --------------------------------------------------
+.sec01{
+    margin-bottom: 17.2rem;
+    width: 100%; height: 48rem;
+    background: url(../imgs/rnd/rnd_title_bg.png) no-repeat 0 50%/cover fixed;
+    .ctBox{
+        padding-top: 20rem;
+        >h2{
+            text-align: center;
+            @include font-($f:24, $s:5rem, $c:4, $h:5.5rem, $ts:1);
+            @include titlUnderLine-();
+        }
+        >p:nth-of-type(1){
+            text-align: center;
+            @include font-($s:1.8rem, $c:4, $h:2.6rem, $ts:1);
+        }
+        nav{
+            ul{
+                display: flex;
+                margin-top: 10.3rem;
+                box-sizing: border-box;
+                border-top: 0.1rem solid $c2;
+                border-bottom: 0.1rem solid $c3;
+                width: 100%; height: 8rem;
+                text-align: center;
+                li{
+                    flex: 1 0 40rem;
+                    background: $c4;
+                    a{
+                        display: block;
+                        @include font-($f:23, $s:1.8rem, $c:1, $h:8rem);
+                    }
+                    &.on{
+                        background: $c5;
+                        a{
+                            color: $c4;
+                        }
+                    }
+                }
+            }
+        }
+        >p:last-of-type{
+            padding-left: 3.4rem;
+            height: 5.2rem;
+            @include font-($f:22, $s:1.4rem, $c:3, $h:5.2rem);
+            background: url(../imgs/company/sec1_ico_home.png) no-repeat 0 40%;
+            span{
+                display: inline-block;
+                margin-right: 0.8rem;
+                height: 5.2rem;
+            }
+        }
+    }
+}
+//section01 end --------------------------------------------------
+
+//section02 --------------------------------------------------
+.sec02{
+    margin-bottom: 10rem;
+    text-align: center;
+    .ctBox{
+        h2{
+            @include font-($f:24, $s:5rem, $c:1, $h:5.5rem, $ts:1);
+            @include underLine-();
+        }
+        .sec02_txt{
+            margin-bottom: 10rem;
+            @include font-($s:1.8rem, $c:3, $h:2.6rem);
+            strong{
+                display: block;
+                margin-top: 4rem;
+                @include font-($f:15, $s:2.6rem, $c:3, $h:3.8rem);
+                em{
+                    color: $c5;
+                }
+            }
+        }
+        .sec02_inforg{
+            margin: 0 auto;
+            width: 82rem; height: 82rem;
+            background: url(../imgs/rnd/rnd_01/sec02_inforg.png) no-repeat 50% 50%;
+        }
+    }
+}
+//section03 end --------------------------------------------------

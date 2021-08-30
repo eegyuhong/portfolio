@@ -1,0 +1,124 @@
+footer {
+  padding: 4rem 0;
+}
+
+footer .centerBox {
+  width: 160rem;
+  margin: 0 auto;
+}
+
+footer {
+  background-color: #000;
+}
+
+footer > .centerBox > ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+footer > .centerBox > ul > li {
+  font-family: 'NotoSansKR-Bold', sans-serif;
+  font-size: 1.6rem;
+  line-height: 4rem;
+  color: #8f7247;
+}
+
+footer > .centerBox > ul > li > h1 {
+  margin: 0.8rem;
+  width: 10rem;
+  height: 2.4rem;
+  background: url(../imgs/footer/logo.png) no-repeat 0 0;
+}
+
+footer > .centerBox > ul > li:first-of-type > ul:first-of-type {
+  margin-left: 1rem;
+}
+
+footer > .centerBox > ul > li > ul {
+  margin-right: 8rem;
+}
+
+footer > .centerBox > ul > li li, footer > .centerBox > ul > li a {
+  font-family: 'NotoSansKR-Light', sans-serif;
+  font-size: 1.6rem;
+  line-height: 4rem;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+footer > .centerBox > ul > li:last-of-type ul ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+footer > .centerBox > ul > li:last-of-type ul ul > li {
+  margin-right: 1rem;
+}
+
+footer > .centerBox > ul > li:last-of-type ul ul > li:nth-of-type(1) {
+  background: url(../imgs/footer/ico_1.png) no-repeat 0 50%;
+}
+
+footer > .centerBox > ul > li:last-of-type ul ul > li:nth-of-type(2) {
+  background: url(../imgs/footer/ico_2.png) no-repeat 0 50%;
+}
+
+footer > .centerBox > ul > li:last-of-type ul ul > li:nth-of-type(3) {
+  background: url(../imgs/footer/ico_3.png) no-repeat 0 50%;
+}
+
+footer > .centerBox > ul > li:last-of-type ul ul > li:nth-of-type(4) {
+  background: url(../imgs/footer/ico_4.png) no-repeat 0 50%;
+}
+
+footer > .centerBox > ul > li:last-of-type ul ul > li > a {
+  display: block;
+  width: 2.8rem;
+  height: 4rem;
+}
+
+footer > .centerBox > .policy {
+  margin: 3.2rem 0;
+  padding: 0.4rem 0.8rem;
+  width: 100%;
+  background-color: #1e1e1e;
+}
+
+footer > .centerBox > .policy > ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0.4rem 0;
+}
+
+footer > .centerBox > .policy > ul li:not(:last-of-type) {
+  position: relative;
+}
+
+footer > .centerBox > .policy > ul li:not(:last-of-type)::after {
+  content: "";
+  position: absolute;
+  top: 0.2rem;
+  right: 1.2rem;
+  width: 0.1rem;
+  height: 1.2rem;
+  border-right: 0.1rem solid rgba(255, 255, 255, 0.3);
+}
+
+footer > .centerBox > .policy > ul a {
+  display: inline-block;
+  margin-right: 2.4rem;
+  font-family: 'NotoSansKR-Thin', sans-serif;
+  font-size: 1.4rem;
+  line-height: 1.4rem;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+footer > .centerBox > p {
+  font-family: 'NotoSansKR-Thin', sans-serif;
+  font-size: 1.4rem;
+  line-height: 1.8rem;
+  color: rgba(255, 255, 255, 0.5);
+}
+/*# sourceMappingURL=footer.css.map */

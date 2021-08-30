@@ -1,0 +1,296 @@
+header {
+  position: fixed;
+  z-index: 500;
+  top: 0;
+  left: 0;
+  border-right: 1px solid rgba(128, 128, 128, 0.5);
+  width: 100vw;
+  height: 72px;
+}
+
+header .header_scrT_Bg {
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  border-bottom: 1px solid rgba(128, 128, 128, 0.5);
+  -webkit-transition: background-color 0.5s ease;
+  transition: background-color 0.5s ease;
+}
+
+header .header_scrT_Bg hr {
+  position: absolute;
+  bottom: -1px;
+  margin: 0;
+  border: 0;
+  width: 100%;
+  height: 2px;
+  background: #3f3f3f;
+  -webkit-transform-origin: left;
+          transform-origin: left;
+}
+
+header h1 {
+  position: absolute;
+  top: 14px;
+  left: 12px;
+  width: 44px;
+  height: 44px;
+}
+
+header .header_menu {
+  position: absolute;
+  top: 14px;
+  right: 32px;
+  width: 44px;
+  height: 44px;
+  cursor: pointer;
+}
+
+header svg .header_logo_path1 {
+  -webkit-transition: stroke 0.5s ease, stroke-dashoffset 0.5s ease;
+  transition: stroke 0.5s ease, stroke-dashoffset 0.5s ease;
+}
+
+header svg .header_logo_path2 {
+  -webkit-transition: stroke 0.5s ease, stroke-dashoffset 0.5s ease 0.2s;
+  transition: stroke 0.5s ease, stroke-dashoffset 0.5s ease 0.2s;
+}
+
+header svg .header_logo_path3 {
+  -webkit-transition: stroke 0.5s ease, stroke-dashoffset 0.5s ease 0.3s;
+  transition: stroke 0.5s ease, stroke-dashoffset 0.5s ease 0.3s;
+}
+
+header svg .header_menu_path1 {
+  -webkit-transition: stroke 0.5s ease, stroke-dashoffset 0.5s ease 0.3s, -webkit-transform 0.3s ease;
+  transition: stroke 0.5s ease, stroke-dashoffset 0.5s ease 0.3s, -webkit-transform 0.3s ease;
+  transition: stroke 0.5s ease, transform 0.3s ease, stroke-dashoffset 0.5s ease 0.3s;
+  transition: stroke 0.5s ease, transform 0.3s ease, stroke-dashoffset 0.5s ease 0.3s, -webkit-transform 0.3s ease;
+}
+
+header svg .header_menu_path2 {
+  -webkit-transition: stroke 0.5s ease, stroke-dashoffset 0.5s ease 0.4s, -webkit-transform 0.3s ease;
+  transition: stroke 0.5s ease, stroke-dashoffset 0.5s ease 0.4s, -webkit-transform 0.3s ease;
+  transition: stroke 0.5s ease, transform 0.3s ease, stroke-dashoffset 0.5s ease 0.4s;
+  transition: stroke 0.5s ease, transform 0.3s ease, stroke-dashoffset 0.5s ease 0.4s, -webkit-transform 0.3s ease;
+}
+
+header svg .header_menu_path3 {
+  -webkit-transition: stroke 0.5s ease, stroke-dashoffset 0.5s ease 0.5s, -webkit-transform 0.3s ease;
+  transition: stroke 0.5s ease, stroke-dashoffset 0.5s ease 0.5s, -webkit-transform 0.3s ease;
+  transition: stroke 0.5s ease, transform 0.3s ease, stroke-dashoffset 0.5s ease 0.5s;
+  transition: stroke 0.5s ease, transform 0.3s ease, stroke-dashoffset 0.5s ease 0.5s, -webkit-transform 0.3s ease;
+}
+
+header .header_trackbar {
+  position: absolute;
+  bottom: 90%;
+  right: -1px;
+  width: 2px;
+  height: 10%;
+  background: #dddddd;
+  -webkit-transition: background-color 0.5s ease;
+  transition: background-color 0.5s ease;
+}
+
+header nav {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  -webkit-transform-origin: left;
+          transform-origin: left;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  background: black;
+  -webkit-transition: -webkit-transform 1s ease;
+  transition: -webkit-transform 1s ease;
+  transition: transform 1s ease;
+  transition: transform 1s ease, -webkit-transform 1s ease;
+}
+
+header nav .header_eventContents {
+  -webkit-transition: -webkit-transform 0.5s ease;
+  transition: -webkit-transform 0.5s ease;
+  transition: transform 0.5s ease;
+  transition: transform 0.5s ease, -webkit-transform 0.5s ease;
+}
+
+header nav h2 {
+  position: absolute;
+  top: 14px;
+  left: 12px;
+  width: 44px;
+  height: 44px;
+  cursor: pointer;
+}
+
+header nav h2 .header_nav_logo .header_nav_logo_path1 {
+  -webkit-transition: stroke-dashoffset 0.5s ease;
+  transition: stroke-dashoffset 0.5s ease;
+}
+
+header nav h2 .header_nav_logo .header_nav_logo_path2 {
+  -webkit-transition: stroke-dashoffset 0.5s ease 0.2s;
+  transition: stroke-dashoffset 0.5s ease 0.2s;
+}
+
+header nav h2 .header_nav_logo .header_nav_logo_path3 {
+  -webkit-transition: stroke-dashoffset 0.5s ease 0.3s;
+  transition: stroke-dashoffset 0.5s ease 0.3s;
+}
+
+header nav .header_close {
+  position: absolute;
+  top: 14px;
+  right: 32px;
+  width: 44px;
+  height: 44px;
+  cursor: pointer;
+}
+
+header nav .header_close .header_close_path1 {
+  -webkit-transition: stroke-dashoffset 0.5s ease;
+  transition: stroke-dashoffset 0.5s ease;
+}
+
+header nav .header_close .header_close_path2 {
+  -webkit-transition: stroke-dashoffset 0.5s ease 0.1s;
+  transition: stroke-dashoffset 0.5s ease 0.1s;
+}
+
+header nav ul {
+  margin-top: 50vh;
+  padding: 0 12vw;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  font-family: 'Roboto-Black', sans-serif;
+  font-size: 6.4rem;
+  line-height: 1.2;
+  color: #808080;
+}
+
+header nav ul li {
+  -webkit-transition: color 0.5s ease;
+  transition: color 0.5s ease;
+  padding: 2.4rem 0;
+}
+
+header nav .header_sendMessage_box {
+  position: absolute;
+  bottom: 0;
+  left: 12vw;
+  width: 76vw;
+  height: 28rem;
+  background: #000;
+}
+
+header nav .header_sendMessage_box hr {
+  background: rgba(128, 128, 128, 0.5);
+  -webkit-transform-origin: left;
+          transform-origin: left;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  -webkit-transition: -webkit-transform 0.5s ease 0.2s;
+  transition: -webkit-transform 0.5s ease 0.2s;
+  transition: transform 0.5s ease 0.2s;
+  transition: transform 0.5s ease 0.2s, -webkit-transform 0.5s ease 0.2s;
+}
+
+header nav .header_sendMessage_box span {
+  display: inline-block;
+}
+
+header nav .header_sendMessage_box .header_sendMessage {
+  position: absolute;
+  top: 4vh;
+  right: 0;
+  width: 24rem;
+  height: 6rem;
+}
+
+header nav .header_sendMessage_box .header_sendMessage .header_eventContents {
+  width: 24rem;
+  height: 6rem;
+}
+
+header nav .header_sendMessage_box .header_sendMessage .header_eventContents .header_sendMessage_txt {
+  position: absolute;
+  z-index: 1;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  height: 6rem;
+  line-height: 6rem;
+  white-space: nowrap;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+header nav .header_sendMessage_box .header_sendMessage .header_eventContents .header_sendMessage_bg {
+  position: absolute;
+  right: 0;
+  width: 24rem;
+  height: 6rem;
+  border-radius: 3rem;
+  background: gray;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+header nav .header_sendMessage_box .header_sendMessage .header_eventContents .header_sendMessage_bg svg {
+  width: 6rem;
+  height: 6rem;
+  opacity: 0;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+header nav ul li:hover {
+  color: #dddddd;
+}
+
+header nav .header_sendMessage_box .header_sendMessage:hover .header_eventContents .header_sendMessage_txt {
+  left: 0;
+  -webkit-transform: translateX(0%);
+          transform: translateX(0%);
+  color: #dddddd;
+}
+
+header nav .header_sendMessage_box .header_sendMessage:hover .header_eventContents .header_sendMessage_bg {
+  width: 6rem;
+  background: #dddddd;
+}
+
+header nav .header_sendMessage_box .header_sendMessage:hover .header_eventContents .header_sendMessage_bg svg {
+  opacity: 1;
+}
+
+@media only screen and (max-width: 784px) {
+  header nav .header_sendMessage_box .header_sendMessage {
+    width: 100px;
+    height: 25px;
+  }
+  header nav .header_sendMessage_box .header_sendMessage .header_eventContents {
+    width: 100px;
+    height: 25px;
+  }
+  header nav .header_sendMessage_box .header_sendMessage .header_eventContents .header_sendMessage_txt {
+    line-height: 25px;
+  }
+  header nav .header_sendMessage_box .header_sendMessage .header_eventContents .header_sendMessage_bg {
+    width: 100px;
+    height: 25px;
+    border-radius: 12.5px;
+  }
+  header nav .header_sendMessage_box .header_sendMessage .header_eventContents .header_sendMessage_bg svg {
+    width: 25px;
+    height: 25px;
+  }
+  header nav .header_sendMessage_box .header_sendMessage:hover .header_eventContents .header_sendMessage_bg {
+    width: 25px;
+    border-radius: 12.5px;
+  }
+}
+/*# sourceMappingURL=header_t_m.css.map */

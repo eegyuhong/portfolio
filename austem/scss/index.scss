@@ -1,0 +1,358 @@
+@mixin underLine-(){
+    &::after{
+        display: block;
+        content: "";
+        margin: 0 auto;
+        margin-top: 2.4rem;
+        margin-bottom: 4rem;
+        width: 24rem; height: 0.6rem;
+        background: $c5;
+    }
+};
+
+@mixin font-(
+    $f:13,
+    $s:1.8rem,
+    $h:1.8rem,
+    $c:1,
+    $ts:0
+    ){
+        @if($f == 11){// font-family 10 = NotoSansKR, 20 = NanumSquareOTF
+            font-family: 'NotoSansKR-Thin', sans-serif;
+        }@else if($f == 12){
+            font-family: 'NotoSansKR-Light', sans-serif;
+        }@else if($f == 13){
+            font-family: 'NotoSansKR-Regular', sans-serif;
+        }@else if($f == 14){
+            font-family: 'NotoSansKR-Medium', sans-serif;
+        }@else if($f == 15){
+            font-family: 'NotoSansKR-Bold', sans-serif;
+        }@else if($f == 16){
+            font-family: 'NotoSansKR-Black', sans-serif;
+        }@else if($f == 21){
+            font-family: 'NanumSquareL', sans-serif;
+        }@else if($f == 22){
+            font-family: 'NanumSquareR', sans-serif;
+        }@else if($f == 23){
+            font-family: 'NanumSquareB', sans-serif;
+        }@else if($f == 24){
+            font-family: 'NanumSquareEB', sans-serif;
+        }
+        font-size: $s;// font-size
+        line-height: $h;// line-height
+        @if($c == 1){// color
+            color: #0E3254;
+        }
+        @else if($c == 2){
+            color: #4F6A82;
+        }
+        @else if($c == 3){
+            color: #8899AA;
+        }
+        @else if($c == 4){
+            color: #F5F5F5
+        }
+        @if($ts == 1){// text-shadow
+            text-shadow: 0.1rem 0.1rem 0.1rem rgba(0,0,0,0.5);
+        }
+}
+//thin 100, light 300, regular 400, medium 500, bold 700, black 900
+//@include font-($f:, $s:, $h:, $c:, $ts:);
+
+$c1:#0E3254;
+$c2:#4F6A82;
+$c3:#8899AA;
+$c4:#F5F5F5;
+$c5:#E36D00;
+$c6:#EEBE91;
+
+
+body{
+    background: $c1;
+}
+
+.secBg{
+    background: #fff;
+}
+
+//section01 --------------------------------------------------
+.sec01{
+    height: 100vh;
+    .videoBox{
+        position: fixed;
+        z-index: -1;
+        width: 100vw; height: 100vh;
+        overflow: hidden;
+        video{
+            width: 100%;
+        }
+        .videoMask{
+            position: absolute;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            background: rgba(14,50,84,0.9);
+            h2{
+                margin: 0 auto;
+                margin-top: 32rem;
+                width: 62.2rem; height: 9rem;
+                background: url(../imgs/index/sec01_logo.png) no-repeat 0 0;
+            }
+            p{
+                text-align: center;
+                &:nth-of-type(1){
+                    margin-top: 2.4rem;
+                    strong{
+                        @include font-($f:14, $s:5rem, $c:4, $h:7.2rem, $ts:1);
+                    }
+                }
+                &:nth-of-type(2){
+                    margin-top: 8rem;
+                    @include font-($f:11, $s:2.2rem, $c:4, $h:3.2rem, $ts:1);
+                }
+                &:nth-of-type(3){
+                    position: absolute; bottom: 4rem; left: 50%; transform: translateX(-50%);
+                    box-sizing: border-box;
+                    border: 0.4rem solid rgba(243,245,246,0.3);
+                    border-radius: 3.2rem;
+                    padding-top: 2rem;
+                    width: 6.4rem; height: 12rem;
+                    .ico_more{
+                        display: block;
+                        box-sizing: border-box;
+                        margin: 0 auto;
+                        border: 0.2rem solid rgba(243,245,246,0.3);
+                        border-radius: 0.2rem;
+                        width: 0; height: 2.4rem;
+                        transform: translateY(0);
+                        transition: transform 1s linear;
+                    }
+                }
+            }
+        }
+    }
+}
+//section01 end --------------------------------------------------
+
+//section02 --------------------------------------------------
+.sec02{
+    box-sizing: border-box;
+    padding-top: 30rem;
+    height: 117.2rem;
+    text-align: center;
+    h2{
+        @include font-($f:24, $s:7.2rem, $c:1, $h:8rem, $ts:1);
+        @include underLine-();
+    }
+    p{
+        margin-bottom: 8rem;
+        @include font-($f:13, $s:2.6rem, $c:3, $h:3.8rem);
+    }
+    dl{
+        display: flex;
+        justify-content: space-between;
+        box-sizing: border-box;
+        padding-top: 8.4rem;
+        width: 100%; height: 56.6rem;
+        .sec02_conBox{
+            width: 28rem; height: 40.2rem;
+            background: $c3;
+            transform: translateY(0);
+            transition: all 0.3s ease;
+            &:nth-of-type(3){
+                background: $c6;
+            }
+            &:nth-of-type(2), &:nth-of-type(4){
+                transform: translateY(8rem);
+            }
+        }
+        dt{
+            transform: translate(4.6rem,-50%);
+            border: 1rem solid #fff;
+            border-radius: 100%;
+            width: 16.8rem; height: 16.8rem;
+            @at-root .sec02_conBox{
+                @for $i from 1 through 4 {
+                    &:nth-of-type(#{$i})>dt{
+                        background: url("../imgs/index/sec02_conBox_#{$i}.png") no-repeat 50% 50%/105%;
+                    }
+                }
+            }
+        }
+        dd{
+            transform: translateY(-4.2rem);
+            &:nth-of-type(1){
+                @include font-($f:13, $s:1.8rem, $c:4, $h:2.6rem);
+            }
+            &:nth-of-type(2){
+                margin: 0 auto;
+                margin-top: 4rem;
+                width: 20rem;
+                @include font-($f:15, $s:1.8rem, $c:4, $h:2.6rem);
+            }
+        }
+    }
+}
+//section02 end --------------------------------------------------
+
+//section03 --------------------------------------------------
+.sec03{
+    box-sizing: border-box;
+    padding-top: 30rem;
+    height: 127.4rem;
+    h2{
+        text-align: center;
+        @include font-($f:24, $s:7.2rem, $c:1, $h:8rem, $ts:1);
+        @include underLine-();
+    }
+    .sec03_bg{
+        height: 82.4rem;
+        background: url(../imgs/index/sec03_bg.jpg) no-repeat 50% 50%/cover;
+        .ctBox{
+            overflow: hidden;
+            .sec03_showBox{
+                display: flex;
+                width: 120rem; height: 64rem;
+                .sec03_cons{
+                    flex: 0 0 120rem;
+                    margin-top: 8rem;
+                    @for $i from 1 through 4 {
+                        &.Chassis{
+                            background: url("../imgs/index/sec03_cons_1.png") no-repeat 12rem 0;
+                        }
+                        &.Body{
+                            background: url("../imgs/index/sec03_cons_2.png") no-repeat 12rem 0;
+                        }
+                        &.Seat{
+                            background: url("../imgs/index/sec03_cons_3.png") no-repeat 12rem 0;
+                        }
+                        &.Wheel{
+                            background: url("../imgs/index/sec03_cons_4.png") no-repeat 12rem 0;
+                        }
+                    }
+                    ul{
+                        box-sizing: border-box;
+                        padding-top: 12rem;
+                        width: 50rem; height: 50rem;
+                        background: $c5;
+                        margin-top: 6rem;
+                        margin-left: 58rem;
+                        .sec03_conTitl{
+                            margin-left: 4rem;
+                            @include font-($f:23, $s:4rem, $c:4, $h:4.4rem);
+                        }
+                        .sec03_conTxt{
+                            margin: 4rem 0 6rem 4rem;
+                            @include font-($f:21, $s:2.4rem, $c:4, $h:2.9rem);
+                        }
+                        .sec03_conMore{
+                            text-align: center;
+                            box-sizing: border-box;
+                            margin: 0 auto;
+                            border: 0.1rem solid $c4;
+                            width: 20rem; height: 5.6rem;
+                            a{
+                                @include font-($f:21, $s:1.8rem, $c:4, $h:5.6rem);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .sec03_conBtns{
+        display: flex;
+        justify-content: space-between;
+        margin: 0 auto;
+        width: 132rem;
+        transform: translateY(-30rem);
+        .sec03_conBtn{
+            width: 6rem; height: 10rem;
+            &.sec03_conBtn_prev{
+                background: url(../imgs/index/sec03_conBtn.png) no-repeat 0 0;
+            }
+            &.sec03_conBtn_next{
+                background: url(../imgs/index/sec03_conBtn.png) no-repeat -6rem 0;
+            }
+        }
+    }
+    .sec03_conNavs{
+        display: flex;
+        justify-content: space-between;
+        margin: 0 auto;
+        width: 14.4rem;
+        .sec03_conNav{
+            width: 2.4rem; height: 2.4rem;
+            background: url(../imgs/index/sec03_conNav.png) no-repeat 0 0;
+            &.on{
+                background-position: -2.4rem 0;
+            }
+        }
+    }
+    a{
+        display: block;
+        width: 100%; height: 100%;
+    }
+}
+//section03 end --------------------------------------------------
+
+//section04 --------------------------------------------------
+.sec04{
+    box-sizing: border-box;
+    padding-top: 30rem;
+    height: 137.6rem;
+    .ctBox{
+        text-align: center;
+        h2{
+            @include font-($f:24, $s:7.2rem, $c:1, $h:8rem, $ts:1);
+            @include underLine-();
+        }
+        p{
+            margin-bottom: 8rem;
+            @include font-($f:13, $s:2.6rem, $c:3, $h:3.8rem);
+        }
+        ul{
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            width: 120rem; height: 57rem;
+            li{
+                padding: 1rem;
+                flex: 0 0 24rem;
+                width: 24rem; height: 24rem;
+                background: $c2;
+                &:nth-of-type(n+5){
+                    align-self: flex-end;
+                }
+                .sec04_conBg{
+                    display: block;
+                    width: 24rem; height: 24rem;
+                }
+                @for $i from 1 through 7{
+                    &:nth-of-type(#{$i}){
+                        .sec04_conBg{
+                            background: url("../imgs/index/sec04_con_#{$i}.png") no-repeat 50% 50%/contain;
+                        }
+                    }
+                }
+                &:last-child{
+                    flex: 0 0 26rem;
+                    padding: 0;
+                    width: 26rem; height: 26rem;
+                    background: $c6;
+                    a{
+                        display: block;
+                        width: 100%; height: 100%;
+                        .sec04_more{
+                            @include font-($f:24, $s:2.4rem, $c:2, $h:24rem);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+main .sec04 .ctBox ul li:hover{
+    background: $c5;
+}
+//section04 end --------------------------------------------------

@@ -1,0 +1,301 @@
+@mixin font-(
+    $f:11,
+    $s:1.8rem,
+    $h:1.8rem,
+    $c:white,
+    $ts:0,
+    $op:0.5,
+    ){
+        @if($f == 11){// font-family 10 = NotoSansKR, 20 = NanumSquareOTF
+            font-family: 'NotoSansKR-Thin', sans-serif;
+        }@else if($f == 13){
+            font-family: 'NotoSansKR-Light', sans-serif;
+        }@else if($f == 14){
+            font-family: 'NotoSansKR-Regular', sans-serif;
+        }@else if($f == 15){
+            font-family: 'NotoSansKR-Medium', sans-serif;
+        }@else if($f == 17){
+            font-family: 'NotoSansKR-Bold', sans-serif;
+        }@else if($f == 19){
+            font-family: 'NotoSansKR-Black', sans-serif;
+        }@else if($f == 20){
+            font-family: 'ChosunBg', sans-serif;
+        }@else if($f == 30){
+            font-family: 'NanumBarunGothicBold', sans-serif;
+        }
+        font-size: $s;// font-size
+        line-height: $h;// line-height
+        @if($c == white){// color
+            color: rgba(255,255,255,$op);
+        }
+        @else if($c == black){
+            color: rgba(0,0,0,$op);
+        }
+        @else if($c == broun){
+            color: rgba(143,114,71,$op);
+        }
+}
+//thin 100, light 300, regular 400, medium 500, bold 700, black 900
+//@include font-($f:, $s:, $h:, $c:, $op:);
+
+main{
+    width: 100%;
+    .centerBox{
+        margin: 0 auto;
+        width: 160rem;
+    }
+}
+
+main>h1{
+    margin: 20rem auto 3.2rem auto;
+    width: 160rem;
+    @include font-($s:4.8rem, $h:4.8rem, $c:black, $op:1);
+}
+
+.sec01>.centerBox{
+    box-sizing: border-box;
+    padding: 4rem 0 0 0;
+    height: 40rem;
+    text-align: center;
+    background: url(../imgs/cart/aside_bg.jpg) no-repeat 0 0;
+    .sec01_logo{
+        margin: 0 auto;
+        width: 60rem;
+        height: 13rem;
+        background: url(../imgs/cart/sec01_logo.png) no-repeat 0 0;
+    }
+    .sec01_line1{
+        position: relative;
+        @include font-($s:2.6rem, $h:2.6rem);
+        &::after{
+            position: absolute;
+            top: 180%;
+            left: calc(50% - 13rem);
+            content: "";
+            width: 26rem;
+            border-bottom: 0.1rem solid rgba(255,255,255,0.5);
+        }
+    }
+    .sec01_line2{
+        margin: 6rem 0 6.4rem 0;
+        em{
+            @include font-($f:20, $s:1.4rem, $h:1.4rem, $op:0.7);
+        }
+    }
+    a{
+        @include font-($s:1.2rem, $h:1.2rem);
+    }
+}
+
+//section02
+$sec02_products_height:20rem;
+
+.sec02{
+    margin-bottom: 10rem;
+    .sec02_category{
+        margin-top: 10rem;
+        @include font-($f:15, $s:2.2rem, $h:2.2rem, $c:black, $op:1);
+        .sec02_dep1{
+            margin-top: 3.2rem;
+            .sec02_dep1_products{
+                height: $sec02_products_height;
+                border-bottom: 1px solid #eee;
+            }
+        }
+        .sec02_dep2{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 100%;
+            .sec02_products_img{
+                font-size: 1rem;
+                flex: 0 0 20rem;
+                text-align: center;
+                line-height: 20rem;
+                img{
+                    vertical-align:middle;
+                }
+            }
+            .sec02_products_tit{
+                flex: 0 0 42rem;
+                margin: 0 2rem;
+                @include font-($f:15, $c:black, $op:1);
+            }
+            .sec02_products_price{
+                @include font-($f:13, $s:1.6rem, $c:black, $op:1);
+            }
+            .sec02_products_qttBtn{
+                @include font-($f:15, $s:1.6rem, $op:1);
+                color: #4d4d4d;
+                span{
+                    display: inline-block;
+                    vertical-align: middle;
+                }
+                .sec02_products_qttBtn_top{
+                    box-sizing: border-box;
+                    border: 0.1rem solid #eee;
+                    width: 3rem; height: 4.8rem;
+                    font-size: 0; line-height: 0;
+                    background: url(../imgs/cart/sec02_products_qttBtn_top.png) no-repeat 50% 50%;
+                }
+                .sec02_products_qttBtn_up{
+                    box-sizing: border-box;
+                    border: 0.1rem solid #eee;
+                    width: 3rem; height: 4.8rem;
+                    font-size: 0; line-height: 0;
+                    background: url(../imgs/cart/sec02_products_qttBtn_up.png) no-repeat 50% 50%;
+                }
+                .sec02_products_qttBtn_count{
+                    box-sizing: border-box;
+                    margin: 0 1.6rem;
+                    border: 0.1rem solid #eee;
+                    width: 10.8rem; height: 4.8rem;
+                    line-height: 4.8rem;
+                    text-align: center;
+                }
+                .sec02_products_qttBtn_down{
+                    box-sizing: border-box;
+                    border: 0.1rem solid #eee;
+                    width: 3rem; height: 4.8rem;
+                    font-size: 0; line-height: 0;
+                    background: url(../imgs/cart/sec02_products_qttBtn_down.png) no-repeat 50% 50%;
+                }
+                .sec02_products_qttBtn_bottom{
+                    box-sizing: border-box;
+                    border: 0.1rem solid #eee;
+                    width: 3rem; height: 4.8rem;
+                    font-size: 0; line-height: 0;
+                    background: url(../imgs/cart/sec02_products_qttBtn_bottom.png) no-repeat 50% 50%;
+                }
+            }
+            .sec02_products_priceSum{
+                flex: 0 0 10rem;
+                text-align: center;
+                @include font-($f:15, $c:black, $op:1);
+            }
+            .sec02_products_remove{
+                width: 4.8rem;
+                
+                span{
+                    display: inline-block;
+                    vertical-align: middle;
+                    box-sizing: border-box;
+                    border: 0.1rem solid #eee;
+                    font-size: 0; line-height: 0;
+                    width: 4.8rem; height: 4.8rem;
+                    background: url(../imgs/cart/sec02_products_remove.png) no-repeat 50% 50%;
+                }
+            }
+        }
+    }
+    .sec02_summary{
+        dl{
+            display: flex;
+            flex-wrap: wrap;
+            margin-left: auto;
+            width: 52rem;   
+            @include font-($f:13, $s:2.4rem, $h:6rem, $c:black, $op:1);
+            strong{
+                font-family: 'NotoSansKR-Bold', sans-serif;
+            }
+            dt{
+                width: 14rem;
+            }
+            dd{
+                width: 38rem;
+                text-align: right;
+            }
+        }
+    }
+    .sec02_btn_buy{
+        margin: 8rem auto;
+        width: 20rem; height: 6rem;
+        text-align: center;
+        border: 0.1rem solid #000;
+        a{
+            display: block;
+            width: 100%; height: 100%;
+            @include font-($f:13, $s:1.6rem, $h:6rem, $c:black, $op:1);
+        }
+        
+
+    }
+}
+
+//section02 이벤트
+body main .sec02 .centerBox .sec02_category .sec02_dep1 .sec02_dep1_products .sec02_dep2{
+    .sec02_products_qttBtn, .sec02_products_remove{
+        >span:not(:nth-child(3)){
+            &:hover{
+                border: 0.1rem solid #C7B8A3;
+            }
+        }
+    }
+}
+
+//section02 버튼 이벤트
+.sec02{
+    .centerBox{
+        .sec02_btn_buy{
+            position: relative;
+            overflow: hidden;
+            &::after{
+                content: "";
+                position: absolute;
+                z-index: -1;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: rgba(143,114,71,1);
+                transition: all .5s ease;
+            }
+            &:hover{
+                &::after{
+                    top: 0;
+                }
+            }
+        }
+    }
+}
+
+//section02 장바구니 빈 경우
+.centerBox{
+    .sec02_doAlertCartEmpty{
+        margin: 10rem auto;
+        width: 100%;
+        text-align: center;
+        >p:first-child{
+            @include font-($s:12rem, $h:16rem, $c:black, $op:1);
+        }
+        >p:last-child{
+            position: relative;
+            overflow: hidden;
+            margin: 8rem auto;
+            width: 20rem; height: 6rem;
+            text-align: center;
+            border: 0.1rem solid #000;
+            a{
+                display: block;
+                width: 100%; height: 100%;
+                @include font-($f:13, $s:1.6rem, $h:6rem, $c:black, $op:1);
+            }
+            &::after{
+                content: "";
+                position: absolute;
+                z-index: -1;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: rgba(143,114,71,1);
+                transition: all .5s ease;
+            }
+            &:hover{
+                &::after{
+                    top: 0;
+                }
+            }
+        }
+    }
+}

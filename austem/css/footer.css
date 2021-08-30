@@ -1,0 +1,41 @@
+footer {
+  width: 100%;
+  height: 16.4rem;
+  background: #0E3254;
+}
+
+footer .ctBox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+footer .ctBox h1 {
+  margin-left: 24.3rem;
+  margin-top: 4rem;
+  width: 35.8rem;
+  height: 8.4rem;
+  background: url(../imgs/footer/logo.png) no-repeat 0 0;
+}
+
+footer .ctBox h1 a {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+footer .ctBox div {
+  margin-top: 5.2rem;
+  font-family: 'NotoSansKR-Regular', sans-serif;
+  font-size: 1.6rem;
+  line-height: 2.3rem;
+  color: #F5F5F5;
+}
+
+footer .ctBox div em {
+  font-family: 'NanumSquareEB', sans-serif;
+  font-size: 1.6rem;
+  line-height: 1.8rem;
+  color: #F5F5F5;
+}
+/*# sourceMappingURL=footer.css.map */

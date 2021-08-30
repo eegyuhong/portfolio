@@ -1,0 +1,16 @@
+footer {
+  position: fixed;
+  z-index: 400;
+  bottom: 14px;
+  right: 24px;
+}
+
+footer p {
+  text-align: right;
+  white-space: nowrap;
+  font-family: 'NotoSansKR-Thin', sans-serif;
+  font-size: 2rem;
+  line-height: 1.2;
+  color: #808080;
+}
+/*# sourceMappingURL=footer_t.css.map */

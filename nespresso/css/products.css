@@ -1,0 +1,579 @@
+main {
+  width: 100%;
+}
+
+main .centerBox {
+  margin: 0 auto;
+  width: 160rem;
+}
+
+.sec01 {
+  width: 100%;
+  height: 64rem;
+  background: url(../imgs/shop/sec01_bg.jpg) no-repeat 0 60%/cover;
+}
+
+.sec01 .centerBox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  height: 64rem;
+}
+
+.sec01 .centerBox p {
+  padding-top: 6rem;
+  height: 14rem;
+  font-family: 'NotoSansKR-Thin', sans-serif;
+  font-size: 3.2rem;
+  line-height: 4rem;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.sec01 .centerBox nav > ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100rem;
+  height: 20rem;
+}
+
+.sec01 .centerBox nav > ul > li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  overflow: hidden;
+  text-align: center;
+  background: #bbb;
+}
+
+.sec01 .centerBox nav > ul > li ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.sec01 .centerBox nav > ul a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.sec01 .centerBox nav > ul > li {
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 10rem;
+          flex: 1 1 10rem;
+}
+
+.sec01 .centerBox nav > ul > li > a > svg {
+  width: 100%;
+}
+
+.sec01 .centerBox nav > ul > li ul {
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 0px;
+          flex: 0 1 0;
+}
+
+.sec01 .centerBox nav > ul > li ul li {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 10rem;
+          flex: 1 1 10rem;
+}
+
+.sec01 .centerBox nav > ul > li ul li a svg {
+  fill: #C7B8A3;
+  width: 100%;
+}
+
+.sec01 .centerBox nav > ul > li:hover:nth-of-type(1), .sec01 .centerBox nav > ul > li:hover:nth-of-type(2), .sec01 .centerBox nav > ul > li.on:nth-of-type(1), .sec01 .centerBox nav > ul > li.on:nth-of-type(2) {
+  -webkit-box-flex: 8;
+      -ms-flex: 8 1 10rem;
+          flex: 8 1 10rem;
+}
+
+.sec01 .centerBox nav > ul > li:hover:nth-of-type(1) > a > svg > rect, .sec01 .centerBox nav > ul > li:hover:nth-of-type(2) > a > svg > rect, .sec01 .centerBox nav > ul > li.on:nth-of-type(1) > a > svg > rect, .sec01 .centerBox nav > ul > li.on:nth-of-type(2) > a > svg > rect {
+  fill: #241918;
+}
+
+.sec01 .centerBox nav > ul > li:hover:nth-of-type(1) ul, .sec01 .centerBox nav > ul > li:hover:nth-of-type(2) ul, .sec01 .centerBox nav > ul > li.on:nth-of-type(1) ul, .sec01 .centerBox nav > ul > li.on:nth-of-type(2) ul {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 200%;
+          flex: 1 1 200%;
+}
+
+.sec01 .centerBox nav > ul > li:hover:nth-of-type(1) ul li, .sec01 .centerBox nav > ul > li:hover:nth-of-type(2) ul li, .sec01 .centerBox nav > ul > li.on:nth-of-type(1) ul li, .sec01 .centerBox nav > ul > li.on:nth-of-type(2) ul li {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 50%;
+          flex: 1 1 50%;
+}
+
+.sec01 .centerBox nav > ul > li:hover:nth-of-type(1) ul li a svg, .sec01 .centerBox nav > ul > li:hover:nth-of-type(2) ul li a svg, .sec01 .centerBox nav > ul > li.on:nth-of-type(1) ul li a svg, .sec01 .centerBox nav > ul > li.on:nth-of-type(2) ul li a svg {
+  width: 100%;
+}
+
+.sec01 .centerBox nav > ul > li:hover:nth-of-type(1) ul li a svg rect, .sec01 .centerBox nav > ul > li:hover:nth-of-type(2) ul li a svg rect, .sec01 .centerBox nav > ul > li.on:nth-of-type(1) ul li a svg rect, .sec01 .centerBox nav > ul > li.on:nth-of-type(2) ul li a svg rect {
+  fill: #C7B8A3;
+}
+
+.sec01 .centerBox nav > ul > li:hover:nth-of-type(1) ul li:hover a svg rect, .sec01 .centerBox nav > ul > li:hover:nth-of-type(1) ul li.on a svg rect, .sec01 .centerBox nav > ul > li:hover:nth-of-type(2) ul li:hover a svg rect, .sec01 .centerBox nav > ul > li:hover:nth-of-type(2) ul li.on a svg rect, .sec01 .centerBox nav > ul > li.on:nth-of-type(1) ul li:hover a svg rect, .sec01 .centerBox nav > ul > li.on:nth-of-type(1) ul li.on a svg rect, .sec01 .centerBox nav > ul > li.on:nth-of-type(2) ul li:hover a svg rect, .sec01 .centerBox nav > ul > li.on:nth-of-type(2) ul li.on a svg rect {
+  fill: #8F7247;
+}
+
+.sec01 .centerBox nav > ul > li:hover:nth-of-type(3), .sec01 .centerBox nav > ul > li:hover:nth-of-type(4), .sec01 .centerBox nav > ul > li:hover:nth-of-type(5), .sec01 .centerBox nav > ul > li.on:nth-of-type(3), .sec01 .centerBox nav > ul > li.on:nth-of-type(4), .sec01 .centerBox nav > ul > li.on:nth-of-type(5) {
+  -webkit-box-flex: 2;
+      -ms-flex: 2 1 10rem;
+          flex: 2 1 10rem;
+}
+
+.sec01 .centerBox nav > ul > li:hover:nth-of-type(3) > a > svg rect, .sec01 .centerBox nav > ul > li:hover:nth-of-type(4) > a > svg rect, .sec01 .centerBox nav > ul > li:hover:nth-of-type(5) > a > svg rect, .sec01 .centerBox nav > ul > li.on:nth-of-type(3) > a > svg rect, .sec01 .centerBox nav > ul > li.on:nth-of-type(4) > a > svg rect, .sec01 .centerBox nav > ul > li.on:nth-of-type(5) > a > svg rect {
+  fill: #241918;
+}
+
+.sec02 .centerBox {
+  height: 80rem;
+  background: url(../imgs/products/sec02_bg.png) no-repeat 0 0;
+}
+
+.sec02 .centerBox .sec02_txt {
+  margin-left: auto;
+  padding: 8rem 0 0 0;
+  width: 64rem;
+}
+
+.sec02 .centerBox .sec02_txt p > em {
+  font-family: 'NotoSansKR-Thin', sans-serif;
+  font-size: 1.4rem;
+  line-height: 2rem;
+  color: black;
+}
+
+.sec02 .centerBox .sec02_txt h2 {
+  font-family: 'NotoSansKR-Light', sans-serif;
+  font-size: 3.6rem;
+  line-height: 3.6rem;
+  color: black;
+}
+
+.sec02 .centerBox .sec02_txt dl {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  margin: 3.2rem 0;
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+}
+
+.sec02 .centerBox .sec02_txt dl dt {
+  margin: 3.6rem 0;
+  width: 12rem;
+  font-family: 'NotoSansKR-Medium', sans-serif;
+  font-size: 1.8rem;
+  line-height: 2.2rem;
+  color: black;
+}
+
+.sec02 .centerBox .sec02_txt dl dd {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 52rem;
+          flex: 1 0 52rem;
+  margin-top: 3.6rem;
+  font-family: 'NotoSansKR-Thin', sans-serif;
+  font-size: 1.6rem;
+  line-height: 2.2rem;
+  color: black;
+}
+
+.sec02 .centerBox .sec02_txt dl dd.sec02_txt_level .sec02_txt_level_vlu {
+  margin: 0 0.6rem;
+}
+
+.sec02 .centerBox .sec02_txt dl dd.sec02_txt_level .sec02_txt_level_icn {
+  display: inline-block;
+  width: 1rem;
+  height: 1rem;
+}
+
+.sec02 .centerBox .sec02_txt dl dd.sec02_txt_level .sec02_txt_level_icn.sec02_txt_level_icn_black {
+  background: #000;
+}
+
+.sec02 .centerBox .sec02_txt dl dd.sec02_txt_level .sec02_txt_level_icn.sec02_txt_level_icn_gray {
+  background: #bbb;
+}
+
+.sec02 .centerBox .sec02_txt dl dd.sec02_txt_volume {
+  margin: 0 0 3.6rem 0;
+}
+
+.sec02 .centerBox .sec02_txt dl dd.sec02_txt_volume .sec02_txt_volume_icn {
+  display: inline-block;
+  margin-right: 1rem;
+  width: 4.8rem;
+  height: 5.8rem;
+  background: url(../imgs/products/sec02_txt_volume_icn.png) no-repeat 0 0;
+}
+
+.sec02 .centerBox .sec02_txt dl dd.sec02_txt_pieces span {
+  display: inline-block;
+  margin-right: 1rem;
+  width: 5.2rem;
+  height: 2rem;
+  background: url(../imgs/products/sec02_txt_pieces.png) no-repeat 0 0;
+}
+
+.sec02 .centerBox .sec02_txt .sec02_txt_btn {
+  overflow: hidden;
+  position: relative;
+  float: left;
+  border: 1px solid #000;
+  width: 20rem;
+  height: 4.8rem;
+  text-align: center;
+  font-family: 'NotoSansKR-Medium', sans-serif;
+  font-size: 1.4rem;
+  line-height: 4.8rem;
+  color: black;
+}
+
+.sec02 .centerBox .sec02_txt .sec02_txt_btn span {
+  position: absolute;
+  top: 100%;
+  display: block;
+  height: 4.8rem;
+}
+
+.sec02 .centerBox .sec02_txt .sec02_txt_btn span:nth-of-type(1) {
+  width: 20rem;
+  color: #fff;
+  background-color: #8f7247;
+  font-family: 'NotoSansKR-Medium', sans-serif;
+  font-size: 1.8rem;
+  line-height: 4.8rem;
+  color: white;
+}
+
+.sec02 .centerBox .sec02_txt .sec02_txt_btn span:nth-of-type(2) {
+  left: 2.4rem;
+  width: 2.4rem;
+  font-size: 0;
+  background: url(../imgs/shop/sec02_btnAddCart_up.png) no-repeat 50% 50%;
+}
+
+.sec02 .centerBox .sec02_txt .sec02_txt_btn span:nth-of-type(3) {
+  right: 2.4rem;
+  width: 2.4rem;
+  font-size: 0;
+  background: url(../imgs/shop/sec02_btnAddCart_down.png) no-repeat 50% 50%;
+}
+
+.sec02 .centerBox .sec02_txt .sec02_txt_btn span:nth-of-type(4) {
+  left: 0;
+  width: 2.4rem;
+  font-size: 0;
+  background: url(../imgs/shop/sec02_btnAddCart_top.png) no-repeat 50% 50%;
+}
+
+.sec02 .centerBox .sec02_txt .sec02_txt_btn span:nth-of-type(5) {
+  right: 0;
+  width: 2.4rem;
+  font-size: 0;
+  background: url(../imgs/shop/sec02_btnAddCart_bottom.png) no-repeat 50% 50%;
+}
+
+.sec02 .centerBox .sec02_txt p:last-child {
+  float: right;
+}
+
+.sec02 .centerBox .sec02_txt p:last-child strong {
+  font-family: 'NotoSansKR-Medium', sans-serif;
+  font-size: 3rem;
+  line-height: 5rem;
+  color: black;
+}
+
+.sec02 .centerBox .sec02_txt .sec02_txt_btn span {
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+.sec02 .centerBox .sec02_txt .sec02_txt_btn:hover span, .sec02 .centerBox .sec02_txt .sec02_txt_btn.on span {
+  top: 0;
+}
+
+main > .centerBox {
+  height: 60rem;
+  background: url(../imgs/products/logo_costarica.png) no-repeat 50% 50%;
+}
+
+.sec03 {
+  height: 80rem;
+  background: url(../imgs/products/sec03_bg.jpg) no-repeat 0 0/cover;
+}
+
+.sec03 .centerBox {
+  padding-top: 30rem;
+  height: 30rem;
+}
+
+.sec03 .centerBox p {
+  text-align: center;
+  font-family: 'NotoSansKR-Thin', sans-serif;
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+  color: white;
+}
+
+.sec03 .centerBox p:nth-child(1) {
+  font-size: 3.8rem;
+  line-height: 3.8rem;
+}
+
+.sec03 .centerBox p:nth-child(2) {
+  font-size: 3.2rem;
+  line-height: 3.2rem;
+  margin: 4rem 0 8rem 0;
+}
+
+.sec03 .centerBox p:nth-child(3) {
+  opacity: 0.7;
+}
+
+.sec04 .sec04_txt_top, .sec04 .sec04_txt_middle, .sec04 .sec04_txt_bottome {
+  margin-top: 12rem;
+  width: 88rem;
+}
+
+.sec04 .sec04_txt_top p, .sec04 .sec04_txt_middle p, .sec04 .sec04_txt_bottome p {
+  font-family: 'NotoSansKR-Thin', sans-serif;
+  font-size: 1.6rem;
+  line-height: 2.2rem;
+  color: black;
+}
+
+.sec04 .sec04_txt_top p strong, .sec04 .sec04_txt_middle p strong, .sec04 .sec04_txt_bottome p strong {
+  font-family: 'NotoSansKR-Medium', sans-serif;
+  font-size: 3rem;
+  line-height: 3.2rem;
+  color: black;
+}
+
+.sec04 .sec04_txt_top p b, .sec04 .sec04_txt_middle p b, .sec04 .sec04_txt_bottome p b {
+  font-family: 'NotoSansKR-Medium', sans-serif;
+  font-size: 3rem;
+  line-height: 3.2rem;
+  color: #8f7247;
+}
+
+.sec04 .sec04_txt_top p:nth-child(2), .sec04 .sec04_txt_middle p:nth-child(2), .sec04 .sec04_txt_bottome p:nth-child(2) {
+  margin: 2.4rem 0 5.6rem 0;
+}
+
+.sec04 .sec04_txt_middle, .sec04 .sec04_txt_etc {
+  margin-left: auto;
+  text-align: right;
+}
+
+.sec04 .sec04_txt_etc {
+  margin-top: 12rem;
+}
+
+.sec04 .sec04_txt_etc > p {
+  font-family: 'NotoSansKR-Medium', sans-serif;
+  font-size: 1.8rem;
+  line-height: 2rem;
+  color: black;
+}
+
+.sec04 .sec04_txt_etc > p strong {
+  position: relative;
+}
+
+.sec04 .sec04_txt_etc > p strong::before {
+  content: "";
+  position: absolute;
+  top: 0.3rem;
+  left: -2.8rem;
+  width: 2.2rem;
+  height: 2.2rem;
+  background: url(../imgs/products/sec04_txt_etc.png) no-repeat 0 0;
+}
+
+.sec04 .sec04_txt_etc .sec04_txt_etc_hide {
+  overflow: hidden;
+  margin-top: 8rem;
+  height: 0;
+}
+
+.sec04 .sec04_txt_etc .sec04_txt_etc_hide dl {
+  margin: 4rem 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-align: left;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.sec04 .sec04_txt_etc .sec04_txt_etc_hide dl div {
+  margin: 1.6rem 0;
+}
+
+.sec04 .sec04_txt_etc .sec04_txt_etc_hide dl div dt {
+  font-family: 'NotoSansKR-Thin', sans-serif;
+  font-size: 1.6rem;
+  line-height: 2rem;
+  color: black;
+}
+
+.sec04 .sec04_txt_etc .sec04_txt_etc_hide dl div dd {
+  font-family: 'NotoSansKR-Medium', sans-serif;
+  font-size: 2rem;
+  line-height: 2.4rem;
+  color: black;
+}
+
+.sec04 .sec04_txt_etc .sec04_txt_etc_hide dl div.sec04_txt_etc_hide_col01 {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 60rem;
+          flex: 0 0 60rem;
+  width: 42rem;
+}
+
+.sec04 .sec04_txt_etc .sec04_txt_etc_hide dl div.sec04_txt_etc_hide_col02 {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 41rem;
+          flex: 0 0 41rem;
+  width: 23rem;
+}
+
+.sec04 .sec04_txt_etc .sec04_txt_etc_hide dl div.sec04_txt_etc_hide_col03 {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 27rem;
+          flex: 0 0 27rem;
+  width: 9rem;
+}
+
+.sec04 .sec04_txt_etc .sec04_txt_etc_hide dl div.sec04_txt_etc_hide_col04 {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 32rem;
+          flex: 0 0 32rem;
+  width: 14rem;
+}
+
+.sec04 .sec04_txt_etc .sec04_txt_etc_hide dl div.sec04_txt_etc_hide_last {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 59rem;
+          flex: 1 0 59rem;
+}
+
+.sec04 .sec04_txt_etc .sec04_txt_etc_hide > p {
+  text-align: left;
+  font-family: 'NotoSansKR-Thin', sans-serif;
+  font-size: 1.6rem;
+  line-height: 2rem;
+  color: black;
+}
+
+.sec04 .centerBox .sec04_txt_etc .sec04_txt_etc_hide.on {
+  height: 36.8rem;
+}
+
+.sec05 {
+  margin: 16rem 0;
+}
+
+.sec05 .centerBox p {
+  font-family: 'NotoSansKR-Medium', sans-serif;
+  font-size: 1.8rem;
+  line-height: 2rem;
+  color: black;
+}
+
+.sec05 .centerBox ul {
+  margin: 4rem 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 160rem;
+}
+
+.sec05 .centerBox ul.sec05_conts li:nth-of-type(1) {
+  background: url(../imgs/products/sec05_conts_01.png) no-repeat 50% 50%/100%;
+}
+
+.sec05 .centerBox ul.sec05_conts li:nth-of-type(2) {
+  background: url(../imgs/products/sec05_conts_02.png) no-repeat 50% 50%/100%;
+}
+
+.sec05 .centerBox ul.sec05_conts li:nth-of-type(3) {
+  background: url(../imgs/products/sec05_conts_03.png) no-repeat 50% 50%/100%;
+}
+
+.sec05 .centerBox ul.sec05_conts li:nth-of-type(4) {
+  background: url(../imgs/products/sec05_conts_04.png) no-repeat 50% 50%/100%;
+}
+
+.sec05 .centerBox ul.sec05_etc li:nth-of-type(1) {
+  background: url(../imgs/products/sec05_etc_01.png) no-repeat 50% 50%/100%;
+}
+
+.sec05 .centerBox ul.sec05_etc li:nth-of-type(2) {
+  background: url(../imgs/products/sec05_etc_02.png) no-repeat 50% 50%/100%;
+}
+
+.sec05 .centerBox ul.sec05_etc li:nth-of-type(3) {
+  background: url(../imgs/products/sec05_etc_03.png) no-repeat 50% 50%/100%;
+}
+
+.sec05 .centerBox ul.sec05_etc li:nth-of-type(4) {
+  background: url(../imgs/products/sec05_etc_04.png) no-repeat 50% 50%/100%;
+}
+
+.sec05 .centerBox ul li {
+  padding-top: 25.6rem;
+  width: 40rem;
+  text-align: center;
+}
+
+.sec05 .centerBox ul li a > span:first-child {
+  font-family: 'NotoSansKR-Regular', sans-serif;
+  font-size: 1.8rem;
+  line-height: 2.4rem;
+  color: black;
+}
+
+.sec05 .centerBox ul li a > span:last-child {
+  font-family: 'NotoSansKR-Thin', sans-serif;
+  font-size: 1.6rem;
+  line-height: 2rem;
+  color: black;
+}
+
+.sec05 .centerBox ul li:not(:last-child) {
+  border-right: 1px solid #eee;
+}
+
+main .sec05 .centerBox .sec05_conts li, main .sec05 .centerBox .sec05_etc li {
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
+}
+
+main .sec05 .centerBox .sec05_conts li:hover, main .sec05 .centerBox .sec05_etc li:hover {
+  background-size: 110%;
+}
+/*# sourceMappingURL=products.css.map */

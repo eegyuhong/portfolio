@@ -1,0 +1,155 @@
+@mixin font-(
+    $f:11,
+    $s:1.8rem,
+    $h:1.8rem,
+    $c:white,
+    $ts:0,
+    $op:0.5,
+    ){
+        @if($f == 11){// font-family 10 = NotoSansKR, 20 = NanumSquareOTF
+            font-family: 'NotoSansKR-Thin', sans-serif;
+        }@else if($f == 13){
+            font-family: 'NotoSansKR-Light', sans-serif;
+        }@else if($f == 14){
+            font-family: 'NotoSansKR-Regular', sans-serif;
+        }@else if($f == 15){
+            font-family: 'NotoSansKR-Medium', sans-serif;
+        }@else if($f == 17){
+            font-family: 'NotoSansKR-Bold', sans-serif;
+        }@else if($f == 19){
+            font-family: 'NotoSansKR-Black', sans-serif;
+        }@else if($f == 20){
+            font-family: 'ChosunBg', sans-serif;
+        }@else if($f == 30){
+            font-family: 'NanumBarunGothicBold', sans-serif;
+        }
+        font-size: $s;// font-size
+        line-height: $h;// line-height
+        @if($c == white){// color
+            color: rgba(255,255,255,$op);
+        }
+        @else if($c == black){
+            color: rgba(0,0,0,$op);
+        }
+        @else if($c == broun){
+            color: rgba(143,114,71,$op);
+        }
+}
+//thin 100, light 300, regular 400, medium 500, bold 700, black 900
+//@include font-($f:, $s:, $h:, $c:, $op:);
+
+
+header{
+    .centerBox{
+        margin: 0 auto;
+        width: 160rem;
+        .header_show{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            h1{
+                position: fixed;
+                z-index: 1000;
+                top: 6.4rem;
+                left: calc( (100% - 160rem ) / 2);
+                overflow: hidden;
+                width: 15rem;
+                a{
+                    display: block;
+                    img{
+                        filter: opacity(1);
+                    }
+                }
+            }
+            p{
+                position: fixed;
+                z-index: 1000;
+                top: 6.4rem;
+                right: calc( (100% - 160rem ) / 2);
+                overflow: hidden;
+                width: 3rem;
+                img{
+                    float: left;
+                }
+            }
+        }
+        .cart_header_show{
+            h1, p{
+                img{
+                    float: right;
+                }
+            }
+        }
+    }
+}
+
+
+//curtain
+header .curtain{
+    position: fixed;
+    z-index: 999;
+    top: 0;
+    right: -100%;
+    width: 45vw;
+    height: 100vh;
+    background: #000;
+    .curtain_area{
+        width: calc(100% - ((100vw - 160rem) / 2));
+        height: 100%;
+        dl{
+            text-align: right;
+            @include font-($h:3.2rem, $op:0.7);
+            margin-top: 12rem;
+            a{
+                color: inherit;
+            }
+        }
+        nav{           
+            margin-top: 8rem;
+            text-align: center;
+            >ul>li{
+                >a{
+                    @include font-($s:3.6rem, $h:6.4rem);
+                }
+                >ul>li>a{
+                    @include font-($h: 3.2rem);
+                }
+            }
+        }
+    }
+}
+
+//curtain action
+header{
+    .centerBox{
+        .curtain{
+            transition:all .5s ease;
+            &.on{
+                right: 0;
+            }
+            nav{
+                >ul{
+                    .curtain_dep1{
+                        .curtain_dep2{
+                            display: none;
+                        }
+                        &.on{
+                            >a{
+                                color: rgba(143,114,71,1);
+                                font-family: 'NotoSansKR-Medium', sans-serif;
+                            }
+                            .curtain_dep2{
+                                display: block;
+                            }
+                        }
+                    }
+                }
+                li>a:hover{
+                    color: rgba(143,114,71,1);
+                    font-family: 'NotoSansKR-Medium', sans-serif;
+                }
+            }
+        }
+    }
+}
+

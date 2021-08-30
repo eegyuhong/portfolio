@@ -1,0 +1,557 @@
+@mixin font_($f:11,
+    $s:1.8rem,
+    $h:1.2,
+    $c:1,
+) {
+    @if($f==11) {
+        // font-family 10 = NotoSansKR
+        font-family: 'NotoSansKR-Thin', sans-serif;
+    }
+
+    @else if($f==19) {
+        font-family: 'NotoSansKR-Black', sans-serif;
+    }
+
+    @else if($f==21) {
+        // 20 = Roboto
+        font-family: 'Roboto-Thin', sans-serif;
+    }
+
+    @else if($f==24) {
+        font-family: 'Roboto-Regular', sans-serif;
+    }
+
+    @else if($f==29) {
+        font-family: 'Roboto-Black', sans-serif;
+    }
+
+    font-size: $s; // font-size
+    line-height: $h;
+
+    @if($c==1) {
+        // color
+        color: #3f3f3f;
+    }
+
+    @else if($c==2) {
+        color: #dddddd;
+    }
+
+    @else if($c==3) {
+        color: #808080;
+    }
+}
+
+//thin 100, light 300, regular 400, medium 500, bold 700, black 900
+//@include font-($f:, $s:, $h:, $c:);
+
+//#3F3F3F
+$c1:rgba(63, 63, 63, 1);
+$c1_5:rgba(63, 63, 63, 0.5);
+//#808080
+$c2:rgba(128, 128, 128, 1);
+$c2_5:rgba(128, 128, 128, 0.5);
+//#DDDDDD
+$c3:rgba(221, 221, 221, 1);
+$c3_5:rgba(221, 221, 221, 0.5);
+//#090909
+$c4:rgba(9, 9, 9, 1);
+$c4_5:rgba(9, 9, 9, 0.5);
+
+
+/*-------------------- common 시작 -------------------- */
+//레이아웃
+.view_f {
+    height: 100vh;
+}
+
+.view_h {
+    height: calc(25vw - 1px);
+}
+
+//<hr>
+hr {
+    margin: 0;
+    border: none;
+    height: 1px;
+    background: $c2_5;
+}
+
+.hrLv_1 {
+    width: 100vw;
+}
+
+//목차 레벨0
+._fontLv_0_1 {
+    @include font-($f:29, $s:3.2rem, $c:2);
+}
+
+._fontLv_0_2 {
+    @include font-($f:29, $s:8rem, $c:2);
+}
+
+._fontLv_0_3 {
+    @include font-($s:5.6rem, $c:2);
+}
+
+._fontLv_0_4 {
+    @include font-($f:29, $s:2.4rem, $c:2);
+}
+
+//목차 레벨1
+._fontLv_1_1 {
+    @include font-($s:2.4rem);
+}
+
+._fontLv_1_2 {
+    margin-top: 0.8rem;
+    @include font-($f:29, $s:6.4rem);
+}
+
+._fontLv_1_3 {
+    margin-top: 6.4rem;
+    @include font-($s:2.4rem);
+}
+
+._fontLv_1_4 {
+    //.myWorks :: web-page design & publising
+    @include font-($f:29, $s:4.8rem);
+}
+
+//목차 레벨2
+._fontLv_2_1 {
+    @include font-($f:29, $s:4.8rem);
+}
+
+._fontLv_2_2 {
+    @include font-($f:19, $s:3.2rem);
+}
+
+._fontLv_2_3 {
+    @include font-($s:3.2rem);
+}
+
+._fontLv_2_4 {
+    @include font-($f:29, $s:3.2rem, $c:2);
+}
+
+//텍스트 이벤트
+// $txtEvent_pT: 1.25s;
+// $txtEvent_dT: 0.15s;
+
+span {
+    span.eventContents {
+        display: inline-block;
+    }
+
+    &.eventMask_goUp {
+        //아래 >> 위로 등장
+        display: inline-block;
+        overflow: hidden;
+
+        .eventContents {
+            transform: translateY(100%);
+        }
+    }
+
+    &.eventMask_goRight {
+        //왼쪽 >> 오른쪽 등장
+        display: inline-block;
+        vertical-align: top;
+
+        .eventContents {
+            opacity: 0;
+            transform: translateX(-100%);
+        }
+    }
+}
+
+/*-------------------- common 끝 -------------------- */
+
+/*-------------------- .front 시작 -------------------- */
+.front {
+    background: url(../imgs/frontBg.svg) repeat 0 0;
+    animation: rollingBg 10s linear infinite;
+
+    @keyframes rollingBg {
+        0% {
+            background-position: 0 0;
+        }
+
+        100% {
+            background-position: 0 -560px;
+        }
+    }
+
+    .frontBg {
+        position: relative;
+        padding: 0 12vw;
+        background: $c4_5;
+
+        .front_title {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+
+            h2 {
+                margin-top: 3.2rem;
+            }
+        }
+
+        .front_BtnNext {
+            position: absolute;
+            bottom: 0;
+            border-left: 1px solid $c2_5;
+            padding-left: 24px;
+            height: 10rem;
+        }
+    }
+}
+
+/*-------------------- .front 끝 -------------------- */
+
+/*-------------------- .aboutMe 시작 -------------------- */
+.aboutMe {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 32rem 12vw;
+    height: auto;
+
+    div,
+    ul {
+        flex: 0 0 36vw;
+    }
+
+    ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-content: space-between;
+        height: 36rem;
+
+        li {
+            flex: 1 1 33%;
+            width: 12rem;
+            height: 16rem;
+            text-align: left;
+
+            svg {
+                width: 12rem;
+                height: 12rem;
+                margin-bottom: 1.6rem;
+            }
+
+            .title_skill {
+                display: block;
+                width: 12rem;
+                @include font-($f:24, $s:2.4rem);
+                text-align: center;
+            }
+        }
+    }
+}
+
+/*-------------------- .aboutMe 끝 -------------------- */
+
+/*-------------------- .myWorks 시작 -------------------- */
+//제목
+.myWorks {
+    .myWorks_title {
+        padding: 0 12vw;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 32rem 12vw;
+        height: auto;
+
+        div,
+        p {
+            flex: 0 0 36vw;
+        }
+    }
+}
+
+//컨텐츠
+.myWorks {
+    ul {
+        li {
+            position: relative;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-top: 0.1px solid $c2_5;
+            padding: 0 12vw 0 12vw;
+            width: 76vw;
+            cursor: pointer;
+
+            h3,
+            .myWorks_txt {
+                flex: 0 0 36vw;
+            }
+
+            h3 {
+                height: 5.6rem;
+
+                svg {
+                    margin-right: auto;
+                    height: 100%;
+
+                    path {
+                        transition: all 0.1s ease;
+                    }
+                }
+            }
+
+            .myWorks_txt {
+                transform: translateY(20%);
+
+
+                .myWorks_txtConcept {
+                    margin: 2.4rem 0 4.8rem 0;
+                }
+
+                .myWorks_txtLink {
+                    vertical-align: top;
+
+                    >span {
+                        // 공통
+                        display: inline-block;
+
+                        >span {
+                            display: inline-block;
+                        }
+                    }
+
+                    .myWork_eventMask_Goup {
+                        overflow: hidden;
+
+                        .myWork_eventContents {
+                            transform: translate(0, 100%);
+                        }
+                    }
+
+                    .myWork_eventMask_Goright {
+                        margin-left: 1.6rem;
+                        vertical-align: top;
+
+                        .myWork_eventContents {
+                            opacity: 0;
+                            transform: translate(-100%, 0);
+
+                            svg {
+                                width: 4rem;
+                                height: 1.8rem;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .myWorks_eventBg {
+                //배경
+                transition: clip-path 0.5s ease;
+                position: absolute;
+                z-index: -1;
+                top: 0;
+                left: 0;
+                width: 100vw;
+                clip-path: polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%);
+            }
+        }
+    }
+}
+
+
+
+//.myWorks_contents 배경
+.myWorks ul {
+    >li:nth-of-type(1) .myWorks_eventBg {
+        background: url(../imgs/bg_AUSTEM.png) no-repeat 50% 50%/100%;
+    }
+
+    >li:nth-of-type(2) .myWorks_eventBg {
+        background: url(../imgs/bg_NESPRESSO.png) no-repeat 50% 50%/100%;
+    }
+
+    >li:nth-of-type(3) .myWorks_eventBg {
+        background: url(../imgs/bg_3000.png) no-repeat 50% 50%/100%;
+    }
+
+    >li:nth-of-type(4) .myWorks_eventBg {
+        background: url(../imgs/bg_iosTravel.png) no-repeat 50% 50%/100%;
+    }
+}
+
+//이벤트
+.myWorks ul li:hover {
+    h3 path {
+        transition: all 0.6s ease;
+        fill: $c3;
+    }
+
+    .myWorks_txt p {
+        color: $c3;
+        transition: all 0.6s ease;
+    }
+
+    .myWorks_eventBg {
+        display: block;
+    }
+
+    .myWorks_txtLink {
+
+        span.myWork_eventMask_Goup,
+        span.myWork_eventMask_Goright {
+            .myWork_eventContents {
+                transform: translate(0, 0);
+            }
+
+            &:nth-child(1) .myWork_eventContents {
+                transition: transform 1s ease;
+            }
+
+            &:nth-child(2) .myWork_eventContents {
+                transition: transform 1s ease 0.15s;
+            }
+
+            &:nth-child(3) .myWork_eventContents {
+                transition: transform 1s ease 0.3s;
+            }
+
+            &:nth-child(4) .myWork_eventContents {
+                opacity: 1;
+                transition: all 1s ease 0.45s;
+            }
+        }
+    }
+}
+
+/*-------------------- .myWorks 끝 -------------------- */
+
+/*-------------------- .contactMe 시작 -------------------- */
+.contactMe {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 32rem 12vw;
+    height: auto;
+
+    div {
+        flex: 0 0 36vw;
+    }
+
+    .contactMe_info {
+        span {
+            // 공통
+            display: inline-block;
+            height: 6rem;
+            line-height: 6rem;
+            vertical-align: top;
+        }
+
+        .info_mail {
+            margin-right: 4rem;
+        }
+
+        .sendMessage {
+            position: relative;
+
+            .eventContents {
+                width: 24rem;
+
+                .sendMessage_txt {
+                    position: absolute;
+                    top: 0;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    white-space: nowrap;
+                    transition: all 0.5s ease;
+                    vertical-align: center;
+                }
+
+                .sendMessage_bg {
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    z-index: -1;
+                    border-radius: 3rem;
+                    width: 24rem;
+                    background: $c2;
+                    transition: all 0.5s ease;
+
+                    svg {
+                        width: 6rem;
+                        height: 6rem;
+                        transition: all 0.5s ease;
+                        opacity: 0;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+//이벤트
+.contactMe .contactMe_info .sendMessage:hover .eventContents {
+    .sendMessage_txt {
+        left: 0;
+        transform: translateX(0);
+    }
+
+    .sendMessage_bg {
+        width: 6rem;
+        min-width: 0;
+
+        svg {
+            opacity: 1;
+        }
+    }
+}
+
+@media only screen and (max-width:784px) {
+    main .contactMe .contactMe_info {
+        .info_mail {
+            height: 25px;
+
+            .eventContents {
+                line-height: 25px;
+            }
+        }
+
+        .sendMessage {
+            width: 100px;
+            height: 25px;
+
+            .eventContents {
+                width: 100px;
+                height: 25px;
+
+                .sendMessage_txt {
+                    line-height: 25px;
+                }
+
+                .sendMessage_bg {
+                    width: 100px;
+                    height: 25px;
+                    border-radius: 12.5px;
+
+                    svg {
+                        width: 25px;
+                        height: 25px;
+                    }
+                }
+            }
+
+            &:hover {
+                .eventContents .sendMessage_bg {
+                    width: 25px;
+                    border-radius: 12.5px;
+                }
+            }
+        }
+    }
+}
+
+/*-------------------- .contactMe 끝 -------------------- */
