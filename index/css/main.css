@@ -307,6 +307,16 @@ span.eventMask_goRight .eventContents {
   transition: all 0.1s ease;
 }
 
+.myWorks ul li h3 svg line {
+  -webkit-transition: all 0.1s ease;
+  transition: all 0.1s ease;
+  stroke: #3f3f3f;
+}
+
+.myWorks ul li :nth-child(1) h3 svg path {
+  fill: none;
+}
+
 .myWorks ul li .myWorks_txt {
   -webkit-transform: translateY(20%);
           transform: translateY(20%);
@@ -372,14 +382,18 @@ span.eventMask_goRight .eventContents {
 }
 
 .myWorks ul > li:nth-of-type(2) .myWorks_eventBg {
-  background: url(../imgs/bg_NESPRESSO.png) no-repeat 50% 50%/100%;
+  background: url(../imgs/bg_AUSTEM.png) no-repeat 50% 50%/100%;
 }
 
 .myWorks ul > li:nth-of-type(3) .myWorks_eventBg {
-  background: url(../imgs/bg_3000.png) no-repeat 50% 50%/100%;
+  background: url(../imgs/bg_NESPRESSO.png) no-repeat 50% 50%/100%;
 }
 
 .myWorks ul > li:nth-of-type(4) .myWorks_eventBg {
+  background: url(../imgs/bg_3000.png) no-repeat 50% 50%/100%;
+}
+
+.myWorks ul > li:nth-of-type(5) .myWorks_eventBg {
   background: url(../imgs/bg_iosTravel.png) no-repeat 50% 50%/100%;
 }
 
@@ -387,6 +401,19 @@ span.eventMask_goRight .eventContents {
   -webkit-transition: all 0.6s ease;
   transition: all 0.6s ease;
   fill: #dddddd;
+}
+
+.myWorks ul li:hover:nth-child(1) h3 svg path {
+  -webkit-transition: all 0.6s ease;
+  transition: all 0.6s ease;
+  fill: none;
+  stroke: #dddddd;
+}
+
+.myWorks ul li:hover:nth-child(1) h3 svg line {
+  -webkit-transition: all 0.6s ease;
+  transition: all 0.6s ease;
+  stroke: #dddddd;
 }
 
 .myWorks ul li:hover .myWorks_txt p {

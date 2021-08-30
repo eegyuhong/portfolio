@@ -300,6 +300,19 @@ span {
                     path {
                         transition: all 0.1s ease;
                     }
+
+                    line {
+                        transition: all 0.1s ease;
+                        stroke: $c1;
+                    }
+                }
+            }
+
+            :nth-child(1) h3{
+                svg {
+                    path {
+                        fill: none;
+                    }
                 }
             }
 
@@ -371,14 +384,18 @@ span {
     }
 
     >li:nth-of-type(2) .myWorks_eventBg {
-        background: url(../imgs/bg_NESPRESSO.png) no-repeat 50% 50%/100%;
+        background: url(../imgs/bg_AUSTEM.png) no-repeat 50% 50%/100%;
     }
 
     >li:nth-of-type(3) .myWorks_eventBg {
-        background: url(../imgs/bg_3000.png) no-repeat 50% 50%/100%;
+        background: url(../imgs/bg_NESPRESSO.png) no-repeat 50% 50%/100%;
     }
 
     >li:nth-of-type(4) .myWorks_eventBg {
+        background: url(../imgs/bg_3000.png) no-repeat 50% 50%/100%;
+    }
+
+    >li:nth-of-type(5) .myWorks_eventBg {
         background: url(../imgs/bg_iosTravel.png) no-repeat 50% 50%/100%;
     }
 }
@@ -388,6 +405,20 @@ span {
     h3 path {
         transition: all 0.6s ease;
         fill: $c3;
+    }
+
+    &:nth-child(1) h3 {
+        svg {
+            path {
+                transition: all 0.6s ease;
+                fill: none;
+                stroke: $c3;
+            }
+            line {
+                transition: all 0.6s ease;
+                stroke: $c3;
+            }
+        }
     }
 
     .myWorks_txt p {
