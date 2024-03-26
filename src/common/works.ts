@@ -1,8 +1,8 @@
 import disneyImg from '@/assets/images/works/disney.png';
 import tictctoeImg from '@/assets/images/works/tictctoe.png';
-import movieImg from '@/assets/images/works/movie.jpg';
-import starbucksImg from '@/assets/images/works/starbucks.jpg';
-import appleImg from '@/assets/images/works/apple.jpg';
+import movieImg from '@/assets/images/works/movie.png';
+import starbucksImg from '@/assets/images/works/starbucks.png';
+import appleImg from '@/assets/images/works/apple.png';
 
 export const works = [
   {
@@ -43,7 +43,7 @@ export const works = [
     used: 'Javascript, GSAP, Swiper',
     github: 'https://github.com/eegyuhong/vanilla-starbucks',
     link: 'https://elegant-tapioca-a44bc7.netlify.app',
-    bgImage: appleImg.src
+    bgImage: starbucksImg.src
   },
   {
     id: 'apple',
@@ -53,6 +53,6 @@ export const works = [
     used: 'Javascript',
     github: 'https://github.com/eegyuhong/vanilla-apple-ipad',
     link: 'https://vanilla-apple-ipad.vercel.app/',
-    bgImage: starbucksImg.src
+    bgImage: appleImg.src
   }
 ];
