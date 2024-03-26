@@ -85,7 +85,7 @@ export default function About() {
           <FadeEnter
             delay={10}
             isShow={isFetching}
-            className="mx-auto max-w-48 xl:max-w-60 2xl:max-w-80"
+            className="mx-auto max-w-48 xl:max-w-60 2xl:ml-10 2xl:max-w-64"
             style={{
               opacity: isFetching ? 1 : 0,
               transform: `translateY(${isFetching ? 0 : 15}%)`,
