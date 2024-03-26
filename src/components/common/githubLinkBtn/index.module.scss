@@ -1,0 +1,7 @@
+.btn {
+  &:hover{
+    .btn__decoration {
+      @apply w-full;
+    }
+  }
+}

@@ -1,0 +1,15 @@
+.btn {
+  &:hover{
+    .btn__title {
+      @apply -translate-x-5 text-inherit;
+    }
+
+    .btn__bg {
+      @apply w-10;
+
+      .btn__icon {
+        @apply opacity-100;
+      }
+    }
+  }
+}

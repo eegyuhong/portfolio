@@ -1,0 +1,12 @@
+.container {
+  animation: rollingBg 10s linear infinite;
+}
+
+@keyframes rollingBg {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 0 -560px;
+  }
+}
