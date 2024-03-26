@@ -37,7 +37,7 @@ export default function About() {
           <FadeEnter
             as="h2"
             delay={1}
-            gap="16px"
+            gap="8px"
             isShow={isFetching}
             className={`${AntonFont.className} text-4xl xl:text-6xl`}
           >
@@ -59,14 +59,14 @@ export default function About() {
               as="h3"
               delay={7}
               isShow={isFetching}
-              className="mb-3 text-xl font-black xl:text-2xl"
+              className="mb-3 text-xl font-black xl:text-4xl"
             >
               Lee GyuHong
             </FadeEnter>
             <FadeEnter
               delay={7}
               isShow={isFetching}
-              className={`${InterFont.className} hover:underline`}
+              className={`${InterFont.className} xl:text-xl hover:underline`}
             >
               <Link href={EnumLink.SEND_EMAIL} target="_blank">
                 ee.gyuhong@gmail.com
@@ -75,9 +75,9 @@ export default function About() {
             <FadeEnter
               delay={7}
               isShow={isFetching}
-              className={`${InterFont.className} hover:underline`}
+              className={`${InterFont.className} xl:text-xl hover:underline`}
             >
-              <Link href={EnumLink.SEND_EMAIL} target="_blank">
+              <Link href={EnumLink.GITHUB} target="_blank">
                 GitHub
               </Link>
             </FadeEnter>
@@ -85,7 +85,7 @@ export default function About() {
           <FadeEnter
             delay={10}
             isShow={isFetching}
-            className="mx-auto max-w-48"
+            className="mx-auto max-w-48 xl:max-w-60 2xl:max-w-80"
             style={{
               opacity: isFetching ? 1 : 0,
               transform: `translateY(${isFetching ? 0 : 15}%)`,

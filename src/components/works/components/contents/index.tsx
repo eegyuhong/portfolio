@@ -86,14 +86,15 @@ export default function Contents({ work, ...props }: IProps) {
       <div
         onMouseEnter={handleMouse}
         onMouseLeave={handleMouse}
-        className="relative z-0 grid grid-cols-2 h-[30vh] hover:text-neutral-200 transition-colors px-4 lg:px-32 xl:pr-52 xl:pl-[136px]"
+        className="relative z-0 grid grid-cols-2 h-[35vh] hover:text-neutral-200 transition-colors px-4 lg:px-32 xl:pr-52 xl:pl-[136px]"
         {...props}
       >
         <div ref={setTargetRef} className="relative z-10 self-center">
           <FadeEnter
             as="h3"
+            gap="8px"
             isShow={isFetching}
-            className={`${AntonFont.className} text-3xl xl:text-5xl`}
+            className={`${AntonFont.className} text-4xl xl:text-6xl`}
           >
             {work.title}
           </FadeEnter>
@@ -102,21 +103,24 @@ export default function Contents({ work, ...props }: IProps) {
           <FadeEnter
             as="h4"
             isShow={isFetching}
-            className="mb-3 text-xl font-bold"
+            className="mb-3 text-xl font-bold xl:text-4xl"
           >
             {work.titleKr}
           </FadeEnter>
-          <FadeEnter isShow={isFetching}>{work.description}</FadeEnter>
-          <FadeEnter isShow={isFetching} className="mb-5 text-sm font-thin">
+          <FadeEnter isShow={isFetching} className="font-thin xl:text-xl">
+            {work.description}
+          </FadeEnter>
+          <FadeEnter isShow={isFetching} className="-mt-2 font-thin xl:text-lg">
             {work.used}
           </FadeEnter>
-          <div className="flex gap-3">
-            <FadeEnter as="div" isShow={isShowBtn}>
+          <div className="absolute flex gap-3 -bottom-12">
+            <FadeEnter as="div" isShow={isShowBtn} className="xl:text-xl">
               <GithubLinkBtn href={work.github} />
             </FadeEnter>
             <FadeEnter
               as="div"
               isShow={isShowBtn}
+              className="xl:text-xl"
               style={{ transitionDelay: isShowBtn ? '0.1s' : '0s' }}
             >
               <ProjectLinkBtn href={work.link} />

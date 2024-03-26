@@ -26,7 +26,7 @@ export default function Title() {
           <FadeEnter
             as="h2"
             delay={1}
-            gap="16px"
+            gap="8px"
             isShow={isFetching}
             className={`${AntonFont.className} text-4xl xl:text-6xl`}
           >
@@ -34,7 +34,7 @@ export default function Title() {
           </FadeEnter>
         </div>
       </div>
-      <div className="self-center text-xl font-black xl:text-3xl">
+      <div className="self-center text-xl font-black xl:text-4xl">
         <FadeEnter isShow={isFetching} delay={2}>
           web - page
         </FadeEnter>

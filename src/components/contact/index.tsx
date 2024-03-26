@@ -26,15 +26,19 @@ export default function Contact() {
         <FadeEnter
           as="h2"
           delay={1}
-          gap="16px"
+          gap="8px"
           isShow={isFetching}
           className={`${AntonFont.className} text-4xl xl:text-6xl`}
         >
           Contact me
         </FadeEnter>
       </div>
-      <div className="flex flex-wrap items-center self-center gap-2">
-        <FadeEnter delay={2} isShow={isFetching} className="font-thin">
+      <div className="flex flex-wrap items-center self-center gap-2 xl:gap-10">
+        <FadeEnter
+          delay={2}
+          isShow={isFetching}
+          className="font-thin xl:text-lg"
+        >
           ee.gyuhong@gmail.com
         </FadeEnter>
         <FadeEnter as="div" delay={4} isShow={isFetching}>
