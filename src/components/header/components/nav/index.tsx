@@ -2,7 +2,6 @@
 
 import { useCollapsedStore } from '@/stores';
 import { AntonFont } from '@/common/font';
-// import Link from 'next/link';
 import { clsx } from 'clsx';
 import LogoIcon from './components/logoIcon';
 import CloseIcon from './components/closeIcon/intdex';

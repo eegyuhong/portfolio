@@ -1,15 +1,22 @@
 'use client';
 
-import { useEffect } from 'react';
+import { useEffect, useMemo } from 'react';
 import { useScrollStore } from '@/stores';
 import LogoIcon from './components/logoIcon';
 import MenuIcon from './components/menuIcon';
 import TrackBar from './components/trackBar';
 import Nav from './components/nav';
+import clsx from 'clsx';
 
 export default function Header() {
-  const { setScrollY, setInnerWidth, setInnerHeight, setBodyHeight } =
-    useScrollStore();
+  const {
+    scrollY,
+    innerHeight,
+    setScrollY,
+    setInnerWidth,
+    setInnerHeight,
+    setBodyHeight
+  } = useScrollStore();
 
   const handleScroll = () => {
     setScrollY(window.scrollY);
@@ -33,8 +40,19 @@ export default function Header() {
     };
   });
 
+  const headerBgColor = useMemo(
+    () => (scrollY > innerHeight ? 'white' : 'transparent'),
+    [scrollY, innerHeight]
+  );
+
   return (
-    <header className="fixed w-full h-[72px] border-b-border border-b-[1px] xl:h-screen xl:border-b-0 xl:border-r-border xl:border-r-[1px] xl:w-[72px] z-10">
+    <header
+      className={clsx([
+        'fixed w-full h-[72px] border-b-border border-b-[1px] z-10',
+        'xl:h-screen xl:border-b-0 xl:border-r-border xl:border-r-[1px] xl:w-[72px]'
+      ])}
+      style={{ backgroundColor: headerBgColor }}
+    >
       <LogoIcon className="absolute top-3 left-3" />
       <MenuIcon className="absolute top-3 right-3 xl:top-[50%] xl:translate-y-[-50%]" />
       <TrackBar className="absolute bottom-0 xl:top-0 xl:right-0" />
