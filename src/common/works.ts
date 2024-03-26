@@ -11,8 +11,8 @@ export const works = [
     titleKr: '디즈니 플러스 클론',
     description: '간편 로그인, TMDB API 활용한 추천 영화 목록, 검색 등 구현',
     used: 'React, Redux, Firebase, Axios, Swiper',
-    github: 'https://github.com/eegyuhong/react-tictactoe',
-    link: 'https://eegyuhong.github.io/react-tictactoe/',
+    github: 'https://github.com/eegyuhong/react-disney-plus',
+    link: 'https://react-disney-plus-113f9.web.app/',
     bgImage: disneyImg.src
   },
   {
