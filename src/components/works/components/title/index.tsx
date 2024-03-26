@@ -1,15 +1,17 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useCallback, useState } from 'react';
+import useIntersectionObserver from '@/hooks/useIntersectionObserver';
 import { AntonFont } from '@/common/font';
 import FadeEnter from '@/components/common/fadeEnter';
 
 export default function Title() {
-  const [isShow, setisShow] = useState(false);
-
-  useEffect(() => {
-    setTimeout(() => setisShow(true), 1000);
-  }, []);
+  const [isFetching, setIsFetching] = useState(false);
+  const [setTargetRef] = useIntersectionObserver(
+    useCallback(([{ isIntersecting }]) => {
+      if (isIntersecting) setIsFetching(true);
+    }, [])
+  );
 
   return (
     <div
@@ -17,15 +19,15 @@ export default function Title() {
       className="grid h-[50vh] grid-cols-2 px-4 lg:px-32 xl:pr-52 xl:pl-[136px]"
     >
       <div className="self-center">
-        <div>
-          <FadeEnter isShow={isShow} className="font-thin xl:text-xl">
+        <div ref={setTargetRef}>
+          <FadeEnter isShow={isFetching} className="font-thin xl:text-xl">
             selecte
           </FadeEnter>
           <FadeEnter
             as="h2"
             delay={1}
             gap="16px"
-            isShow={isShow}
+            isShow={isFetching}
             className={`${AntonFont.className} text-4xl xl:text-6xl`}
           >
             My works
@@ -33,10 +35,10 @@ export default function Title() {
         </div>
       </div>
       <div className="self-center text-xl font-black xl:text-3xl">
-        <FadeEnter isShow={isShow} delay={2}>
+        <FadeEnter isShow={isFetching} delay={2}>
           web - page
         </FadeEnter>
-        <FadeEnter isShow={isShow} delay={3}>
+        <FadeEnter isShow={isFetching} delay={3}>
           design & development
         </FadeEnter>
       </div>

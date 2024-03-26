@@ -1,6 +1,7 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useCallback, useState } from 'react';
+import useIntersectionObserver from '@/hooks/useIntersectionObserver';
 import { AntonFont } from '@/common/font';
 import GithubLinkBtn from '@/components/common/githubLinkBtn';
 import ProjectLinkBtn from '@/components/common/projectLinkBtn';
@@ -25,12 +26,13 @@ export default function Contents({ work, ...props }: IProps) {
   const [isPaused, setIsPaused] = useState(false);
   const [isPlaying, setIsPlaying] = useState(false);
   const [clipPath, setClipPath] = useState<ClipPath>([0, 0, 0, 0]);
-  const [isShow, setisShow] = useState(false);
   const [isShowBtn, setisShowBtn] = useState(false);
-
-  useEffect(() => {
-    setTimeout(() => setisShow(true), 1000);
-  }, []);
+  const [isFetching, setIsFetching] = useState(false);
+  const [setTargetRef] = useIntersectionObserver(
+    useCallback(([{ isIntersecting }]) => {
+      if (isIntersecting) setIsFetching(true);
+    }, [])
+  );
 
   const resetAnimation = (path: ClipPath) => {
     setIsPaused(true);
@@ -87,21 +89,25 @@ export default function Contents({ work, ...props }: IProps) {
         className="relative z-0 grid grid-cols-2 h-[30vh] hover:text-neutral-200 transition-colors px-4 lg:px-32 xl:pr-52 xl:pl-[136px]"
         {...props}
       >
-        <div className="relative z-10 self-center">
+        <div ref={setTargetRef} className="relative z-10 self-center">
           <FadeEnter
             as="h3"
-            isShow={isShow}
+            isShow={isFetching}
             className={`${AntonFont.className} text-3xl xl:text-5xl`}
           >
             {work.title}
           </FadeEnter>
         </div>
         <div className="relative z-10 self-center">
-          <FadeEnter as="h4" isShow={isShow} className="mb-3 text-xl font-bold">
+          <FadeEnter
+            as="h4"
+            isShow={isFetching}
+            className="mb-3 text-xl font-bold"
+          >
             {work.titleKr}
           </FadeEnter>
-          <FadeEnter isShow={isShow}>{work.description}</FadeEnter>
-          <FadeEnter isShow={isShow} className="mb-5 text-sm font-thin">
+          <FadeEnter isShow={isFetching}>{work.description}</FadeEnter>
+          <FadeEnter isShow={isFetching} className="mb-5 text-sm font-thin">
             {work.used}
           </FadeEnter>
           <div className="flex gap-3">
