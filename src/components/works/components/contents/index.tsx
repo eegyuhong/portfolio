@@ -110,7 +110,7 @@ export default function Contents({ work, ...props }: IProps) {
           <FadeEnter isShow={isFetching} className="font-thin xl:text-xl">
             {work.description}
           </FadeEnter>
-          <FadeEnter isShow={isFetching} className="-mt-2 font-thin xl:text-lg">
+          <FadeEnter isShow={isFetching} className="font-thin xl:text-lg">
             {work.used}
           </FadeEnter>
           <div className="absolute flex gap-3 -bottom-12">
