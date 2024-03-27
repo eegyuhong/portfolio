@@ -86,7 +86,7 @@ export default function Contents({ work, ...props }: IProps) {
       <div
         onMouseEnter={handleMouse}
         onMouseLeave={handleMouse}
-        className="relative z-0 grid grid-cols-2 h-[35vh] hover:text-neutral-200 transition-colors px-4 lg:px-32 xl:pr-52 xl:pl-[136px]"
+        className="relative z-0 grid grid-cols-2 h-[35vw] max-h-[35vh] hover:text-neutral-200 transition-colors px-4 lg:px-32 xl:pr-52 xl:pl-[136px]"
         {...props}
       >
         <div ref={setTargetRef} className="relative z-10 self-center">
@@ -128,9 +128,9 @@ export default function Contents({ work, ...props }: IProps) {
           </div>
         </div>
         <div
-          className="absolute top-0 left-0 z-0 w-full h-full bg-center bg-no-repeat bg-origin-padding"
+          className="absolute top-0 left-0 z-0 w-full h-full bg-center bg-no-repeat"
           style={{
-            background: `url(${work.bgImage}) no-repeat 50% 50%`,
+            backgroundImage: `url(${work.bgImage})`,
             transition: isPaused ? 'none' : 'all 0.5s ease',
             backgroundSize: isPlaying ? '120%' : '100%',
             clipPath: `polygon(0% ${clipPath[0]}%, 100% ${clipPath[1]}%, 100% ${clipPath[2]}%, 0% ${clipPath[3]}%)`

@@ -1,3 +1,4 @@
+import portfolioImg from '@/assets/images/works/portfolio.png';
 import disneyImg from '@/assets/images/works/disney.png';
 import tictctoeImg from '@/assets/images/works/tictctoe.png';
 import movieImg from '@/assets/images/works/movie.png';
@@ -5,6 +6,16 @@ import starbucksImg from '@/assets/images/works/starbucks.png';
 import appleImg from '@/assets/images/works/apple.png';
 
 export const works = [
+  {
+    id: 'portfolio',
+    title: 'Portfolio',
+    titleKr: '개인용 포트폴리오',
+    description: '자기소개 및 프로젝트 소개 등을 다양한 애니메이션으로 구현',
+    used: 'React, Nextjs, zustand, tailwindcss',
+    github: 'https://github.com/eegyuhong/portfolio',
+    link: 'https://vercel.com/eegyuhongs-projects/portfolio/',
+    bgImage: portfolioImg.src
+  },
   {
     id: 'disney',
     title: 'Disney Plus',
