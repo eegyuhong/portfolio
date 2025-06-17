@@ -30,7 +30,7 @@ export default function FadeEnter({
   const Component = as ?? 'p';
   const childrenStyle = (i: number) => {
     return {
-      marginLeft: i === 0 ? '' : gap ?? '4px',
+      marginLeft: i === 0 ? '' : (gap ?? '4px'),
       transitionProperty: 'transform',
       transitionDuration: '1s',
       transitionTimingFunction: 'ease',

@@ -42,7 +42,7 @@ export default function FadeEnter({
             key={i}
             className="inline-block"
             style={{
-              marginLeft: i === 0 ? '' : gap ?? '4px',
+              marginLeft: i === 0 ? '' : (gap ?? '4px'),
               transition: 'transform 1s ease',
               transitionDelay: `${(i + delay) * 0.05}s`,
               transform: `translateY(${isShow ? 0 : 100}%)`
