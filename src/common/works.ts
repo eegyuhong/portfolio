@@ -1,3 +1,4 @@
+import crawlerImg from '@/assets/images/works/crawler.png';
 import portfolioImg from '@/assets/images/works/portfolio.png';
 import disneyImg from '@/assets/images/works/disney.png';
 import tictctoeImg from '@/assets/images/works/tictctoe.png';
@@ -6,6 +7,16 @@ import starbucksImg from '@/assets/images/works/starbucks.png';
 import appleImg from '@/assets/images/works/apple.png';
 
 export const works = [
+  {
+    id: 'crawler',
+    title: 'crawler',
+    titleKr: '상품 정보 크롤러',
+    description: '플랫폼 입점 브랜드의 전체 상품 목록에 대한 크롤러 구현',
+    used: 'Nextjs, playwright, Docker, Railway',
+    github: 'https://github.com/eegyuhong/test-product-crawler',
+    link: 'https://test-product-crawler-production-5e1b.up.railway.app/',
+    bgImage: crawlerImg.src
+  },
   {
     id: 'portfolio',
     title: 'Portfolio',
