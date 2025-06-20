@@ -19,7 +19,7 @@ export default function RootLayout({
     <html lang="ko">
       <head>
         <Script
-          src="https://insightboard.vercel.app/track.js"
+          src="https://insight-board-omega.vercel.app/track.js"
           data-project-id="Portfolio"
           strategy="afterInteractive"
         />
