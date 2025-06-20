@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import { NotosansFont } from '@/common/font';
 import Favicon from '@/assets/images/avata.png';
 import '@/styles/globals.scss';
+import Script from 'next/script';
 
 export const metadata: Metadata = {
   title: 'PORTFOLIO - DEVELOPER EE.GYUHONG',
@@ -16,6 +17,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ko">
+      <head>
+        <Script
+          src="https://insightboard.vercel.app/track.js"
+          data-project-id="Portfolio"
+          strategy="afterInteractive"
+        />
+      </head>
       <body className={NotosansFont.className}>{children}</body>
     </html>
   );
