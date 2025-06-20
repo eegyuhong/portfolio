@@ -12,7 +12,7 @@ export const works = [
     id: 'insight',
     title: 'Insight Board',
     titleKr: '포트폴리오 방문자 현황',
-    description: '프로젝프별 방문 현황을 서버리스 함수로 구현',
+    description: '서버리스 함수를 이용한 프로젝트별 방문 로그 수집 구현',
     used: 'Nextjs, Supabase Edge Functions, Recharts',
     github: 'https://github.com/eegyuhong/insight-board',
     link: 'https://insight-board-omega.vercel.app/',
