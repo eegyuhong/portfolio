@@ -1,3 +1,4 @@
+import insightImg from '@/assets/images/works/insight.png';
 import crawlerImg from '@/assets/images/works/crawler.png';
 import portfolioImg from '@/assets/images/works/portfolio.png';
 import disneyImg from '@/assets/images/works/disney.png';
@@ -8,8 +9,18 @@ import appleImg from '@/assets/images/works/apple.png';
 
 export const works = [
   {
+    id: 'insight',
+    title: 'Insight Board',
+    titleKr: '포트폴리오 방문자 현황',
+    description: '프로젝프별 방문 현황을 서버리스 함수로 구현',
+    used: 'Nextjs, Supabase Edge Functions, Recharts',
+    github: 'https://github.com/eegyuhong/insight-board',
+    link: 'https://insight-board-omega.vercel.app/',
+    bgImage: insightImg.src
+  },
+  {
     id: 'crawler',
-    title: 'crawler',
+    title: 'Crawler',
     titleKr: '상품 정보 크롤러',
     description: '플랫폼 입점 브랜드의 전체 상품 목록에 대한 크롤러 구현',
     used: 'Nextjs, playwright, Docker, Railway',
